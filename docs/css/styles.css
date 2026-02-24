@@ -141,7 +141,8 @@ h1,h2,h3,h4{font-family:var(--font-heading);line-height:1.25}
 .area-tag{background:var(--white);padding:.75rem 1.2rem;border-radius:var(--radius);font-size:.9rem;font-weight:500;border:1px solid var(--light-gray);display:flex;align-items:center;gap:.5rem;transition:all var(--transition)}
 .area-tag:hover{border-color:var(--terracotta);color:var(--terracotta);transform:translateX(4px)}
 .area-tag::before{content:'📍';font-size:.8rem}
-.areas-map{background:var(--light-gray);border-radius:var(--radius);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gray)}
+.areas-map{border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gray);width:100%}
+.areas-map iframe{width:100%;border-radius:12px}
 
 /* ---------- CTA Banner ---------- */
 .cta-banner{background:linear-gradient(135deg,var(--terracotta),var(--teal));padding:4rem 0;text-align:center;color:var(--white)}

@@ -1,7 +1,3 @@
-# Robots.txt for Alamo Pool Resurfacing
-# https://deme-cyber11.github.io/sa-pool-resurfacing/
-
 User-agent: *
 Allow: /
-
 Sitemap: https://deme-cyber11.github.io/sa-pool-resurfacing/sitemap.xml

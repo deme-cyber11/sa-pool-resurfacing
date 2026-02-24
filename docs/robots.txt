@@ -1,7 +1,7 @@
 # Robots.txt for Alamo Pool Resurfacing
-# https://costa-rica-real-estate-ai.github.io/sa-pool-resurfacing/
+# https://deme-cyber11.github.io/sa-pool-resurfacing/
 
 User-agent: *
 Allow: /
 
-Sitemap: https://costa-rica-real-estate-ai.github.io/sa-pool-resurfacing/sitemap.xml
+Sitemap: https://deme-cyber11.github.io/sa-pool-resurfacing/sitemap.xml

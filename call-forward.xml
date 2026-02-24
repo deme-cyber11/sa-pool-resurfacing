@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Say voice="Polly.Joanna">Connecting you now. Please hold.</Say>
+  <Dial callerId="+17262685597" timeout="30">
+    <Number>+17344761457</Number>
+  </Dial>
+  <Say voice="Polly.Joanna">We're sorry, no one is available right now. Please leave a message after the beep, or try again later.</Say>
+  <Record maxLength="120" transcribe="true" />
+</Response>

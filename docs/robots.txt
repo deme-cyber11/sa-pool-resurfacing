@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://deme-cyber11.github.io/sa-pool-resurfacing/sitemap.xml
+
+Sitemap: https://alamopoolresurfacing.com/sitemap.xml

@@ -49,6 +49,9 @@ h1,h2,h3,h4{font-family:var(--font-heading);line-height:1.25}
 /* Mobile hamburger */
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{width:26px;height:3px;background:var(--dark);border-radius:3px;transition:var(--transition)}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 
 /* Dropdown (nav) */
 .nav-dropdown{position:relative}

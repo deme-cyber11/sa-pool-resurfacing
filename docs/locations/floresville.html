@@ -20,7 +20,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does pool resurfacing cost in Floresville?","acceptedAnswer":{"@type":"Answer","text":"Pool resurfacing in Floresville typically runs $4,000–$11,000. Replastering starts at $4,000–$7,000, quartz aggregate $6,500–$10,000, pebble finishes $7,500–$11,000. Call for a free on-site estimate."}},{"@type":"Question","name":"Do you serve rural properties in Wilson County?","acceptedAnswer":{"@type":"Answer","text":"Yes — we serve both Floresville city and rural Wilson County properties. We account for well water and local mineral conditions in our startup chemistry protocol."}},{"@type":"Question","name":"How long does pool resurfacing take in Floresville?","acceptedAnswer":{"@type":"Answer","text":"Most Floresville pool resurfacing projects complete in 5–8 days: drain and prep, surface application, then fill and startup chemistry calibrated for local water conditions."}}]}
   </script>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../css/styles.v1.css">
   <style>
     .location-hero{background:linear-gradient(135deg,#1e3a5f 0%,#2c5282 100%);color:white;padding:60px 20px;text-align:center}
     .location-hero h1{font-size:2.2rem;font-weight:800;margin-bottom:16px;line-height:1.2}
@@ -47,7 +47,21 @@
   <style>.floating-cta{position:fixed;bottom:20px;right:20px;z-index:998;display:flex;flex-direction:column;gap:12px;transform:translateY(110px);opacity:0;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .4s ease;pointer-events:none}.floating-cta.visible{transform:translateY(0);opacity:1;pointer-events:auto}.floating-cta a{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;color:#fff;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:transform .2s ease,box-shadow .2s ease;position:relative}.floating-cta a:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(0,0,0,.3)}.fcta-call{background:#22c55e}.fcta-quote{background:var(--color-primary,var(--color-accent,#1a3a5c))}.fcta-label{position:absolute;right:64px;white-space:nowrap;background:rgba(0,0,0,.75);color:#fff;padding:5px 12px;border-radius:20px;font-size:.78rem;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s ease}.floating-cta a:hover .fcta-label{opacity:1}@media(min-width:769px){.floating-cta{display:none!important}}</style>
 </head>
 <body>
-  <header><nav><a href="/">Alamo Pool Resurfacing</a><a href="tel:7262685597">(726) 268-5597</a></nav></header>
+<header class="header">
+  <div class="container">
+    <a href="/" class="logo"><img src="../favicon.svg" alt="Alamo Pool Resurfacing logo"> Alamo Pool</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <div class="nav-dropdown"><a href="/services.html">Services</a><div class="dropdown-menu"><a href="/services.html#plaster">Plaster &amp; Marcite</a><a href="/services.html#pebble">Pebble Finishes</a><a href="/services.html#quartz">Quartz Finishes</a><a href="/services.html#tile">Tile &amp; Coping</a><a href="/services.html#repair">Structural Repair</a></div></div>
+      <a href="/about.html">About</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+      <a href="tel:7262685597" class="nav-cta">&#128222; (726) 268-5597</a>
+    </nav>
+    <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/locations/">Locations</a> &rsaquo; <span>Pool Resurfacing in Floresville</span></nav>
 
   <section class="location-hero">
@@ -137,5 +151,6 @@
   <a href="/contact.html" class="fcta-quote" aria-label="Free Quote"><span class="fcta-label">Free Quote</span><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></a>
 </div>
 <script>(function(){var el=document.getElementById('floating-cta');if(!el)return;window.addEventListener('scroll',function(){el.classList.toggle('visible',window.scrollY>80);},{passive:true});})();</script>
+<script src="/js/main.js"></script>
 </body>
 </html>

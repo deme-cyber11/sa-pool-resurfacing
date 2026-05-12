@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lead Partnership Proposal — Keith Zars Pools × Iron Tiger Leads</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#10b981">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310b981'/%3E%3Ctext x='32' y='44' font-family='system-ui' font-size='32' font-weight='800' text-anchor='middle' fill='%23fff'%3EITL%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+
+<style>
+:root {
+  --green: #10b981;
+  --green-dark: #059669;
+  --dark: #1a1a2e;
+  --gray: #5a5a5a;
+  --light: #eefaf4;
+  --border: #d2ecdf;
+  --badge-bg: #e6f7ef;
+  --badge-color: #059669;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+
+header {
+  background: var(--dark);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  border-bottom: 4px solid var(--green);
+}
+header .eyebrow {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-bottom: .3rem;
+}
+header h1 { margin: 0; font-size: 1.1rem; font-weight: 700; }
+
+.hero {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color: #fff;
+  padding: 2rem 1.5rem 1.75rem;
+  border-radius: 0 0 14px 14px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.hero .badge {
+  display: inline-block;
+  background: rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.4);
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: .85rem;
+}
+.hero h2 { margin: 0 0 .4rem; font-size: 1.7rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; }
+.hero p { margin: 0; opacity: .92; font-size: .95rem; max-width: 460px; margin: 0 auto; }
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.card-title {
+  margin: 0 0 1rem;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 700;
+}
+
+/* how it works steps */
+.steps { display: flex; flex-direction: column; gap: .85rem; }
+.step { display: flex; gap: 1rem; align-items: flex-start; }
+.step-num {
+  flex: 0 0 30px;
+  width: 30px; height: 30px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 50%;
+  font-size: .8rem;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1px;
+}
+.step-body {}
+.step-title { font-size: .95rem; font-weight: 700; color: var(--dark); margin-bottom: .2rem; }
+.step-desc { font-size: .875rem; color: var(--gray); line-height: 1.45; }
+
+/* pricing */
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+@media(max-width: 480px) { .pricing-grid { grid-template-columns: 1fr; } }
+.price-box {
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+}
+.price-box.featured { border-color: var(--green); background: var(--badge-bg); }
+.price-phase { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); margin-bottom: .5rem; }
+.price-box.featured .price-phase { color: var(--green-dark); }
+.price-amount { font-size: 2rem; font-weight: 800; color: var(--dark); letter-spacing: -.03em; line-height: 1; margin-bottom: .35rem; }
+.price-box.featured .price-amount { color: var(--green-dark); }
+.price-unit { font-size: .8rem; font-weight: 600; color: var(--gray); }
+.price-note { font-size: .78rem; color: var(--gray); margin-top: .5rem; }
+
+.milestone {
+  background: var(--light);
+  border-left: 4px solid var(--green);
+  border-radius: 4px;
+  padding: .85rem 1rem;
+  font-size: .875rem;
+  color: #2d4a3e;
+  line-height: 1.5;
+}
+.milestone strong { color: var(--green-dark); }
+
+/* proof */
+.proof-row { display: flex; gap: .75rem; align-items: baseline; margin-bottom: .6rem; }
+.proof-row:last-child { margin-bottom: 0; }
+.proof-label { flex: 0 0 80px; font-size: .76rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--gray); }
+.proof-val { flex: 1; font-size: .925rem; font-weight: 600; color: var(--dark); }
+
+/* bullets */
+.bullet-list { list-style: none; padding: 0; margin: 0; }
+.bullet-list li {
+  padding: .55rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: .9rem;
+  color: var(--dark);
+  display: flex;
+  gap: .65rem;
+  align-items: flex-start;
+}
+.bullet-list li:last-child { border-bottom: none; }
+.bullet-list li::before { content: '✓'; color: var(--green); font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+
+.cta {
+  background: var(--dark);
+  color: #fff;
+  padding: 1.65rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.cta h3 { margin: 0 0 .45rem; font-size: 1.15rem; color: #fff; font-weight: 800; }
+.cta p { margin: 0 0 1.1rem; opacity: .8; font-size: .9rem; }
+.cta-btn {
+  display: inline-block;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  padding: .85rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: .95rem;
+  margin: .25rem;
+}
+.cta-btn.secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--gray);
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+footer strong { color: var(--green-dark); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Iron Tiger Leads — Partnership Proposal</div>
+  <h1>Exclusive Pool Resurfacing Leads · San Antonio / New Braunfels, TX</h1>
+</header>
+
+<div class="wrap">
+
+<div class="hero">
+  <span class="badge">Prepared for Keith Zars Pools · May 2026</span>
+  <h2>Inbound leads. Pay only when you win the job.</h2>
+  <p>Homeowners in your backyard are already searching Google and landing on my sites. This proposal outlines how we turn that traffic into closed jobs for Keith Zars.</p>
+</div>
+
+<div class="card">
+  <div class="card-title">How this works</div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-title">Homeowner searches Google</div>
+        <div class="step-desc">They type "pool resurfacing New Braunfels" or "pool replastering San Antonio" — and land on alamopoolresurfacing.com. Organic, not a paid ad.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-title">They submit a request</div>
+        <div class="step-desc">Name, phone, address, project details — sometimes photos and dimensions included. These homeowners are actively shopping, not casual browsers.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-title">I send it to Keith Zars — exclusively</div>
+        <div class="step-desc">You get the lead first. I'm not selling it to five shops like Angie's List. You call, quote, and close on your own timeline.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-title">Job won? You pay $500.</div>
+        <div class="step-desc">Lead didn't convert? You pay nothing. No monthly retainer, no setup fee — just a simple success fee when it closes.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">Proof of concept — lead already in your inbox</div>
+  <div class="proof-row">
+    <span class="proof-label">Lead</span>
+    <span class="proof-val">Don Henderson — New Braunfels, TX 78132</span>
+  </div>
+  <div class="proof-row">
+    <span class="proof-label">Project</span>
+    <span class="proof-val">Gunite resurfacing — flagstone coping, hot tub on site</span>
+  </div>
+  <div class="proof-row">
+    <span class="proof-label">Timeline</span>
+    <span class="proof-val">ASAP — homeowner sent photos + dimensions with the request</span>
+  </div>
+  <div class="proof-row">
+    <span class="proof-label">Source</span>
+    <span class="proof-val">Organic Google → alamopoolresurfacing.com (not an ad)</span>
+  </div>
+  <div class="proof-row">
+    <span class="proof-label">Est. ticket</span>
+    <span class="proof-val">$8,000–$14,000+ (premium gunite + flagstone finish)</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">Pricing — two phases</div>
+  <div class="pricing-grid">
+    <div class="price-box featured">
+      <div class="price-phase">Phase 1 — Starting now</div>
+      <div class="price-amount">$500</div>
+      <div class="price-unit">per job won</div>
+      <div class="price-note">Pay only when the job closes. Zero risk on leads that don't convert.</div>
+    </div>
+    <div class="price-box">
+      <div class="price-phase">Phase 2 — At scale</div>
+      <div class="price-amount">Flat</div>
+      <div class="price-unit">monthly rate</div>
+      <div class="price-note">Negotiated together when we hit 5+ consistent leads/week.</div>
+    </div>
+  </div>
+  <div class="milestone">
+    <strong>Milestone trigger:</strong> once we're averaging 5+ qualified leads per week, we renegotiate to a flat monthly rate. No more tracking individual jobs — just a predictable number you can budget against, and predictable revenue on my end.
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">Why this is different from directories</div>
+  <ul class="bullet-list">
+    <li>Leads are <strong>inbound</strong> — homeowner initiated, not a cold list</li>
+    <li>Leads are <strong>exclusive</strong> — not sold to 3–5 competing contractors simultaneously</li>
+    <li>Leads come with <strong>project details</strong> — service type, pool specs, timeline, sometimes photos</li>
+    <li><strong>No monthly commitment</strong> in Phase 1 — pay per win, stop any time</li>
+    <li>I own the site and control volume — as I rank more keywords, more leads flow to you</li>
+  </ul>
+</div>
+
+<div class="cta">
+  <h3>Ready to move forward?</h3>
+  <p>Don Henderson's full contact info is already in your inbox. Quote the job, close it, and that's how Phase 1 starts — one job at a time.</p>
+  <a href="mailto:costa@irontigerleads.com?subject=Keith%20Zars%20Lead%20Partnership&body=Hi%20Costa%20—%20I%27d%20like%20to%20move%20forward%20with%20the%20lead%20partnership." class="cta-btn">Email Costa</a>
+  <a href="tel:+12255354918" class="cta-btn secondary">Call (225) 535-4918</a>
+</div>
+
+</div>
+
+<footer>
+  Costa Demetral &nbsp;·&nbsp; Iron Tiger Digital &nbsp;·&nbsp; <strong>costa@irontigerleads.com</strong> &nbsp;·&nbsp; (225) 535-4918
+</footer>
+
+</body>
+</html>

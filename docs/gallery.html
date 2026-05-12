@@ -30,7 +30,6 @@
     })(window, document, "clarity", "script", "vqc77cod5l");
   </script>
 <style>
-
 /* Floating CTA circles — injected by cta-strategy.py */
 .floating-cta{position:fixed;bottom:20px;right:20px;z-index:998;display:flex;flex-direction:column;gap:12px;transform:translateY(110px);opacity:0;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .4s ease;pointer-events:none}
 .floating-cta.visible{transform:translateY(0);opacity:1;pointer-events:auto}
@@ -42,6 +41,18 @@
 .floating-cta a:hover .fcta-label{opacity:1}
 @media(min-width:769px){.floating-cta{display:none!important}}
 
+.project-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.project-card .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.project-card .ba-photo{position:relative;overflow:hidden;aspect-ratio:4/3}
+.project-card .ba-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.project-card .ba-label{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.65);color:#fff;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;border-radius:20px}
+.project-card .ba-label.after{background:rgba(16,185,129,.85)}
+.project-card .project-meta{padding:18px 20px}
+.project-card .project-meta h3{font-size:1rem;font-weight:700;color:#1a1a2e;margin-bottom:4px}
+.project-card .project-meta p{font-size:.875rem;color:#64748b;margin:0}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+@media(max-width:700px){.projects-grid{grid-template-columns:1fr}}
+@media(max-width:500px){.project-card .ba-pair{grid-template-columns:1fr}.project-card .ba-photo.after-photo{display:none}}
 </style>
 </head>
 <body>
@@ -65,32 +76,165 @@
 <section class="page-header" style="background:linear-gradient(135deg,rgba(27,42,43,.75),rgba(26,94,99,.65)),url('images/12-gallery-header.webp') center/cover no-repeat">
   <div class="container">
     <h1>Project Gallery</h1>
-<h2>Our San Antonio, TX Pool Resurfacing And Replastering Portfolio</h2>
-<p>Our portfolio showcases the diverse range of pool resurfacing and replastering projects Alamo Pool Resurfacing has expertly completed across San Antonio, TX. From historic residential properties in Monte Vista to contemporary homes in the Far West Side, and even commercial facilities, our work reflects a deep commitment to quality craftsmanship and lasting beauty. We pride ourselves on transforming worn-out pools into stunning aquatic features, utilizing premium materials and time-tested techniques tailored specifically to the unique demands of the Texas climate. Each project in our gallery is a testament to our dedication to durability, aesthetic excellence, and consistently exceeding our San Antonio customers' expectations, ensuring their pools are not only beautiful but also built to last for decades.</p>
+    <p>Before &amp; after transformations across San Antonio and the Hill Country</p>
+  </div>
+</section>
 
-<h2>Recent San Antonio, TX Projects</h2>
-<p>We've recently brought new life to pools in various San Antonio neighborhoods, including Alamo Heights, Stone Oak, Helotes, and Dignowity Hill. Our recent work encompasses a broad spectrum of projects: revitalizing an aging residential pool with a modern pebble finish in a Terrell Hills estate, resurfacing a busy HOA community pool in The Dominion for enhanced safety and appeal, and applying custom plaster to a luxury backyard oasis in Shavano Park. Each project presented its own unique challenges, from intricate designs to structural repairs beneath the surface, all met with our specialized expertise. The results consistently demonstrate a dramatic improvement in both functionality and curb appeal, proving our versatility and unwavering commitment to exceptional outcomes for every San Antonio homeowner.</p>
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="overline">Our Work</p>
+      <h2>Recent Pool Resurfacing Projects</h2>
+      <p>Every pool below was resurfaced by our crews — no stock photos.</p>
+    </div>
+    <div class="projects-grid">
 
-<h2>Before and After Results</h2>
-<p>Imagine stepping onto your patio to find a pool with faded, chalky plaster, rough patches, and visible stains—a surface that's uncomfortable to touch and significantly detracts from your backyard's overall beauty. That's the common "before" scenario for many San Antonio, TX pools that have endured years of sun and use. Now, envision the remarkable transformation: a brilliant, uniform surface that glistens invitingly under the Texas sun. The "after" is a pool with silky-smooth, inviting textures, vibrant colors, and a pristine finish that dramatically elevates your entire outdoor living space. Our professional resurfacing and replastering not only restores the visual appeal but also provides a durable, easy-to-clean, and safer surface, transforming an uninviting eyesore into a shimmering centerpiece for relaxation and entertainment. This renewed aesthetic adds significant value and enjoyment to your San Antonio home, inviting endless hours of comfortable recreation.</p>
+      <div class="project-card reveal">
+        <div class="ba-pair">
+          <div class="ba-photo">
+            <img src="images/01-alamo-before.webp" alt="Alamo Heights pool before resurfacing" loading="lazy">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-photo after-photo">
+            <img src="images/02-alamo-after.webp" alt="Alamo Heights pool after Pebble Tec resurfacing" loading="lazy">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <h3>Alamo Heights — Pebble Tec Resurface</h3>
+          <p>15-year-old plaster → PebbleSheen natural gray. Structural crack repair + new waterline tile.</p>
+        </div>
+      </div>
 
-<h2>Types of Projects We Complete in San Antonio, TX</h2>
-<ul>
-<li><strong>Standard Residential Pool Resurfacing:</strong> We specialize in bringing older San Antonio residential pools back to life. This often involves stripping worn plaster, addressing any structural issues, and applying a fresh, durable new finish that withstands the Texas heat and heavy use for years to come.</li>
-<li><strong>Commercial Pool Resurfacing:</strong> From apartment complexes and HOAs to hotels and community centers, we provide robust resurfacing solutions for high-traffic commercial pools throughout San Antonio. Our work ensures compliance with safety standards while creating an inviting, professional appearance for residents and guests.</li>
-<li><strong>Custom & Luxury Pool Resurfacing:</strong> For San Antonio homeowners desiring a truly unique aquatic experience, we offer custom resurfacing with premium finishes like Pebble Tec, quartz, or glass beads. These projects focus on intricate designs, specialized color palettes, and creating a bespoke look that perfectly complements luxury properties.</li>
-<li><strong>Pool Replastering & Minor Repairs:</strong> Beyond full resurfacing, we expertly handle essential replastering to address specific areas of wear, minor cracks, or delamination. This targeted approach efficiently restores the integrity and appearance of your pool's surface, preventing further damage and extending its lifespan.</li>
-</ul>
+      <div class="project-card reveal">
+        <div class="ba-pair">
+          <div class="ba-photo">
+            <img src="images/03-stoneoak-before.webp" alt="Stone Oak pool before resurfacing" loading="lazy">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-photo after-photo">
+            <img src="images/04-stoneoak-after.webp" alt="Stone Oak pool after quartz resurfacing" loading="lazy">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <h3>Stone Oak — Quartz Aggregate Finish</h3>
+          <p>Heavily stained marcite → Diamond Brite quartz. New coping and drain covers included.</p>
+        </div>
+      </div>
 
-<h2>What Our San Antonio, TX Customers Say</h2>
-<p>Our San Antonio, TX customers consistently praise Alamo Pool Resurfacing for our unwavering professionalism and the outstanding quality of our work. Common feedback highlights our team's reliability, transparent communication throughout every phase of the project, and meticulous attention to detail from start to finish. Many appreciate our deep understanding of local pool care requirements and how we expertly adapt our services to the specific challenges presented by the San Antonio climate. Homeowners frequently comment on the truly transformative results, noting how their pools look better than ever and how smooth and stress-free the entire resurfacing or replastering process was. We're proud to be known as the trusted local experts who consistently deliver on our promises, making every pool resurfacing and replastering experience a positive one.</p>
+      <div class="project-card reveal">
+        <div class="ba-pair">
+          <div class="ba-photo">
+            <img src="images/05-helotes-before.webp" alt="Helotes pool before resurfacing" loading="lazy">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-photo after-photo">
+            <img src="images/06-helotes-after.webp" alt="Helotes pool after replastering" loading="lazy">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <h3>Helotes — White Plaster Replaster</h3>
+          <p>Chipping plaster with algae staining → fresh white marcite. Full drain, acid wash, replaster.</p>
+        </div>
+      </div>
 
-<p class="cta-text">Want results like these for your San Antonio, TX home? Contact Alamo Pool Resurfacing for a free estimate. We bring the same quality craftsmanship to every pool resurfacing and replastering project in San Antonio, TX and surrounding communities.</p>
+      <div class="project-card reveal">
+        <div class="ba-pair">
+          <div class="ba-photo">
+            <img src="images/07-boerne-before.webp" alt="Boerne pool before resurfacing" loading="lazy">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-photo after-photo">
+            <img src="images/08-boerne-after.webp" alt="Boerne pool after Pebble Tec resurfacing" loading="lazy">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <h3>Boerne — Pebble Tec Full Renovation</h3>
+          <p>Complete renovation: Pebble Tec dark blue, new coping, tile replacement, LED light upgrade.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="ba-pair">
+          <div class="ba-photo">
+            <img src="images/ba1-before.jpg" alt="San Antonio pool before resurfacing" loading="lazy">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-photo after-photo">
+            <img src="images/ba1-after.jpg" alt="San Antonio pool after quartz resurfacing" loading="lazy">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <h3>San Antonio — Quartz Resurface</h3>
+          <p>Rough, deteriorating plaster → quartz aggregate finish. 7-day turnaround including cure startup.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="ba-pair">
+          <div class="ba-photo">
+            <img src="images/ba2-before.jpg" alt="New Braunfels pool before resurfacing" loading="lazy">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-photo after-photo">
+            <img src="images/ba2-after.jpg" alt="New Braunfels pool after Pebble Tec" loading="lazy">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <h3>New Braunfels — Pebble Tec</h3>
+          <p>12-year-old white plaster with calcium scale → PebbleTec ocean blue. Tile and coping updated.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="ba-pair">
+          <div class="ba-photo">
+            <img src="images/ba3-before.jpg" alt="Schertz pool before resurfacing" loading="lazy">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-photo after-photo">
+            <img src="images/ba3-after.jpg" alt="Schertz pool after quartz resurfacing" loading="lazy">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <h3>Schertz — Quartz Finish</h3>
+          <p>Stained plaster with hairline cracks → quartz aggregate. Cracks addressed before application.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="ba-pair">
+          <div class="ba-photo">
+            <img src="images/ba4-before.jpg" alt="Converse pool before resurfacing" loading="lazy">
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-photo after-photo">
+            <img src="images/ba4-after.jpg" alt="Converse pool after resurfacing" loading="lazy">
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <h3>Converse — Plaster &amp; Coping</h3>
+          <p>Full replaster with new coping and waterline tile. Pool restored to swim-ready in 6 days.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="cta-banner">
   <div class="container">
     <h2>Want Your Pool to Look Like This?</h2>
-    <p>Join 1,200+ San Antonio homeowners who've transformed their pools with Alamo Pool Resurfacing.</p>
+    <p>Join 1,200+ San Antonio homeowners who've transformed their pools with Alamo Pool Resurfacing. The estimate is free.</p>
     <a href="contact.html" class="btn btn-primary">Get Your Free Estimate</a>
+    <a href="tel:7262685597" class="btn btn-secondary">Call (726) 268-5597</a>
   </div>
 </section>
 
@@ -102,10 +246,9 @@
       <div><h4>Services</h4><ul><li><a href="services.html#plaster">Plaster</a></li><li><a href="services.html#pebble">Pebble</a></li><li><a href="services.html#quartz">Quartz</a></li><li><a href="services.html#tile">Tile</a></li><li><a href="services.html#repair">Repair</a></li></ul></div>
       <div><h4>Contact</h4><ul class="footer-contact"><li>📞 <a href="tel:7262685597">(726) 268-5597</a></li><li><img src="images/icons/mail.svg" class="inline-icon" alt="Email"> info@alamopoolresurfacing.com</li><li><img src="images/icons/map-pin.svg" class="inline-icon" alt="Location"> San Antonio, TX</li></ul></div>
     </div>
-    <div class="footer-bottom">&copy; 2025 Alamo Pool Resurfacing. All rights reserved.</div>
+    <div class="footer-bottom">&copy; 2026 Alamo Pool Resurfacing. All rights reserved.</div>
   </div>
 </footer>
-
 
 <script src="js/main.js"></script>
 

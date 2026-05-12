@@ -149,7 +149,7 @@ header h1 {
   gap: .75rem;
   margin-top: .25rem;
 }
-.photo-grid .photo-item { cursor: pointer; }
+.photo-grid .photo-item { cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .photo-grid img {
   width: 100%;
   border-radius: 8px;
@@ -159,6 +159,8 @@ header h1 {
   aspect-ratio: 4/3;
   background: #e5f5ed;
   transition: opacity .15s;
+  cursor: pointer;
+  pointer-events: none;
 }
 .photo-grid img:hover { opacity: .88; }
 .photo-grid .photo-caption {
@@ -172,12 +174,13 @@ header h1 {
 .lb-overlay {
   display: none;
   position: fixed;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   background: rgba(0,0,0,.9);
   z-index: 9999;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  -webkit-overflow-scrolling: touch;
 }
 .lb-overlay.open { display: flex; }
 .lb-overlay img {
@@ -333,20 +336,12 @@ footer strong { color: var(--green-dark); }
   <h3>Pool photos + dimensions</h3>
   <div class="photo-grid">
     <div class="photo-item" onclick="openLb(this)">
-      <img src="pool-photo-1.jpg" alt="Pool view — hot tub + flagstone coping">
-      <div class="photo-caption">View toward hot tub</div>
+      <img src="pool-photo-1.jpg" alt="Pool — flagstone coping + patio side">
+      <div class="photo-caption">Pool — patio side</div>
     </div>
     <div class="photo-item" onclick="openLb(this)">
-      <img src="pool-photo-2.jpg" alt="Pool wide angle — patio + pavilion">
-      <div class="photo-caption">Wide angle — patio side</div>
-    </div>
-    <div class="photo-item" onclick="openLb(this)">
-      <img src="pool-photo-3.jpg" alt="Pool lap lane — entry steps + wood deck">
-      <div class="photo-caption">Lap lane + entry steps</div>
-    </div>
-    <div class="photo-item" onclick="openLb(this)">
-      <img src="pool-dimensions.jpg" alt="Pool dimensions sketch">
-      <div class="photo-caption">Dimensions sketch (homeowner)</div>
+      <img src="pool-photo-2.jpg" alt="Pool — pavilion + umbrella view">
+      <div class="photo-caption">Pool — pavilion view</div>
     </div>
   </div>
 </div>

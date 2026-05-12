@@ -13,9 +13,7 @@
   --transition:.3s ease;
 }
 html{scroll-behavior:smooth;font-size:16px}
-body{font-family:var(--font-body);color:var(--dark);background:var(--cream);line-height:1.7;overflow-x:hidden
-    font-size: 16px;
-}
+body{font-family:var(--font-body);color:var(--dark);background:var(--cream);line-height:1.7;overflow-x:hidden;font-size:16px}
 img{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit;transition:color var(--transition)}
 ul{list-style:none}

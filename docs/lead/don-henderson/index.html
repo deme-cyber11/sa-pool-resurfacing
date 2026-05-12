@@ -149,6 +149,7 @@ header h1 {
   gap: .75rem;
   margin-top: .25rem;
 }
+.photo-grid .photo-item { cursor: zoom-in; }
 .photo-grid img {
   width: 100%;
   border-radius: 8px;
@@ -157,12 +158,46 @@ header h1 {
   object-fit: cover;
   aspect-ratio: 4/3;
   background: #e5f5ed;
+  transition: opacity .15s;
 }
+.photo-grid img:hover { opacity: .88; }
 .photo-grid .photo-caption {
   font-size: .72rem;
   color: var(--gray);
   margin-top: .3rem;
   font-weight: 500;
+}
+
+/* lightbox */
+.lb-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.9);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.lb-overlay.open { display: flex; }
+.lb-overlay img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.lb-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  font-weight: 300;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .cta {
@@ -295,19 +330,23 @@ footer strong { color: var(--green-dark); }
 </div>
 
 <div class="card">
-  <h3>Pool photos — from homeowner</h3>
+  <h3>Pool photos + dimensions</h3>
   <div class="photo-grid">
-    <div>
-      <img src="./pool-1.jpg" alt="Don Henderson pool — photo 1">
-      <div class="photo-caption">Pool overview</div>
+    <div class="photo-item" onclick="openLb(this)">
+      <img src="pool-photo-1.jpg" alt="Pool view — hot tub + flagstone coping">
+      <div class="photo-caption">View toward hot tub</div>
     </div>
-    <div>
-      <img src="./pool-2.jpg" alt="Don Henderson pool — photo 2">
-      <div class="photo-caption">Surface condition</div>
+    <div class="photo-item" onclick="openLb(this)">
+      <img src="pool-photo-2.jpg" alt="Pool wide angle — patio + pavilion">
+      <div class="photo-caption">Wide angle — patio side</div>
     </div>
-    <div>
-      <img src="./pool-sketch.jpg" alt="Don Henderson pool — dimensions sketch">
-      <div class="photo-caption">Dimensions sketch</div>
+    <div class="photo-item" onclick="openLb(this)">
+      <img src="pool-photo-3.jpg" alt="Pool lap lane — entry steps + wood deck">
+      <div class="photo-caption">Lap lane + entry steps</div>
+    </div>
+    <div class="photo-item" onclick="openLb(this)">
+      <img src="pool-dimensions.jpg" alt="Pool dimensions sketch">
+      <div class="photo-caption">Dimensions sketch (homeowner)</div>
     </div>
   </div>
 </div>
@@ -347,5 +386,15 @@ footer strong { color: var(--green-dark); }
 
 </div>
 
+<div class="lb-overlay" id="lb" onclick="closeLb()">
+  <button class="lb-close" onclick="closeLb()">&times;</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openLb(el){var img=el.querySelector('img');document.getElementById('lb-img').src=img.src;document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+</script>
 </body>
 </html>

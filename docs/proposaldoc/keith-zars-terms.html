@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1a1a2e">
 <title>Service Terms — Iron Tiger Digital × Keith Zars Pools</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310b981'/%3E%3Ctext x='32' y='44' font-family='system-ui' font-size='32' font-weight='800' text-anchor='middle' fill='%23fff'%3EITD%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,22 +19,24 @@
   --green-dark: #059669;
   --dark: #1a1a2e;
   --gray: #5a5a5a;
-  --light: #eefaf4;
+  --light: #f7faf9;
   --border: #d2ecdf;
   --badge-bg: #e6f7ef;
+  --badge-color: #059669;
   --text: #222;
 }
 * { box-sizing: border-box; }
 body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   margin: 0;
-  background: #f8f8f8;
+  background: var(--light);
   color: var(--dark);
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
-.wrap { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 1.25rem 4rem; }
 
+/* ─── HEADER ─── */
 header {
   background: var(--dark);
   color: #fff;
@@ -39,89 +44,165 @@ header {
   text-align: center;
   border-bottom: 4px solid var(--green);
 }
-header .eyebrow { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; opacity: .7; margin-bottom: .3rem; }
-header h1 { margin: 0; font-size: 1.1rem; font-weight: 700; }
+header .eyebrow {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-bottom: .3rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+header .sub {
+  margin: .4rem 0 0;
+  font-size: .8rem;
+  opacity: .6;
+}
 
+/* ─── BACK LINK ─── */
 .back-link {
-  display: inline-block;
+  display: block;
+  margin: 1.25rem 0 .5rem;
+  font-size: .82rem;
   color: var(--green-dark);
   text-decoration: none;
-  font-size: .85rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  padding: .4rem 0;
 }
 .back-link:hover { text-decoration: underline; }
 
-.doc-title {
-  margin: 0 0 .25rem;
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: -.02em;
-  color: var(--dark);
+/* ─── INTRO BOX ─── */
+.intro-box {
+  background: var(--badge-bg);
+  border: 1.5px solid var(--green);
+  border-radius: 12px;
+  padding: 1.1rem 1.3rem;
+  margin: 0 0 1.5rem;
+  font-size: .9rem;
+  color: var(--text);
+  line-height: 1.6;
 }
-.doc-subtitle {
-  font-size: .88rem;
+.intro-box strong { color: var(--green-dark); }
+
+/* ─── CLAUSE SECTIONS ─── */
+.terms-doc {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  margin-bottom: 1.25rem;
+}
+.terms-doc .doc-title {
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
   color: var(--gray);
-  margin-bottom: 2rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 2px solid var(--dark);
+  font-weight: 700;
+  padding-bottom: .75rem;
+  border-bottom: 1.5px solid var(--border);
+  margin-bottom: 1.5rem;
 }
 
 .clause {
-  margin-bottom: 1.6rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 1.35rem;
+  padding-bottom: 1.35rem;
+  border-bottom: 1px solid var(--border);
 }
-.clause:last-of-type { border-bottom: none; }
+.clause:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
 .clause .cl-num {
   font-size: .68rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .12em;
   color: var(--green-dark);
-  margin-bottom: .15rem;
+  margin-bottom: .2rem;
 }
 .clause .cl-head {
-  font-size: 1rem;
+  font-size: .97rem;
   font-weight: 700;
   color: var(--dark);
-  margin-bottom: .4rem;
+  margin-bottom: .35rem;
 }
 .clause .cl-body {
-  font-size: .9rem;
-  color: #333;
+  font-size: .88rem;
+  color: var(--gray);
   line-height: 1.7;
 }
-.clause .cl-body strong { color: var(--dark); font-weight: 600; }
-.clause .cl-body em { font-style: italic; color: var(--gray); }
+.clause .cl-body strong { color: var(--text); font-weight: 600; }
+.clause .cl-body em { color: var(--text); }
 
+/* ─── SIGNATURE BLOCK ─── */
 .sig-block {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1.5px solid var(--border);
+}
+.sig-block .sig-title {
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.sig-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 480px) {
+  .sig-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+.sig-party-name {
+  font-size: .82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+.sig-line {
+  border-bottom: 1.5px solid #999;
+  margin-bottom: .35rem;
+  height: 36px;
+}
+.sig-line-label {
+  font-size: .72rem;
+  color: var(--gray);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  text-align: center;
+  font-size: .78rem;
+  color: var(--gray);
   margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 2px solid var(--dark);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
 }
-.sig-title { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); font-weight: 700; margin-bottom: 1.5rem; }
-.sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-@media (max-width: 480px) { .sig-grid { grid-template-columns: 1fr; gap: 1.75rem; } }
-.sig-party-name { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--dark); margin-bottom: 1.6rem; }
-.sig-line { border-bottom: 1.5px solid #999; margin-bottom: .3rem; height: 40px; }
-.sig-line-label { font-size: .68rem; color: var(--gray); letter-spacing: .04em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.25rem; }
-
-.notice-box {
-  background: var(--badge-bg);
-  border: 1.5px solid var(--green);
-  border-radius: 10px;
-  padding: .9rem 1.1rem;
-  font-size: .88rem;
-  color: var(--green-dark);
-  margin-bottom: 2rem;
-  font-weight: 500;
-}
-
-footer { text-align: center; font-size: .78rem; color: var(--gray); margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #ddd; }
 footer strong { color: var(--green-dark); }
-.date-badge { display: inline-block; background: var(--badge-bg); color: var(--green-dark); padding: .15rem .55rem; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .04em; }
+.date-badge {
+  display: inline-block;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  padding: .15rem .55rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
 
 @media print {
   body { background: #fff; }
@@ -136,222 +217,224 @@ footer strong { color: var(--green-dark); }
 <header>
   <div class="eyebrow">Iron Tiger Digital × Keith Zars Pools</div>
   <h1>Lead Generation Service Terms</h1>
+  <div class="sub">These terms are attached to the Lead Generation Proposal dated May 2026</div>
 </header>
 
 <div class="wrap">
 
-<a href="keith-zars.html" class="back-link">← Back to Proposal</a>
+<a class="back-link" href="keith-zars.html">← Back to Proposal</a>
 
-<h2 class="doc-title">Lead Generation Service Terms</h2>
-<div class="doc-subtitle">
-  Iron Tiger Digital &nbsp;·&nbsp; Keith Zars Pools &nbsp;·&nbsp; Effective Date: [Date] &nbsp;·&nbsp; Confidential
+<div class="intro-box">
+  These Service Terms govern the lead generation arrangement between <strong>Costa Demetral d/b/a Iron Tiger Digital</strong> ("Provider") and <strong>Keith Zars Pools</strong> ("Client"). They are plain-language and designed to be understood without a lawyer. The Proposal document covers the ROI math, payment mechanics, and lead quality standards. These Terms cover the binding operating rules both parties agree to. Together, the Proposal and these Terms form the complete agreement.
 </div>
 
-<div class="notice-box">
-  This document contains the binding terms for lead generation services between Iron Tiger Digital and Keith Zars Pools. It is intended to be read alongside the accompanying Proposal document. By signing below, both parties agree to all terms herein.
-</div>
+<div class="terms-doc">
+  <div class="doc-title">Iron Tiger Digital — Lead Generation Service Terms · May 2026</div>
 
 
-<div class="clause">
-  <div class="cl-num">§0 · Pilot Program</div>
-  <div class="cl-head">30-Day Performance Test — Binding Exit Rights</div>
-  <div class="cl-body">
-    For the first thirty (30) days following the Effective Date ("Pilot Period"), Provider will deliver up to ten (10) Leads at the standard rate of $500 per Lead. If fewer than three (3) of the first ten (10) Leads result in a <strong>Booked Appointment</strong> within the Pilot Period, Client may terminate this Agreement in writing with no further obligation — no wind-down fees, no additional invoices for Leads delivered during the Pilot Period.
-    <br><br>
-    <strong>"Booked Appointment"</strong> means a confirmed, scheduled in-person site visit or consultation between Keith Zars Pools personnel and the homeowner who submitted the Lead, occurring within 30 days of Lead delivery.
-    <br><br>
-    If three (3) or more Booked Appointments are achieved within the Pilot Period, this Agreement automatically continues on a month-to-month basis under §10. Provider does not guarantee any minimum Lead volume during the Pilot Period or thereafter — Lead volume depends on organic search traffic to Provider's websites.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§1 · Parties &amp; Effective Date</div>
-  <div class="cl-head">Iron Tiger Digital and Keith Zars Pools</div>
-  <div class="cl-body">
-    This Lead Generation Service Agreement ("Agreement") is entered into as of <strong>[Date]</strong> by and between <strong>Iron Tiger Digital, a Texas sole proprietorship</strong> (operated by Costa Demetral, costa@irontigerleads.com, (225) 535-4918) ("Provider") and <strong>Keith Zars Pools</strong> ("Client"). Provider and Client are each referred to individually as a "Party" and collectively as the "Parties."
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§2 · Lead Definition</div>
-  <div class="cl-head">What constitutes a billable lead</div>
-  <div class="cl-body">
-    A "Lead" is an inbound form submission or phone inquiry originated from Provider's lead generation website(s), from a homeowner located within the agreed service territory, expressing genuine interest in new pool construction or major pool renovation services. A valid Lead must include: (a) a full name, (b) a working contact phone number, and (c) a service address within the service territory. Leads that fail to meet these criteria are subject to the dispute process in §7.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§3 · Delivery Process</div>
-  <div class="cl-head">How leads are delivered</div>
-  <div class="cl-body">
-    Provider will deliver each Lead to Client via email within <strong>one (1) hour</strong> of receipt during business hours (8 AM–8 PM CT, Monday–Friday). Each delivery will include, to the extent available: full name, phone number, email address, service address, project description, and submission timestamp. Provider may deliver Leads received outside business hours on the next business morning.
-    <br><br>
-    A shared lead delivery log (read-only Google Sheet) is available to Client on request — every Lead, timestamped, with dispute status tracked in real time. For any Lead disputed under §7, Provider will supply the associated call recording within <strong>3 business days</strong> of a written request.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§4 · Exclusivity &amp; Intellectual Property</div>
-  <div class="cl-head">Each lead delivered to Client only — Provider retains all site assets</div>
-  <div class="cl-body">
-    Once a Lead is delivered to Client, Provider will not sell, transfer, or share that same Lead with any other contractor or third party. Client acknowledges that Leads are sourced from publicly accessible websites and that homeowners may independently contact other contractors; however, Provider's exclusive obligation is to deliver each Lead to Client only and to no other party through Provider's distribution.
-    <br><br>
-    <strong>All websites, domain names, content, and organic search rankings used to generate Leads remain the sole property of Provider at all times.</strong> This Agreement does not transfer, license, or assign any ownership in Provider's websites or digital assets to Client, and termination does not grant Client any right to replicate or acquire those assets.
-    <br><br>
-    Upon reasonable written request (no more than once per calendar quarter), Client may request a read-only copy of the lead delivery log to verify exclusivity for any specified date range. Provider will respond within 14 business days.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§5 · Service Territory</div>
-  <div class="cl-head">San Antonio metro, New Braunfels, Corpus Christi, and surrounding areas</div>
-  <div class="cl-body">
-    Provider will deliver Leads originating from homeowners located within <strong>100 miles of San Antonio, Texas</strong>, which includes but is not limited to: San Antonio metro, New Braunfels, Corpus Christi, Seguin, Boerne, Kerrville, and surrounding communities. Leads from addresses clearly outside this territory are disputable under §7.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§6 · Fees &amp; Payment</div>
-  <div class="cl-head">$500/lead · Net-15 · Weekly ACH invoice</div>
-  <div class="cl-body">
-    Client agrees to pay Provider <strong>$500 (USD) per delivered Lead</strong>. Provider will issue a weekly invoice every Friday covering all Leads delivered during that calendar week. Payment is due <strong>Net-15</strong> from the invoice date via ACH bank transfer — routing and account details are provided with the first invoice.
-    <br><br>
-    There is no setup fee, no monthly retainer, and no minimum volume commitment. Melio or Bill.com AP automation is available on request at no additional cost to either party. Invoices unpaid after 30 days from the due date may accrue interest at 1.5% per month on the outstanding balance.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§7 · Dispute Process</div>
-  <div class="cl-head">14 calendar days · Credits only · No cash refunds</div>
-  <div class="cl-body">
-    Client must raise any dispute within <strong>fourteen (14) calendar days</strong> of Lead delivery by emailing costa@irontigerleads.com with the Lead name, delivery date, and reason. Eligible dispute reasons: (a) wrong or disconnected phone number, (b) service address clearly outside the defined territory, or (c) exact duplicate of a Lead already delivered and billed in the same calendar month.
-    <br><br>
-    If Provider accepts the dispute, a <strong>credit equal to $500</strong> is applied to Client's next weekly invoice. <strong>No cash refunds.</strong> Disputes not raised within 14 calendar days are deemed waived. Disputes based on failed close, homeowner unavailability, or competitive loss are not eligible.
-    <br><br>
-    If a dispute is accepted and a credit is issued, Client agrees to delete the disputed Lead data from its records within 30 days and certify deletion in writing upon Provider's request.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§8 · No Conversion Guarantee</div>
-  <div class="cl-head">Provider delivers intent; Client closes the job</div>
-  <div class="cl-body">
-    Provider makes no representation or warranty regarding the conversion rate of Leads. Provider's obligation is to deliver qualified inbound Leads meeting the definition in §2. Whether a Lead results in a scheduled appointment, signed contract, or completed job is solely the responsibility of Client's sales and operations team.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§9 · Confidentiality</div>
-  <div class="cl-head">Lead data stays private</div>
-  <div class="cl-body">
-    Each Party agrees to keep Lead data (homeowner names, addresses, phone numbers, and project details) confidential and to use it solely for the purposes of this Agreement. Client will not resell, share, or distribute Lead data to any third party. Provider will not disclose Client's lead volume, close rates, or pricing to any competitor. This obligation survives termination.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§10 · Term &amp; Termination</div>
-  <div class="cl-head">Month-to-month · 30 days written notice · Data return</div>
-  <div class="cl-body">
-    This Agreement begins on the Effective Date and continues on a <strong>month-to-month basis</strong> following the Pilot Period. Either Party may terminate by providing <strong>thirty (30) days written notice</strong> via email to the other Party's address on file.
-    <br><br>
-    Upon termination: (a) Provider will cease delivering Leads, (b) all invoices for Leads delivered prior to termination remain due and payable under the payment terms, (c) any pending disputes will be resolved under the normal process, and (d) Client will cease using all delivered Lead data within 90 days and, upon written request, certify in writing that all Lead data has been deleted. Provider will supply a final CSV export of all Leads delivered during the term within 14 business days of termination. There are no early-termination penalties.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§11 · Limitation of Liability</div>
-  <div class="cl-head">Provider liability capped at fees paid in prior 30 days</div>
-  <div class="cl-body">
-    Provider's maximum aggregate liability to Client under this Agreement shall not exceed the <strong>total amount of fees actually paid by Client to Provider in the thirty (30) days immediately preceding the event giving rise to the claim</strong>. In no event shall either Party be liable for indirect, incidental, consequential, special, or punitive damages, including but not limited to lost profits, lost revenue, or damage to goodwill, even if advised of the possibility of such damages.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§12 · Force Majeure</div>
-  <div class="cl-head">Search algorithm changes, outages, and events outside Provider's control</div>
-  <div class="cl-body">
-    Provider will not be liable for any failure or delay in Lead delivery caused by circumstances beyond its reasonable control, including but not limited to: search engine algorithm updates, domain deindexation, Google penalties, natural disasters, or internet outages ("Force Majeure Event").
-    <br><br>
-    Provider will notify Client within <strong>7 business days</strong> of becoming aware of any Force Majeure Event that is materially disrupting Lead delivery volume. If Provider is unable to deliver Leads for more than <strong>30 consecutive days</strong> due to a Force Majeure Event, either Party may terminate this Agreement in writing with no further obligation or penalty.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§13 · Governing Law</div>
-  <div class="cl-head">State of Texas — Bexar County</div>
-  <div class="cl-body">
-    This Agreement shall be governed by and construed in accordance with the laws of the <strong>State of Texas</strong>, without regard to its conflict of law provisions. Any disputes that cannot be resolved informally shall be brought in the state or federal courts located in Bexar County, Texas.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§14 · TCPA Compliance</div>
-  <div class="cl-head">Consent and telecommunications law</div>
-  <div class="cl-body">
-    Provider represents that all Leads are generated from opt-in web forms that include written consent language disclosing that the homeowner may be contacted by a licensed pool contractor regarding their inquiry — sufficient to constitute prior express written consent under current TCPA and FCC standards. Provider's lead capture forms include the following or substantially similar disclosure:
-    <br><br>
-    <em>"By submitting this form, you agree to be contacted by a licensed pool contractor in your area. You may receive calls, texts, or emails at the information provided. Consent is not a condition of purchase. Reply STOP to opt out of text messages."</em>
-    <br><br>
-    Client acknowledges its independent responsibility for complying with all applicable telecommunications laws when contacting Leads, including but not limited to: the Telephone Consumer Protection Act (TCPA), applicable FCC regulations, the National Do Not Call Registry, restrictions on the use of automated telephone dialing systems (ATDS) or pre-recorded messages, and any applicable state-level telemarketing laws. Client is solely responsible for its own outreach practices, including call frequency, use of autodialers, and honoring all opt-out requests.
-  </div>
-</div>
-
-
-<div class="clause">
-  <div class="cl-num">§15 · Entire Agreement</div>
-  <div class="cl-head">This document supersedes all prior discussions</div>
-  <div class="cl-body">
-    This Agreement, together with the accompanying Proposal document, constitutes the entire agreement between the Parties regarding lead generation services and supersedes all prior or contemporaneous negotiations, representations, or agreements, whether written or oral. Modifications must be made in writing and signed by both Parties.
-  </div>
-</div>
-
-
-<!-- SIGNATURE BLOCK -->
-<div class="sig-block">
-  <div class="sig-title">Signatures — By signing below, each Party agrees to all terms in this Agreement</div>
-  <div class="sig-grid">
-
-    <div>
-      <div class="sig-party-name">Iron Tiger Digital (Provider)</div>
-      <div class="sig-line"></div>
-      <div class="sig-line-label">Signature</div>
-      <div class="sig-line"></div>
-      <div class="sig-line-label">Printed Name</div>
-      <div class="sig-line"></div>
-      <div class="sig-line-label">Title</div>
-      <div class="sig-line"></div>
-      <div class="sig-line-label">Date</div>
+  <!-- ─── 1. PARTIES ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 1</div>
+    <div class="cl-head">Parties &amp; Effective Date</div>
+    <div class="cl-body">
+      This Lead Generation Service Agreement ("Agreement") is entered into as of <strong>[Date]</strong> by and between <strong>Costa Demetral d/b/a Iron Tiger Digital</strong>, a sole proprietor operating as Iron Tiger Digital, with principal contact at costa@irontigerleads.com and (225) 535-4918 ("Provider"), and <strong>Keith Zars Pools</strong> ("Client"). Provider and Client are each referred to individually as a "Party" and collectively as the "Parties."
     </div>
-
-    <div>
-      <div class="sig-party-name">Keith Zars Pools (Client)</div>
-      <div class="sig-line"></div>
-      <div class="sig-line-label">Signature</div>
-      <div class="sig-line"></div>
-      <div class="sig-line-label">Printed Name</div>
-      <div class="sig-line"></div>
-      <div class="sig-line-label">Title</div>
-      <div class="sig-line"></div>
-      <div class="sig-line-label">Date</div>
-    </div>
-
   </div>
-</div>
 
+
+  <!-- ─── 2. PILOT PERIOD ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 2</div>
+    <div class="cl-head">Pilot Period &amp; Exit Clause</div>
+    <div class="cl-body">
+      <strong>Pilot Period.</strong> The first 30 days of this Agreement constitute a Pilot Period. During the Pilot Period, Provider will deliver up to ten (10) Leads at the standard rate of $500 per Lead. No retainer or minimum purchase is required.<br><br>
+      <strong>Pilot Exit.</strong> If fewer than three (3) of the first ten (10) Leads delivered result in a Booked Appointment within thirty (30) days of the first Lead delivery, Client may terminate this Agreement immediately upon written notice to Provider with no further financial obligation beyond Leads already invoiced and unpaid. No wind-down fees, penalties, or additional invoices will apply. If three (3) or more Booked Appointments are confirmed within the Pilot Period, the Agreement continues automatically on a month-to-month basis per Section 11.<br><br>
+      <strong>"Booked Appointment" defined.</strong> A Booked Appointment means a confirmed, scheduled on-site consultation or project estimate with the homeowner, communicated to Provider by Client via email within seven (7) days of the appointment occurring. Client agrees to report Booked Appointments in good faith as a condition of invoking the Pilot Exit clause.
+    </div>
+  </div>
+
+
+  <!-- ─── 3. DEFINITIONS ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 3</div>
+    <div class="cl-head">Lead Definition</div>
+    <div class="cl-body">
+      A <strong>"Lead"</strong> is an inbound form submission or phone inquiry originating from Provider's lead generation website(s), from a homeowner located within the agreed Service Territory, expressing genuine interest in new pool construction or major pool renovation. A valid Lead must include: (a) a full name, (b) a working contact phone number, and (c) a service address within the Service Territory. Leads that fail to meet these criteria are subject to the dispute process in Section 8.
+    </div>
+  </div>
+
+
+  <!-- ─── 4. DELIVERY ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 4</div>
+    <div class="cl-head">Delivery Process</div>
+    <div class="cl-body">
+      Provider will deliver each Lead to Client via email within <strong>one (1) hour</strong> of receipt during business hours (8 AM–8 PM CT, Monday–Friday). Each delivery will include, to the extent available: full name, phone number, email address, service address, project description, and submission timestamp. Leads received outside business hours may be delivered on the next business morning. For any phone Lead disputed under Section 8, Provider will supply the call recording within <strong>three (3) business days</strong> of a written request.<br><br>
+      <strong>Audit access.</strong> Client may at any time request a written log of all Leads delivered under this Agreement. Provider will supply a complete delivery log within five (5) business days of a written request.
+    </div>
+  </div>
+
+
+  <!-- ─── 5. SERVICE TERRITORY ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 5</div>
+    <div class="cl-head">Service Territory</div>
+    <div class="cl-body">
+      Provider will deliver Leads originating from homeowners located within <strong>100 miles of San Antonio, Texas</strong>, which includes but is not limited to: San Antonio metro, New Braunfels, Corpus Christi, Seguin, Boerne, Kerrville, and surrounding communities. Leads from addresses clearly outside this territory are disputable under Section 8.
+    </div>
+  </div>
+
+
+  <!-- ─── 6. EXCLUSIVITY + IP ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 6</div>
+    <div class="cl-head">Exclusivity &amp; Intellectual Property</div>
+    <div class="cl-body">
+      Once a Lead is delivered to Client, Provider will not sell, transfer, or share that same Lead with any other contractor or third party. Client acknowledges that homeowners may independently contact other contractors; however, Provider's exclusive obligation is to deliver each Lead to Client only through Provider's distribution channels.<br><br>
+      <strong>IP ownership.</strong> All websites, domain names, content, and organic search rankings used to generate Leads remain the sole property of Provider at all times. This Agreement does not transfer, license, or assign any ownership in Provider's websites or digital assets to Client. Termination of this Agreement does not grant Client any right to replicate or acquire those assets.
+    </div>
+  </div>
+
+
+  <!-- ─── 7. FEES + PAYMENT ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 7</div>
+    <div class="cl-head">Fees &amp; Payment</div>
+    <div class="cl-body">
+      Client agrees to pay Provider <strong>$500 (USD) per delivered Lead</strong>. Provider will issue a weekly invoice every Friday covering all Leads delivered during that calendar week. Payment is due <strong>Net-15</strong> from the invoice date via ACH bank transfer. There is no setup fee, no monthly retainer, and no minimum volume commitment.<br><br>
+      Invoices unpaid after 30 days from the due date may accrue interest at 1.5% per month on the outstanding balance. Client may indicate a preferred payment method (ACH, Bill.com, or Melio) when returning the signed Agreement — Provider will accommodate at no additional cost.
+    </div>
+  </div>
+
+
+  <!-- ─── 8. DISPUTE PROCESS ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 8</div>
+    <div class="cl-head">Dispute Process</div>
+    <div class="cl-body">
+      Client must raise any dispute within <strong>fourteen (14) calendar days</strong> of Lead delivery by emailing costa@irontigerleads.com with the Lead name, delivery date, and reason for dispute.<br><br>
+      <strong>Eligible dispute reasons:</strong> (a) wrong or disconnected phone number, (b) service address clearly outside the defined territory, or (c) exact duplicate of a Lead already delivered and billed in the same calendar month.<br><br>
+      If Provider accepts the dispute, a <strong>credit equal to $500</strong> will be applied to Client's next weekly invoice. No cash refunds will be issued. Disputes not raised within 14 calendar days are deemed waived. Disputes based on failed close, homeowner unavailability, or competitive loss are not eligible.<br><br>
+      If a dispute credit is issued, Client agrees to delete the disputed Lead data from its records within 30 days and not use it for further marketing or outreach.
+    </div>
+  </div>
+
+
+  <!-- ─── 9. NO CONVERSION GUARANTEE ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 9</div>
+    <div class="cl-head">No Conversion Guarantee</div>
+    <div class="cl-body">
+      Provider makes no representation or warranty regarding the conversion rate of Leads. Provider's obligation is to deliver qualified inbound Leads meeting the definition in Section 3. Whether a Lead results in a scheduled appointment, signed contract, or completed job is solely the responsibility of Client's sales and operations team.
+    </div>
+  </div>
+
+
+  <!-- ─── 10. CONFIDENTIALITY ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 10</div>
+    <div class="cl-head">Confidentiality</div>
+    <div class="cl-body">
+      Each Party agrees to keep Lead data (including homeowner names, addresses, phone numbers, and project details) confidential and to use it solely for the purposes of this Agreement. Client will not resell, share, or distribute Lead data to any third party. Provider will not disclose Client's lead volume, close rates, or pricing to any competitor. This obligation survives termination of this Agreement.
+    </div>
+  </div>
+
+
+  <!-- ─── 11. TERM + TERMINATION ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 11</div>
+    <div class="cl-head">Term &amp; Termination</div>
+    <div class="cl-body">
+      This Agreement begins on the Effective Date and continues on a <strong>month-to-month basis</strong> following the Pilot Period (Section 2). Either Party may terminate by providing <strong>thirty (30) days written notice</strong> via email to the other Party's address on file. There are no early-termination penalties.<br><br>
+      <strong>Upon termination:</strong> (a) Provider will cease delivering Leads; (b) all invoices for Leads delivered prior to the termination effective date remain due and payable per the payment terms in Section 7; (c) any pending disputes will be resolved under Section 8; and (d) each Party will delete or return the other Party's confidential data within <strong>thirty (30) days</strong>. On request, either Party will provide written confirmation that data has been deleted.
+    </div>
+  </div>
+
+
+  <!-- ─── 12. FORCE MAJEURE ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 12</div>
+    <div class="cl-head">Force Majeure</div>
+    <div class="cl-body">
+      Neither Party will be liable for delays or failures in performance resulting from causes beyond its reasonable control, including but not limited to: algorithm changes by search engines materially reducing lead flow, acts of God, government actions, internet service disruptions, or platform outages. Provider will notify Client in writing within five (5) business days if a force majeure event materially affects Lead delivery volume. During a force majeure period, billing will reflect only Leads actually delivered. Either Party may terminate with immediate written notice if a force majeure event persists for more than sixty (60) days.
+    </div>
+  </div>
+
+
+  <!-- ─── 13. LIMITATION OF LIABILITY ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 13</div>
+    <div class="cl-head">Limitation of Liability</div>
+    <div class="cl-body">
+      Provider's maximum aggregate liability to Client under this Agreement shall not exceed the <strong>total fees paid by Client to Provider in the thirty (30) days immediately preceding the event giving rise to the claim</strong>. In no event shall either Party be liable to the other for indirect, incidental, consequential, special, or punitive damages, including but not limited to lost profits, lost revenue, or damage to goodwill, even if advised of the possibility of such damages.
+    </div>
+  </div>
+
+
+  <!-- ─── 14. TCPA COMPLIANCE ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 14</div>
+    <div class="cl-head">TCPA Compliance</div>
+    <div class="cl-body">
+      Provider represents that all Leads are generated from opt-in web forms that include written consent disclosing that the homeowner may be contacted by a licensed pool contractor — sufficient to constitute prior express written consent under current TCPA and FCC standards. Provider's lead capture forms include the following or substantially similar disclosure: <em>"By submitting this form, you agree to be contacted by a licensed pool contractor in your area. You may receive calls, texts, or emails at the information provided. Consent is not a condition of purchase. Reply STOP to opt out of text messages."</em><br><br>
+      Client acknowledges its independent responsibility for complying with all applicable telecommunications laws when contacting Leads, including but not limited to: the Telephone Consumer Protection Act (TCPA), applicable FCC regulations, the National Do Not Call Registry, restrictions on the use of automated telephone dialing systems (ATDS) or pre-recorded messages, and any applicable state-level telemarketing laws. Client is solely responsible for its own outreach practices, including call frequency, use of autodialers, and ensuring compliance with all opt-out requests received from homeowners.
+    </div>
+  </div>
+
+
+  <!-- ─── 15. GOVERNING LAW ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 15</div>
+    <div class="cl-head">Governing Law</div>
+    <div class="cl-body">
+      This Agreement is governed by and construed in accordance with the laws of the <strong>State of Texas</strong>, without regard to its conflict of law provisions. Any disputes that cannot be resolved informally shall be brought in the state or federal courts located in Bexar County, Texas.
+    </div>
+  </div>
+
+
+  <!-- ─── 16. ENTIRE AGREEMENT ─── -->
+  <div class="clause">
+    <div class="cl-num">Section 16</div>
+    <div class="cl-head">Entire Agreement</div>
+    <div class="cl-body">
+      This Agreement, together with the Lead Generation Proposal dated May 2026, constitutes the entire agreement between the Parties and supersedes all prior negotiations, representations, or agreements, whether written or oral. Modifications must be made in writing and signed by both Parties.
+    </div>
+  </div>
+
+
+  <!-- ─── SIGNATURE BLOCK ─── -->
+  <div class="sig-block">
+    <div class="sig-title">Signatures — By signing below, each Party agrees to the terms above</div>
+    <div class="sig-grid">
+
+      <div>
+        <div class="sig-party-name">Iron Tiger Digital (Provider)</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Signature</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Printed Name</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Title</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Date</div>
+      </div>
+
+      <div>
+        <div class="sig-party-name">Keith Zars Pools (Client)</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Signature</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Printed Name</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Title</div>
+        <div class="sig-line"></div>
+        <div class="sig-line-label">Date</div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /terms-doc -->
 
 </div><!-- /wrap -->
 

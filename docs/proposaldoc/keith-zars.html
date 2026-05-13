@@ -36,6 +36,7 @@ body {
 }
 .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.25rem 4rem; }
 
+/* ─── HEADER ─── */
 header {
   background: var(--dark);
   color: #fff;
@@ -50,8 +51,14 @@ header .eyebrow {
   opacity: .7;
   margin-bottom: .3rem;
 }
-header h1 { margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
+header h1 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
 
+/* ─── HERO ─── */
 .hero {
   background: linear-gradient(135deg, var(--green), var(--green-dark));
   color: #fff;
@@ -72,9 +79,19 @@ header h1 { margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -.0
   text-transform: uppercase;
   margin-bottom: .85rem;
 }
-.hero h2 { margin: 0 0 .4rem; font-size: 1.85rem; font-weight: 800; letter-spacing: -.025em; }
-.hero p { margin: 0; opacity: .92; font-size: 1rem; }
+.hero h2 {
+  margin: 0 0 .4rem;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+.hero p {
+  margin: 0;
+  opacity: .92;
+  font-size: 1rem;
+}
 
+/* ─── CARDS ─── */
 .card {
   background: #fff;
   border: 1px solid var(--border);
@@ -94,7 +111,12 @@ header h1 { margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -.0
 .card p { margin: 0 0 .75rem; font-size: .95rem; color: var(--text); }
 .card p:last-child { margin-bottom: 0; }
 
-.summary-list { list-style: none; margin: 0; padding: 0; }
+/* ─── DEAL SUMMARY BULLETS ─── */
+.summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .summary-list li {
   display: flex;
   align-items: flex-start;
@@ -117,66 +139,198 @@ header h1 { margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -.0
 }
 .summary-list .s-val { flex: 1; }
 
+/* ─── ROI TABLE ─── */
 .roi-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: .75rem;
   margin-bottom: 1rem;
 }
-@media (max-width: 520px) { .roi-grid { grid-template-columns: 1fr; } }
-.roi-cell { border: 1.5px solid var(--border); border-radius: 10px; padding: .9rem 1rem; text-align: center; }
-.roi-cell.highlight { border-color: var(--green); background: var(--light); }
-.roi-cell .roi-val { font-size: 1.6rem; font-weight: 800; color: var(--dark); letter-spacing: -.03em; line-height: 1; }
+@media (max-width: 520px) {
+  .roi-grid { grid-template-columns: 1fr; }
+}
+.roi-cell {
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: .9rem 1rem;
+  text-align: center;
+}
+.roi-cell.highlight {
+  border-color: var(--green);
+  background: var(--light);
+}
+.roi-cell .roi-val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+  line-height: 1;
+}
 .roi-cell.highlight .roi-val { color: var(--green-dark); }
-.roi-cell .roi-label { font-size: .75rem; color: var(--gray); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-top: .3rem; }
-.roi-note { background: var(--badge-bg); border: 1px solid var(--green); border-radius: 10px; padding: .8rem 1rem; font-size: .88rem; color: var(--green-dark); font-weight: 600; }
+.roi-cell .roi-label {
+  font-size: .75rem;
+  color: var(--gray);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-top: .3rem;
+}
+.roi-note {
+  background: var(--badge-bg);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  padding: .8rem 1rem;
+  font-size: .88rem;
+  color: var(--green-dark);
+  font-weight: 600;
+}
 
+/* ─── STEPS ─── */
 .steps { list-style: none; margin: 0; padding: 0; }
-.steps li { display: flex; gap: .9rem; align-items: flex-start; margin-bottom: .85rem; font-size: .95rem; }
+.steps li {
+  display: flex;
+  gap: .9rem;
+  align-items: flex-start;
+  margin-bottom: .85rem;
+  font-size: .95rem;
+}
 .steps li:last-child { margin-bottom: 0; }
-.step-num { flex: 0 0 28px; height: 28px; background: var(--green); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 800; flex-shrink: 0; margin-top: .1rem; }
+.step-num {
+  flex: 0 0 28px;
+  height: 28px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: .1rem;
+}
 .steps li .step-body { flex: 1; }
 .steps li .step-body strong { display: block; font-weight: 700; margin-bottom: .15rem; color: var(--dark); }
 .steps li .step-body span { color: var(--gray); font-size: .88rem; }
 
-.quality-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
-@media (max-width: 480px) { .quality-grid { grid-template-columns: 1fr; } }
-.quality-cell { border: 1px solid var(--border); border-radius: 10px; padding: .85rem 1rem; }
-.quality-cell .qc-head { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--green-dark); margin-bottom: .3rem; }
-.quality-cell .qc-body { font-size: .88rem; color: var(--gray); line-height: 1.45; }
-.dispute-box { background: #fff8ed; border: 1.5px solid #f5a623; border-radius: 10px; padding: .9rem 1rem; margin-top: .85rem; font-size: .9rem; color: #7a5200; }
+/* ─── QUALITY GRID ─── */
+.quality-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+@media (max-width: 480px) {
+  .quality-grid { grid-template-columns: 1fr; }
+}
+.quality-cell {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .85rem 1rem;
+}
+.quality-cell .qc-head {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--green-dark);
+  margin-bottom: .3rem;
+}
+.quality-cell .qc-body {
+  font-size: .88rem;
+  color: var(--gray);
+  line-height: 1.45;
+}
+.dispute-box {
+  background: #fff8ed;
+  border: 1.5px solid #f5a623;
+  border-radius: 10px;
+  padding: .9rem 1rem;
+  margin-top: .85rem;
+  font-size: .9rem;
+  color: #7a5200;
+}
 .dispute-box strong { color: #5a3800; }
 
-.payment-card { background: var(--badge-bg); border: 1.5px solid var(--green); border-radius: 12px; padding: 1.1rem 1.2rem; margin-top: .85rem; }
-.payment-card .pc-head { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--green-dark); margin-bottom: .4rem; }
-.payment-card .pc-body { font-size: .9rem; color: var(--text); line-height: 1.55; }
-.payment-card .pc-alt { font-size: .82rem; color: var(--gray); margin-top: .5rem; }
+/* ─── PAYMENT INFO ─── */
+.payment-card {
+  background: var(--badge-bg);
+  border: 1.5px solid var(--green);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  margin-top: .85rem;
+}
+.payment-card .pc-head {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--green-dark);
+  margin-bottom: .4rem;
+}
+.payment-card .pc-body {
+  font-size: .9rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+.payment-card .pc-alt {
+  font-size: .82rem;
+  color: var(--gray);
+  margin-top: .5rem;
+}
 
-.terms-cta {
+/* ─── CTA ─── */
+.cta-card {
   background: var(--dark);
+  color: #fff;
   border-radius: 14px;
   padding: 1.75rem 1.6rem;
-  text-align: center;
   margin-bottom: 1.1rem;
+  text-align: center;
 }
-.terms-cta p { color: rgba(255,255,255,.75); font-size: .92rem; margin: 0 0 1.1rem; }
-.terms-cta a {
+.cta-card h3 {
+  margin: 0 0 .5rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -.015em;
+}
+.cta-card p {
+  margin: 0 0 1.25rem;
+  opacity: .82;
+  font-size: .9rem;
+}
+.cta-btn {
   display: inline-block;
   background: var(--green);
   color: #fff;
   text-decoration: none;
+  padding: .75rem 2rem;
+  border-radius: 10px;
   font-weight: 700;
   font-size: .95rem;
-  padding: .75rem 1.75rem;
-  border-radius: 10px;
   letter-spacing: -.01em;
 }
-.terms-cta a:hover { background: var(--green-dark); }
-.terms-cta .terms-note { font-size: .78rem; color: rgba(255,255,255,.45); margin: .85rem 0 0; }
 
-footer { text-align: center; font-size: .78rem; color: var(--gray); margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+/* ─── FOOTER ─── */
+footer {
+  text-align: center;
+  font-size: .78rem;
+  color: var(--gray);
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
 footer strong { color: var(--green-dark); }
-.date-badge { display: inline-block; background: var(--badge-bg); color: var(--badge-color); padding: .15rem .55rem; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .04em; }
+
+.date-badge {
+  display: inline-block;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  padding: .15rem .55rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
 
 @media print {
   body { background: #fff; }
@@ -189,7 +343,7 @@ footer strong { color: var(--green-dark); }
 
 <header>
   <div class="eyebrow">Iron Tiger Digital × Keith Zars Pools</div>
-  <h1>Lead Generation Proposal — New Pool Construction</h1>
+  <h1>Lead Generation Proposal — New Pool Construction · San Antonio Region</h1>
 </header>
 
 <div class="wrap">
@@ -201,28 +355,34 @@ footer strong { color: var(--green-dark); }
 </div>
 
 
+<!-- ═══════════════════════════════════
+     PILOT PROGRAM
+═══════════════════════════════════ -->
 <div class="card" style="border-color:var(--green);background:var(--light);">
   <h3>Pilot Program — 30-Day Performance Test</h3>
-  <p style="font-size:.95rem;color:var(--text);margin-bottom:.75rem;"><strong>The offer:</strong> Keith Zars enters as a pilot client for the first 30 days. Iron Tiger delivers up to 10 leads at the standard $500 rate. No retainer, no long-term commitment — a live market test with a defined exit.</p>
-  <p style="font-size:.88rem;color:var(--gray);margin-bottom:.85rem;"><strong>The exit clause (binding — see Service Terms §0):</strong> If fewer than 3 of the first 10 leads result in a booked appointment within 30 days, Keith Zars may exit with no further obligation — no wind-down fees, no additional invoices. A "booked appointment" means a confirmed, scheduled in-person site visit with the homeowner. If 3+ appointments are booked, the full agreement continues month-to-month automatically.</p>
-  <div class="roi-note" style="margin:0;">Maximum first-month exposure: <strong>$5,000</strong> (10 leads × $500). One new pool build at $50k–$150k pays that back 10–30×. If we don't perform, you don't stay.</div>
+  <p style="font-size:.95rem;color:var(--text);margin-bottom:.75rem;"><strong>The offer:</strong> Keith Zars enters as a pilot client for the first 30 days. Iron Tiger delivers up to 10 leads at the standard $500 rate. No retainer, no long-term commitment — just a live market test with a defined exit.</p>
+  <p style="font-size:.88rem;color:var(--gray);margin-bottom:.85rem;"><strong>The exit clause:</strong> If fewer than 3 of the first 10 leads result in a booked appointment within 30 days, Keith Zars may exit with no further obligation — no wind-down fees, no additional invoices. If 3+ appointments are booked, the full agreement continues automatically. This exit clause is binding and captured in the Service Terms.</p>
+  <div class="roi-note" style="margin:0;">Maximum first-month exposure: <strong>$5,000</strong> (10 leads × $500). One new pool build at $50k–$150k pays that back 10–30×. This isn't a free trial — it's a performance-backed test at a defined cost and a defined exit. If we don't perform, you don't stay.</div>
 </div>
 
 
+<!-- ═══════════════════════════════════
+     SECTION 1: DEAL SUMMARY
+═══════════════════════════════════ -->
 <div class="card">
   <h3>Section 1 — Deal Summary</h3>
   <ul class="summary-list">
     <li>
       <span class="s-label">What it is</span>
-      <span class="s-val">Iron Tiger Digital delivers inbound homeowner leads from <strong>alamopoolresurfacing.com</strong> — homeowners searching for new pool construction in the San Antonio / New Braunfels / Corpus Christi area who submitted a contact form. Keith Zars Pools receives each lead exclusively.</span>
+      <span class="s-val">Iron Tiger Digital delivers inbound homeowner leads from <strong>alamopoolresurfacing.com</strong> — homeowners who searched for new pool construction in the San Antonio / New Braunfels / Corpus Christi area and submitted a contact form. Keith Zars Pools receives each lead exclusively.</span>
     </li>
     <li>
       <span class="s-label">Cost</span>
-      <span class="s-val"><strong>$500 per delivered lead.</strong> Invoiced weekly. No setup fee, no monthly retainer, no minimum volume commitment.</span>
+      <span class="s-val"><strong>$500 per delivered lead.</strong> Invoiced weekly in batches. No setup fee, no monthly retainer, no minimum volume commitment.</span>
     </li>
     <li>
       <span class="s-label">Billing</span>
-      <span class="s-val">Net-15 from invoice date. Payment via ACH bank transfer — no new accounts required. Melio or Bill.com if Keith Zars uses AP automation.</span>
+      <span class="s-val">Net-15 from invoice date. Payment via ACH bank transfer — Iron Tiger emails a standard invoice every Friday with banking details. No new accounts required on Keith Zars' side.</span>
     </li>
     <li>
       <span class="s-label">Disputes</span>
@@ -230,40 +390,63 @@ footer strong { color: var(--green-dark); }
     </li>
     <li>
       <span class="s-label">Exit</span>
-      <span class="s-val">Month-to-month after pilot. Either party terminates with <strong>30 days written notice</strong>. No penalties, no wind-down fees.</span>
+      <span class="s-val">Month-to-month. Either party terminates with <strong>30 days written notice</strong>. No penalties, no wind-down fees.</span>
     </li>
   </ul>
 </div>
 
 
+<!-- ═══════════════════════════════════
+     SECTION 2: ROI MATH
+═══════════════════════════════════ -->
 <div class="card">
   <h3>Section 2 — ROI Math</h3>
-  <p style="font-size:.9rem;color:var(--gray);margin-bottom:1rem;">Keith Zars already runs Google and Facebook campaigns. Cost-per-lead on those channels ranges <strong>$10–$1,000</strong> depending on competition and conversion rate.</p>
+
+  <p style="font-size:.9rem;color:var(--gray);margin-bottom:1rem;">Keith Zars already runs Google and Facebook campaigns. Cost-per-lead on those channels ranges <strong>$10–$1,000</strong> depending on competition and conversion rate. Here's how this compares on a new pool build.</p>
+
   <div class="roi-grid">
-    <div class="roi-cell"><div class="roi-val">$500</div><div class="roi-label">Our flat rate</div></div>
-    <div class="roi-cell"><div class="roi-val">$50k–$150k</div><div class="roi-label">Avg new pool build</div></div>
-    <div class="roi-cell highlight"><div class="roi-val">&lt;1%</div><div class="roi-label">Lead cost vs. job value</div></div>
+    <div class="roi-cell">
+      <div class="roi-val">$500</div>
+      <div class="roi-label">Our flat rate</div>
+    </div>
+    <div class="roi-cell">
+      <div class="roi-val">$50k–$150k</div>
+      <div class="roi-label">Avg new pool build</div>
+    </div>
+    <div class="roi-cell highlight">
+      <div class="roi-val">&lt;1%</div>
+      <div class="roi-label">Lead cost vs. job value</div>
+    </div>
   </div>
-  <div class="roi-note">Fixed $500 for an inbound homeowner who searched, found the site, and filled out a form. Inbound intent. Predictable unit economics.</div>
-  <p style="margin-top:1rem;font-size:.82rem;color:var(--gray);margin-bottom:.6rem;">Stress-test at two close rates:</p>
+
+  <div class="roi-note">
+    You're already paying for leads — Google and Facebook just give you a variable, unpredictable rate. This gives you a <strong>fixed $500</strong> for an inbound homeowner who searched, found the site, and filled out a form. Inbound intent. Predictable unit economics.
+  </div>
+
+  <p style="margin-top:1rem;font-size:.82rem;color:var(--gray);margin-bottom:.6rem;">Stress-test at two close rates — even the conservative case is well within normal high-ticket home services CPA:</p>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-bottom:.85rem;">
     <div style="background:var(--badge-bg);border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.78rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;">Scenario</div>
     <div style="background:var(--badge-bg);border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.78rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;">Leads / job</div>
     <div style="background:var(--badge-bg);border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.78rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;">Lead cost / job</div>
     <div style="background:var(--badge-bg);border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.78rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;">CAC % of job</div>
+
     <div style="border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.88rem;color:var(--text);">25% close rate</div>
     <div style="border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.88rem;color:var(--text);">4 leads</div>
     <div style="border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.88rem;color:var(--text);">$2,000</div>
     <div style="border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.88rem;font-weight:700;color:var(--green-dark);">4% of $50k job</div>
+
     <div style="border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.88rem;color:var(--text);">10% close rate <em style="font-size:.78rem;">(conservative)</em></div>
     <div style="border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.88rem;color:var(--text);">10 leads</div>
     <div style="border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.88rem;color:var(--text);">$5,000</div>
     <div style="border:1px solid var(--border);border-radius:8px;padding:.65rem .75rem;font-size:.88rem;font-weight:700;color:var(--green-dark);">10% of $50k job</div>
   </div>
-  <p style="font-size:.82rem;color:var(--gray);margin:0;">Industry benchmark for high-ticket home services: 8–15% CAC as a % of job value. Even at worst-case above, this channel is at the low end of normal.</p>
+  <p style="font-size:.82rem;color:var(--gray);margin:0;">Industry benchmark for high-ticket home services (Google Ads): 8–15% CAC as a % of job value. At the worst-case scenario above, this channel is still at the low end of normal.</p>
 </div>
 
 
+<!-- ═══════════════════════════════════
+     SECTION 3: HOW IT WORKS
+═══════════════════════════════════ -->
 <div class="card">
   <h3>Section 3 — How It Works</h3>
   <ol class="steps">
@@ -278,65 +461,78 @@ footer strong { color: var(--green-dark); }
       <span class="step-num">2</span>
       <div class="step-body">
         <strong>Iron Tiger delivers a full lead packet within 1 hour</strong>
-        <span>Keith Zars Pools receives an email with: full name, service address, phone number, email (if provided), project description, and submission timestamp. No portal login. Straight to your inbox. A shared lead delivery log (read-only Google Sheet) is available on request. For any disputed phone lead, Iron Tiger provides the call recording within <strong>3 business days</strong> of a written request.</span>
+        <span>Keith Zars Pools receives an email with the complete lead record: full name, service address, phone number, email (if provided), project description, and timestamp of submission. No portal login. Straight to your inbox. A shared lead delivery log (read-only Google Sheet) is available on request — every lead, timestamped, with dispute status tracked in real time. For any phone lead disputed under the Service Terms, Iron Tiger will provide the call recording within <strong>3 business days</strong> of a written request.</span>
       </div>
     </li>
     <li>
       <span class="step-num">3</span>
       <div class="step-body">
         <strong>Keith Zars follows up and closes the job</strong>
-        <span>The lead is <strong>exclusively yours</strong> from the moment it's delivered. Iron Tiger does not send the same lead to any other contractor.</span>
+        <span>The lead is <strong>exclusively yours</strong> from the moment it's delivered. Iron Tiger does not send the same lead to any other contractor. Your team calls, books the appointment, and closes the deal.</span>
       </div>
     </li>
     <li>
       <span class="step-num">4</span>
       <div class="step-body">
         <strong>Iron Tiger invoices $500/lead weekly via ACH</strong>
-        <span>Every Friday, Iron Tiger emails an invoice for all leads delivered that week. Keith Zars has 15 days to pay via ACH — routing and account details are in the first invoice. Disputed leads are resolved before the invoice is due.</span>
+        <span>Every Friday, Iron Tiger emails an invoice for all leads delivered that week. Keith Zars has 15 days to pay via ACH bank transfer — routing and account details are provided with the first invoice. Any disputed leads from that batch are resolved before the invoice is due.</span>
       </div>
     </li>
   </ol>
 </div>
 
 
+<!-- ═══════════════════════════════════
+     SECTION 4: LEAD QUALITY + PAYMENT
+═══════════════════════════════════ -->
 <div class="card">
   <h3>Section 4 — Lead Quality &amp; Payment</h3>
-  <p style="font-size:.92rem;color:var(--text);margin-bottom:1rem;"><strong>A valid lead:</strong> inbound form submission or phone call from a homeowner within the service territory (San Antonio metro, New Braunfels, Corpus Christi, within 100 miles), with a working phone number, expressing interest in a new pool build or major pool renovation.</p>
+
+  <p style="font-size:.92rem;color:var(--text);margin-bottom:1rem;"><strong>A valid lead is defined as:</strong> an inbound form submission or phone call from a homeowner located within the service territory (San Antonio metro, New Braunfels, Corpus Christi, and surrounding areas within 100 miles), with a working phone number, expressing interest in a new pool build or major pool renovation.</p>
+
   <div class="quality-grid">
     <div class="quality-cell">
       <div class="qc-head">Valid — you pay</div>
-      <div class="qc-body">Real name and working phone. Within territory. Inbound homeowner intent. Not a prior duplicate this billing period.</div>
+      <div class="qc-body">Real name and working phone. Within territory. Inbound homeowner intent. Not a prior duplicate in this billing period.</div>
     </div>
     <div class="quality-cell">
       <div class="qc-head">Disputable — credit issued</div>
-      <div class="qc-body">Wrong/disconnected number. Address outside 100-mile territory. Exact duplicate of a lead already delivered. Obvious spam or bot.</div>
+      <div class="qc-body">Wrong/disconnected number. Address clearly outside 100-mile territory. Exact duplicate of a lead already delivered. Obvious spam or bot submission.</div>
     </div>
     <div class="quality-cell">
       <div class="qc-head">Not disputable</div>
-      <div class="qc-body">Lead didn't answer. Lead chose a competitor. Lead changed their mind. Low budget. Sales outcomes, not lead quality failures.</div>
+      <div class="qc-body">Lead didn't answer the phone. Lead chose a competitor. Lead changed their mind. Low budget. These are sales outcomes, not lead quality failures.</div>
     </div>
     <div class="quality-cell">
       <div class="qc-head">No conversion guarantee</div>
-      <div class="qc-body">Iron Tiger delivers qualified inbound intent. Closing is Keith Zars' operation.</div>
+      <div class="qc-body">Iron Tiger delivers qualified inbound intent. It does not guarantee that any lead will close — closing is Keith Zars' operation.</div>
     </div>
   </div>
+
   <div class="dispute-box">
-    <strong>Dispute window: 14 calendar days from delivery.</strong> Flag via email to <strong>costa@irontigerleads.com</strong> with the lead name and reason. Credit applied to the next weekly invoice — no cash refunds.
+    <strong>Dispute window: 14 calendar days from delivery.</strong> Flag via email to <strong>costa@irontigerleads.com</strong> with the lead name and reason. Credit is applied to the <em>next</em> weekly invoice — no cash refunds. Disputes not raised within 14 calendar days are considered accepted.
   </div>
+
   <div class="payment-card" style="margin-top:1rem;">
     <div class="pc-head">Payment — ACH Bank Transfer (No Stripe, No New Accounts)</div>
-    <div class="pc-body">Weekly email invoice every Friday. Keith Zars pays via ACH — same as any other vendor. Iron Tiger's routing and account number are in the first invoice.</div>
-    <div class="pc-alt">Using <strong>Bill.com</strong> for AP? Add Iron Tiger Digital as a vendor. <strong>Melio</strong> also available (free, no monthly fee). Note your preference when returning the signed terms.</div>
+    <div class="pc-body">
+      Iron Tiger Digital sends a weekly email invoice every Friday. Keith Zars pays via ACH bank transfer — same as paying any other vendor. Iron Tiger's routing and account number are included in the first invoice. No new accounts required, no credit card processing, no subscription fees on your end.
+    </div>
+    <div class="pc-alt">
+      If Keith Zars uses <strong>Bill.com</strong> for AP automation: add Iron Tiger Digital as a vendor — full approval workflow, audit trail, integrates with NetSuite/Sage. Prefer <strong>Melio</strong> (free ACH, $0/month)? That works too. Just note your preference when returning the signed terms.
+    </div>
   </div>
 </div>
 
 
-<div class="terms-cta">
-  <p>The binding terms — pilot exit clause, lead definitions, exclusivity, TCPA compliance, dispute process, termination, and governing law — are in the Service Terms document.</p>
-  <a href="keith-zars-terms.html">View &amp; Sign Service Terms →</a>
-  <div class="terms-note">2 pages · plain language · no legalese needed</div>
+<!-- ═══════════════════════════════════
+     CTA — SERVICE TERMS
+═══════════════════════════════════ -->
+<div class="cta-card">
+  <h3>Ready to move forward?</h3>
+  <p>Review and sign the Service Terms — a short, plain-English document covering the binding details: pilot exit clause, payment, disputes, exclusivity, and termination. No surprises, no legal review needed.</p>
+  <a class="cta-btn" href="keith-zars-terms.html">View &amp; Sign Service Terms →</a>
 </div>
-
 
 </div><!-- /wrap -->
 

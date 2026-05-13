@@ -142,7 +142,7 @@ header h1 {
 /* ─── ROI TABLE ─── */
 .roi-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: .75rem;
   margin-bottom: 1rem;
 }
@@ -240,17 +240,6 @@ header h1 {
   color: var(--gray);
   line-height: 1.45;
 }
-.dispute-box {
-  background: #fff8ed;
-  border: 1.5px solid #f5a623;
-  border-radius: 10px;
-  padding: .9rem 1rem;
-  margin-top: .85rem;
-  font-size: .9rem;
-  color: #7a5200;
-}
-.dispute-box strong { color: #5a3800; }
-
 /* ─── AGREEMENT ─── */
 .agreement-section {
   background: #fff;
@@ -432,10 +421,6 @@ footer strong { color: var(--green-dark); }
       <span class="s-val">Net-15 from invoice date, triggered when Keith Zars reports a closed job. Payment via ACH. No new accounts required.</span>
     </li>
     <li>
-      <span class="s-label">Disputes</span>
-      <span class="s-val"><strong>14 calendar-day window.</strong> Wrong number, out-of-territory, or duplicate? Flag it within 14 days of delivery. Credit applied to the next invoice. No cash refunds.</span>
-    </li>
-    <li>
       <span class="s-label">Exit</span>
       <span class="s-val">Month-to-month. Either party terminates with <strong>30 days written notice</strong>. No penalties, no wind-down fees.</span>
     </li>
@@ -456,13 +441,17 @@ footer strong { color: var(--green-dark); }
       <div class="roi-val">$500</div>
       <div class="roi-label">Our flat rate</div>
     </div>
+    <div class="roi-cell highlight">
+      <div class="roi-val">~1–2%</div>
+      <div class="roi-label">Lead cost vs. job value</div>
+    </div>
     <div class="roi-cell">
       <div class="roi-val">$15k–$65k</div>
       <div class="roi-label">Avg renovation job</div>
     </div>
-    <div class="roi-cell highlight">
-      <div class="roi-val">~2%</div>
-      <div class="roi-label">Lead cost vs. job value</div>
+    <div class="roi-cell">
+      <div class="roi-val">$50k–$150k</div>
+      <div class="roi-label">Avg new pool build</div>
     </div>
   </div>
 
@@ -500,7 +489,7 @@ footer strong { color: var(--green-dark); }
     <li>
       <span class="step-num">1</span>
       <div class="step-body">
-        <strong>Homeowner submits via Iron Tiger lead gen site</strong>
+        <strong style="margin-bottom:.35rem;">Homeowner submits via Iron Tiger lead gen site</strong>
         <span>A homeowner searching for new pool construction or major renovation in the San Antonio / New Braunfels / Corpus Christi area finds <strong>alamopoolresurfacing.com</strong>, reads the content, and submits a contact form with their name, address, phone, and project description.</span>
       </div>
     </li>
@@ -514,7 +503,7 @@ footer strong { color: var(--green-dark); }
     <li>
       <span class="step-num">3</span>
       <div class="step-body">
-        <strong>Keith Zars follows up and closes the job</strong>
+        <strong style="margin-bottom:.35rem;">Keith Zars follows up and closes the job</strong>
         <span>The lead is <strong>exclusively yours</strong> from the moment it's delivered. Iron Tiger does not send the same lead to any other contractor. Your team calls, books the appointment, and closes the deal.</span>
       </div>
     </li>
@@ -522,7 +511,7 @@ footer strong { color: var(--green-dark); }
       <span class="step-num">4</span>
       <div class="step-body">
         <strong>Iron Tiger invoices $500 when the job closes</strong>
-        <span>When your team closes a job, report it to costa@irontigerleads.com. Iron Tiger sends an invoice within 2 business days. Keith Zars has 15 days to pay via ACH — no payment due on a lead unless the job closes.</span>
+        <span>When your team closes a job, report it to <strong>costa@irontigerleads.com</strong>. Iron Tiger sends an invoice within 2 business days. Keith Zars has 15 days to pay via ACH — no payment due on a lead unless the job closes.</span>
       </div>
     </li>
   </ol>
@@ -556,11 +545,7 @@ footer strong { color: var(--green-dark); }
     </div>
   </div>
 
-  <div class="dispute-box">
-    <strong>Dispute window: 14 calendar days from delivery.</strong> Flag via email to <strong>costa@irontigerleads.com</strong> with the lead name and reason. Credit is applied to the <em>next</em> weekly invoice — no cash refunds. Disputes not raised within 14 calendar days are considered accepted.
-  </div>
-
-  <div class="payment-card" style="margin-top:1rem;">
+  <div class="payment-card" style="margin-top:.85rem;">
     <div class="pc-head">Payment — Recommended: QuickBooks ACH</div>
     <div class="pc-body">
       Iron Tiger Digital invoices via <strong>QuickBooks</strong>. Keith Zars pays by ACH bank transfer directly from the invoice — same workflow as any other vendor. No Stripe, no credit card processing, no new accounts needed on your side.
@@ -590,7 +575,7 @@ footer strong { color: var(--green-dark); }
     <div class="cl-num">2. Lead Definition</div>
     <div class="cl-head">What constitutes a billable lead</div>
     <div class="cl-body">
-      A "Lead" is defined as an inbound form submission or phone inquiry originated from Provider's lead generation website(s), from a homeowner located within the agreed service territory, expressing genuine interest in new pool construction or major pool renovation services. A valid Lead must include: (a) a full name, (b) a working contact phone number, and (c) a service address within the service territory. Leads that fail to meet these criteria are subject to the dispute process in Section 7.
+      A "Lead" is defined as an inbound form submission or phone inquiry originated from Provider's lead generation website(s), from a homeowner located within the agreed service territory, expressing genuine interest in new pool construction or major pool renovation services. A valid Lead must include: (a) a full name, (b) a working contact phone number, and (c) a service address within the service territory.
     </div>
   </div>
 
@@ -614,7 +599,7 @@ footer strong { color: var(--green-dark); }
     <div class="cl-num">5. Service Territory</div>
     <div class="cl-head">San Antonio metro, New Braunfels, Corpus Christi, and surrounding areas</div>
     <div class="cl-body">
-      Provider will deliver Leads originating from homeowners located within <strong>100 miles of San Antonio, Texas</strong>, which includes but is not limited to: San Antonio metro, New Braunfels, Corpus Christi, Seguin, Boerne, Kerrville, and surrounding communities. Leads from addresses clearly outside this territory are disputable under Section 7.
+      Provider will deliver Leads originating from homeowners located within <strong>100 miles of San Antonio, Texas</strong>, which includes but is not limited to: San Antonio metro, New Braunfels, Corpus Christi, Seguin, Boerne, Kerrville, and surrounding communities.
     </div>
   </div>
 
@@ -627,15 +612,7 @@ footer strong { color: var(--green-dark); }
   </div>
 
   <div class="clause">
-    <div class="cl-num">7. Dispute Process</div>
-    <div class="cl-head">14 calendar days · Credits only · No cash refunds</div>
-    <div class="cl-body">
-      Client must raise any dispute within <strong>fourteen (14) calendar days</strong> of Lead delivery by emailing costa@irontigerleads.com with the lead name, delivery date, and reason for dispute. Eligible dispute reasons: (a) wrong or disconnected phone number, (b) service address clearly outside the defined territory, or (c) exact duplicate of a Lead already delivered and billed in the same calendar month. If Provider accepts the dispute, a <strong>credit equal to $500</strong> will be applied to Client's next weekly invoice. <strong>No cash refunds will be issued.</strong> Disputes not raised within 14 calendar days are deemed waived. Disputes based on failed close, homeowner unavailability, or competitive loss are not eligible.
-    </div>
-  </div>
-
-  <div class="clause">
-    <div class="cl-num">8. No Conversion Guarantee</div>
+    <div class="cl-num">7. No Conversion Guarantee</div>
     <div class="cl-head">Provider delivers intent; Client closes the job</div>
     <div class="cl-body">
       Provider makes no representation regarding conversion rates. Appointments, signed contracts, and closed jobs are solely Client's responsibility.
@@ -643,7 +620,7 @@ footer strong { color: var(--green-dark); }
   </div>
 
   <div class="clause">
-    <div class="cl-num">9. Confidentiality</div>
+    <div class="cl-num">8. Confidentiality</div>
     <div class="cl-head">Lead data stays private</div>
     <div class="cl-body">
       Each Party agrees to keep Lead data (including homeowner names, addresses, phone numbers, and project details) confidential and to use it solely for the purposes of this Agreement. Client will not resell, share, or distribute Lead data to any third party. Provider will not disclose Client's lead volume, close rates, or pricing to any competitor. This obligation survives termination of this Agreement.
@@ -651,7 +628,7 @@ footer strong { color: var(--green-dark); }
   </div>
 
   <div class="clause">
-    <div class="cl-num">10. Term &amp; Termination</div>
+    <div class="cl-num">9. Term &amp; Termination</div>
     <div class="cl-head">Month-to-month · 30 days written notice</div>
     <div class="cl-body">
       This Agreement begins on the Effective Date and continues on a <strong>month-to-month basis</strong>. Either Party may terminate this Agreement by providing <strong>thirty (30) days written notice</strong> via email to the other Party's address on file. Upon termination: (a) Provider will cease delivering Leads, (b) all invoices for Leads delivered prior to termination remain due and payable per the payment terms, and (c) any pending disputes will be resolved under the normal process. There are no early-termination penalties.
@@ -659,15 +636,15 @@ footer strong { color: var(--green-dark); }
   </div>
 
   <div class="clause">
-    <div class="cl-num">11. Limitation of Liability</div>
+    <div class="cl-num">10. Limitation of Liability</div>
     <div class="cl-head">Provider's maximum liability capped at invoice credits</div>
     <div class="cl-body">
-      Provider's maximum aggregate liability to Client under this Agreement shall not exceed the total value of invoice credits issued or eligible to be issued under the dispute process (Section 7). In no event shall either Party be liable to the other for indirect, incidental, consequential, special, or punitive damages, including but not limited to lost profits, lost revenue, or damage to goodwill, even if advised of the possibility of such damages.
+      Provider's maximum aggregate liability to Client under this Agreement shall not exceed the total fees invoiced to Client in the three (3) months preceding the event giving rise to the claim. In no event shall either Party be liable to the other for indirect, incidental, consequential, special, or punitive damages, including but not limited to lost profits, lost revenue, or damage to goodwill, even if advised of the possibility of such damages.
     </div>
   </div>
 
   <div class="clause">
-    <div class="cl-num">12. Governing Law</div>
+    <div class="cl-num">11. Governing Law</div>
     <div class="cl-head">State of Texas</div>
     <div class="cl-body">
       This Agreement shall be governed by and construed in accordance with the laws of the <strong>State of Texas</strong>, without regard to its conflict of law provisions. Any disputes arising under this Agreement that cannot be resolved informally shall be brought in the state or federal courts located in Bexar County, Texas.
@@ -675,7 +652,7 @@ footer strong { color: var(--green-dark); }
   </div>
 
   <div class="clause">
-    <div class="cl-num">13. TCPA Compliance</div>
+    <div class="cl-num">12. TCPA Compliance</div>
     <div class="cl-head">Consent and telecommunications law</div>
     <div class="cl-body">
       Provider represents that all Leads are generated from opt-in web forms with written consent disclosing potential contact by a licensed pool contractor — sufficient for TCPA prior express written consent. Client is solely responsible for its own outreach practices and compliance with applicable telecommunications law, including the TCPA, FCC regulations, and the National Do Not Call Registry.
@@ -683,7 +660,7 @@ footer strong { color: var(--green-dark); }
   </div>
 
   <div class="clause">
-    <div class="cl-num">14. Entire Agreement</div>
+    <div class="cl-num">13. Entire Agreement</div>
     <div class="cl-head">This document supersedes all prior discussions</div>
     <div class="cl-body">
       This Agreement constitutes the entire agreement between the Parties regarding lead generation services and supersedes all prior or contemporaneous negotiations, representations, or agreements, whether written or oral. Modifications to this Agreement must be made in writing and signed by both Parties.
@@ -691,7 +668,7 @@ footer strong { color: var(--green-dark); }
   </div>
 
   <div class="clause">
-    <div class="cl-num">15. Severability</div>
+    <div class="cl-num">14. Severability</div>
     <div class="cl-head">Invalid provisions don't void the rest</div>
     <div class="cl-body">
       If any provision of this Agreement is held to be invalid, illegal, or unenforceable under applicable law, that provision will be deemed modified to the minimum extent necessary to make it enforceable, or if modification is not possible, severed from this Agreement. The remaining provisions will continue in full force and effect.

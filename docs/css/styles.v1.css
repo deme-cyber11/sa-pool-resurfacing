@@ -452,3 +452,15 @@ h1,h2,h3,h4{font-family:var(--font-heading);line-height:1.25}
   font-style: normal;
 }
 /* END LOGO-GEN */
+
+/* Trust badge strip */
+.trust-strip{background:#1a2e3b;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.trust-strip .trust-items{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0}
+.trust-item{display:flex;align-items:center;gap:8px;padding:10px 22px;color:#cbd5e1;font-size:.82rem;border-right:1px solid rgba(255,255,255,.1)}
+.trust-item:last-child{border-right:none}
+.trust-item strong{color:#fff;font-weight:700}
+@media(max-width:900px){.trust-item{padding:8px 14px;font-size:.78rem}}
+@media(max-width:640px){.trust-items{flex-direction:column}.trust-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);width:100%;justify-content:center;text-align:center}.trust-item:last-child{border-bottom:none}}
+
+/* Upgraded testimonial avatar */
+.testimonial-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1b6ca8,#2d9cdb);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.15)}

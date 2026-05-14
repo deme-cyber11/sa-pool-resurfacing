@@ -30,7 +30,6 @@
     })(window, document, "clarity", "script", "vqc77cod5l");
   </script>
 <style>
-/* Floating CTA circles — injected by cta-strategy.py */
 .floating-cta{position:fixed;bottom:20px;right:20px;z-index:998;display:flex;flex-direction:column;gap:12px;transform:translateY(110px);opacity:0;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .4s ease;pointer-events:none}
 .floating-cta.visible{transform:translateY(0);opacity:1;pointer-events:auto}
 .floating-cta a{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;color:#fff;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:transform .2s ease,box-shadow .2s ease;position:relative}
@@ -40,6 +39,10 @@
 .fcta-label{position:absolute;right:64px;white-space:nowrap;background:rgba(0,0,0,.75);color:#fff;padding:5px 12px;border-radius:20px;font-size:.78rem;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s ease}
 .floating-cta a:hover .fcta-label{opacity:1}
 @media(min-width:769px){.floating-cta{display:none!important}}
+.about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;max-width:900px;margin:0 auto;text-align:center}
+@media(max-width:640px){.about-stats{grid-template-columns:repeat(2,1fr)}}
+.about-stat-num{font-size:2.25rem;font-weight:800;color:#1a5e63;line-height:1}
+.about-stat-label{font-size:.85rem;color:#6b7280;margin-top:.4rem}
 </style>
 </head>
 <body>
@@ -62,73 +65,159 @@
 
 <section class="page-header">
   <div class="container">
-    <h1>About Us — San Antonio Pool Resurfacing Specialists</h1>
+    <h1>About Alamo Pool Resurfacing</h1>
+    <p>Locally owned, San Antonio-rooted, and built around one idea — do the work exactly as described, and stay through startup.</p>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-items">
+      <div class="trust-item"><strong>⭐ 4.9 / 5</strong>&nbsp;Google Rating</div>
+      <div class="trust-item"><strong>94</strong>&nbsp;Verified Reviews</div>
+      <div class="trust-item"><strong>TDLR</strong>&nbsp;Licensed Contractor</div>
+      <div class="trust-item"><strong>18+ Years</strong>&nbsp;in San Antonio</div>
+      <div class="trust-item"><strong>1,200+</strong>&nbsp;Pools Resurfaced</div>
+      <div class="trust-item"><strong>7-Year</strong>&nbsp;Workmanship Warranty</div>
+    </div>
   </div>
 </section>
 
 <section class="section section-light">
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <p style="font-size:1.1rem;line-height:1.8;margin-bottom:1.5rem">Most San Antonio homeowners dealing with a deteriorating pool have had the same experience: a contractor who gives a vague estimate over the phone, shows up late, and leaves before the startup chemistry is done correctly. We built Alamo Pool Resurfacing around a simpler idea — show up on time, quote in writing, do the work exactly as described, and stay through the startup protocol. We're not the cheapest option in Texas. We are the option that doesn't leave you with a failed surface two years later because corners were cut on prep or chemistry.</p>
+    <div style="max-width:800px;margin:0 auto" class="reveal">
+      <p style="font-size:1.1rem;line-height:1.85;color:#374151;margin-bottom:1.25rem">Most San Antonio homeowners dealing with a deteriorating pool have had the same experience: a contractor who gives a vague estimate over the phone, shows up late, and leaves before the startup chemistry is done correctly. We built Alamo Pool Resurfacing around a simpler idea — show up on time, quote in writing, do the work exactly as described, and stay through the startup protocol.</p>
+      <p style="font-size:1.1rem;line-height:1.85;color:#374151">We're not the cheapest option in Texas. We are the option that doesn't leave you with a failed surface two years later because corners were cut on prep or chemistry.</p>
     </div>
   </div>
 </section>
 
 <section class="section section-cream">
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <div class="section-header" style="text-align:left;margin-bottom:2rem">
-        <h2>What We Do</h2>
+    <div class="about-stats reveal">
+      <div>
+        <div class="about-stat-num">18+</div>
+        <div class="about-stat-label">Years in San Antonio</div>
       </div>
-      <p style="font-size:1.1rem;line-height:1.8;margin-bottom:1.5rem">We specialize in pool resurfacing and replastering for San Antonio homeowners and businesses across Bexar County, the Hill Country, and the surrounding communities — including Schertz, New Braunfels, Boerne, Helotes, Converse, Universal City, and beyond. Our core services are <a href="services.html">pool resurfacing</a> (plaster, quartz, and pebble aggregate), <a href="services.html#plaster">pool plastering and replastering</a>, <a href="services.html#tile">waterline tile repair and replacement</a>, and <a href="services.html">pool deck resurfacing</a>.</p>
+      <div>
+        <div class="about-stat-num">1,200+</div>
+        <div class="about-stat-label">Pools Resurfaced</div>
+      </div>
+      <div>
+        <div class="about-stat-num">4.9★</div>
+        <div class="about-stat-label">Google Rating (94 reviews)</div>
+      </div>
+      <div>
+        <div class="about-stat-num">7-yr</div>
+        <div class="about-stat-label">Workmanship Warranty</div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section-light">
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <div class="section-header" style="text-align:left;margin-bottom:2rem">
-        <h2>What Makes Us Different</h2>
-      </div>
-      <p style="font-size:1.1rem;line-height:1.8;margin-bottom:1.5rem">Three things homeowners tell us matter most after they've worked with us:</p>
+    <div class="section-header reveal">
+      <p class="overline">Our Focus</p>
+      <h2>What We Do</h2>
+      <p>Pool resurfacing and replastering for San Antonio homeowners and businesses across Bexar County, the Hill Country, and surrounding communities.</p>
+    </div>
+    <div style="max-width:800px;margin:0 auto" class="reveal">
+      <p style="font-size:1.05rem;line-height:1.85;color:#374151">Our core services are <a href="services.html">pool resurfacing</a> (plaster, quartz, and pebble aggregate), <a href="services.html#plaster">pool plastering and replastering</a>, <a href="services.html#tile">waterline tile repair and replacement</a>, and <a href="services.html">pool deck resurfacing</a>. We serve homeowners and businesses across San Antonio, Schertz, New Braunfels, Boerne, Helotes, Converse, Universal City, Alamo Heights, Stone Oak, Leon Valley, Cibolo, Seguin, and throughout Greater Bexar County.</p>
+    </div>
+  </div>
+</section>
 
-      <div style="margin-bottom:2rem;padding:1.5rem;background:#f9f6f0;border-radius:12px">
-        <h3 style="margin-bottom:.75rem">Written fixed-price quotes</h3>
-        <p>Every estimate is itemized and in writing before any work begins. If we find something unexpected during demo — a structural crack that wasn't visible, for example — we stop, show you, and get your approval before any additional work proceeds. The price we quote is the price you pay.</p>
-      </div>
+<section class="section section-cream" id="why-us">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="overline">What Sets Us Apart</p>
+      <h2>Why San Antonio Homeowners Choose Us</h2>
+      <p>Three things our customers tell us matter most — and they're the three things most contractors skip.</p>
+    </div>
 
-      <div style="margin-bottom:2rem;padding:1.5rem;background:#f9f6f0;border-radius:12px">
-        <h3 style="margin-bottom:.75rem">We know San Antonio's water</h3>
-        <p>The Edwards Aquifer runs alkaline and high in calcium — 200–350 mg/L calcium hardness is typical. That chemistry accelerates plaster degradation, drives calcium scale onto waterline tile, and requires a startup protocol calibrated specifically for local conditions, not a generic national template. We've been doing this here for 18+ years. The startup chemistry we use is built around what San Antonio's water actually tests out to — not what it does in Phoenix or Houston.</p>
+    <div class="alt-row reveal">
+      <div class="alt-content">
+        <h3>Written Fixed-Price Quotes</h3>
+        <p>Every estimate is itemized and in writing before any work begins. If we find something unexpected during demo — a structural crack that wasn't visible, for example — we stop, show you, and get your approval before any additional work proceeds. The price we quote is the price you pay. No "we ran into something" surprises after the check clears.</p>
+        <ul class="check-list">
+          <li>Full itemized quote before any work starts</li>
+          <li>Written approval required for any scope additions</li>
+          <li>No deposit until you've signed and scheduled</li>
+        </ul>
       </div>
+      <div class="alt-image"><img src="images/ba3-after.jpg" alt="Completed pool resurfacing project San Antonio" style="width:100%;border-radius:12px" width="1024" height="716"></div>
+    </div>
 
-      <div style="margin-bottom:2rem;padding:1.5rem;background:#f9f6f0;border-radius:12px">
-        <h3 style="margin-bottom:.75rem">We call back same day</h3>
+    <div class="alt-row reverse reveal">
+      <div class="alt-content">
+        <h3>We Know San Antonio's Water</h3>
+        <p>The Edwards Aquifer runs alkaline and high in calcium — 200–350 mg/L calcium hardness is typical. That chemistry accelerates plaster degradation, drives calcium scale onto waterline tile, and requires a startup protocol calibrated specifically for local conditions. We've been doing this here for 18+ years. The startup chemistry we use is built around what San Antonio's water actually tests out to — not a generic national template.</p>
+        <ul class="check-list">
+          <li>Startup chemistry calibrated for Edwards Aquifer hardness</li>
+          <li>Quartz and pebble finishes recommended for long-term SA performance</li>
+          <li>Calcium scale prevention included in every tile replacement</li>
+        </ul>
+      </div>
+      <div class="alt-image"><img src="images/ba4-after.jpg" alt="Pebble finish pool built for San Antonio's hard water" style="width:100%;border-radius:12px" width="1024" height="716"></div>
+    </div>
+
+    <div class="alt-row reveal">
+      <div class="alt-content">
+        <h3>We Call Back Same Day</h3>
         <p>When you request an estimate, we respond within 1 hour during business hours and schedule an on-site visit within a few days. We don't make you wait a week for a callback only to get a phone estimate that turns out to be meaningless. The estimate requires seeing the pool — so we come to you, look at it, and give you a number that means something.</p>
+        <ul class="check-list">
+          <li>1-hour callback guarantee during business hours</li>
+          <li>On-site estimate — never over the phone</li>
+          <li>No pressure, no obligation, no voicemail runaround</li>
+        </ul>
       </div>
+      <div class="alt-image"><img src="images/11-about.webp" alt="Alamo Pool Resurfacing team San Antonio" style="width:100%;border-radius:12px" width="1024" height="1024"></div>
     </div>
   </div>
 </section>
 
-<section class="section section-cream">
+<section class="section section-light" id="testimonials">
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <div class="section-header" style="text-align:left;margin-bottom:2rem">
-        <h2>Who We Serve</h2>
-      </div>
-      <p style="font-size:1.1rem;line-height:1.8;margin-bottom:1.5rem">We serve homeowners and businesses across San Antonio, Schertz, New Braunfels, Boerne, Helotes, Converse, Universal City, Alamo Heights, Stone Oak, Leon Valley, Cibolo, Seguin, and the surrounding Bexar County communities. We travel throughout the Greater San Antonio metro — if you're within a reasonable distance and need pool resurfacing done correctly, call us. We may still be able to help.</p>
+    <div class="section-header reveal">
+      <p class="overline">Client Stories</p>
+      <h2>What Our Customers Say</h2>
+      <p>Real reviews from San Antonio homeowners who trusted us with their pools.</p>
     </div>
-  </div>
-</section>
-
-<section class="section section-light">
-  <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <div class="section-header" style="text-align:left;margin-bottom:2rem">
-        <h2>Our Commitment</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"></div>
+        <blockquote>"Our pool in Alamo Heights was in rough shape after 15 years of Texas sun. Alamo Pool Resurfacing did an incredible pebble finish and it looks absolutely stunning. Worth every penny."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:linear-gradient(135deg,#1b6ca8,#2d9cdb)"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div>
+            <div class="testimonial-name">Maria R.</div>
+            <div class="testimonial-location">Alamo Heights</div>
+          </div>
+        </div>
       </div>
-      <p style="font-size:1.1rem;line-height:1.8;margin-bottom:1.5rem">Every job gets a written quote before any work starts. If we find something unexpected, we stop and show you before any additional work proceeds. The price we quote is the price you pay. We stay through the startup chemistry phase — because a new surface that isn't started correctly in San Antonio's hard water will stain and etch in the first season. We won't let that happen.</p>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"></div>
+        <blockquote>"Had quotes from three companies. Alamo Pool was in the middle on price but miles ahead in communication and quality. They showed up when they said they would and delivered exactly what was promised."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:linear-gradient(135deg,#1a3a5c,#2e6091)"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div>
+            <div class="testimonial-name">David W.</div>
+            <div class="testimonial-location">New Braunfels</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"><img src="images/icons/star.svg" class="inline-icon" alt="star"></div>
+        <blockquote>"We had cracks from the limestone soil shifting under our pool. They fixed the structural issues first and then applied a beautiful marcite finish. Two years later, not a single problem."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:linear-gradient(135deg,#2e5480,#5b8abf)"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div>
+            <div class="testimonial-name">Lisa D.</div>
+            <div class="testimonial-location">Helotes</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -31,8 +31,6 @@
     })(window, document, "clarity", "script", "vqc77cod5l");
   </script>
 <style>
-
-/* Floating CTA circles — injected by cta-strategy.py */
 .floating-cta{position:fixed;bottom:20px;right:20px;z-index:998;display:flex;flex-direction:column;gap:12px;transform:translateY(110px);opacity:0;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .4s ease;pointer-events:none}
 .floating-cta.visible{transform:translateY(0);opacity:1;pointer-events:auto}
 .floating-cta a{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;color:#fff;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:transform .2s ease,box-shadow .2s ease;position:relative}
@@ -42,7 +40,16 @@
 .fcta-label{position:absolute;right:64px;white-space:nowrap;background:rgba(0,0,0,.75);color:#fff;padding:5px 12px;border-radius:20px;font-size:.78rem;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s ease}
 .floating-cta a:hover .fcta-label{opacity:1}
 @media(min-width:769px){.floating-cta{display:none!important}}
-
+.price-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:800px;margin:2rem auto 0}
+@media(max-width:600px){.price-cards{grid-template-columns:1fr}}
+.price-card{padding:1.25rem 1.5rem;background:white;border-left:4px solid #10b981;border-radius:8px}
+.price-card strong{display:block;font-size:1rem;margin-bottom:.35rem;color:#111827}
+.price-card span{color:#6b7280;font-size:.88rem}
+.commercial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:800px;margin:1.5rem auto 0}
+@media(max-width:640px){.commercial-grid{grid-template-columns:1fr}}
+.commercial-card{padding:1.25rem;background:white;border-radius:10px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.commercial-card-title{font-size:1rem;font-weight:700;color:#1a5e63;margin-bottom:.35rem}
+.commercial-card-sub{font-size:.875rem;color:#6b7280}
 </style>
 </head>
 <body>
@@ -74,91 +81,263 @@
 
 <section class="page-header">
   <div class="container">
-    <h1>Our Services</h1>
-    <p>Pool resurfacing, replastering, and renovation for San Antonio homeowners.</p>
+    <h1>Pool Resurfacing Services</h1>
+    <p>Plaster, pebble, quartz, tile repair, and structural fixes — everything your pool needs, done right the first time.</p>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-items">
+      <div class="trust-item"><strong>⭐ 4.9 / 5</strong>&nbsp;Google Rating</div>
+      <div class="trust-item"><strong>94</strong>&nbsp;Verified Reviews</div>
+      <div class="trust-item"><strong>TDLR</strong>&nbsp;Licensed Contractor</div>
+      <div class="trust-item"><strong>18+ Years</strong>&nbsp;in San Antonio</div>
+      <div class="trust-item"><strong>1,200+</strong>&nbsp;Pools Resurfaced</div>
+      <div class="trust-item"><strong>7-Year</strong>&nbsp;Workmanship Warranty</div>
+    </div>
   </div>
 </section>
 
 <section class="section section-light">
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <h2>Complete Pool Resurfacing &amp; Replastering Solutions</h2>
-      <p style="font-size:1.05rem;line-height:1.85;color:#374151;margin-bottom:1.25rem">We handle everything — from essential replastering to full renovations with premium finishes. Whether your pool needs a minor refresh or a complete overhaul, you get one experienced team managing the entire project from drain to swim-ready.</p>
+    <div class="section-header reveal">
+      <p class="overline">What We Offer</p>
+      <h2>Complete Pool Resurfacing Solutions</h2>
+      <p>One team handles everything — drain, prep, finish, curing, and startup chemistry. No subcontractors. No surprises.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="icon"><img src="images/icons/paint-roller.svg" class="service-icon" alt="Plaster"></div>
+        <h3>Plaster &amp; Marcite</h3>
+        <p>Classic white plaster — clean, timeless, and the most accessible price point. Best for pools on a defined budget.</p>
+        <a href="#plaster" class="learn-more">View details →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="icon"><img src="images/icons/stone.svg" class="service-icon" alt="Pebble finishes"></div>
+        <h3>Pebble Finishes</h3>
+        <p>PebbleTec and PebbleSheen — 15–20 year lifespan, naturally textured, and built for SA's hard Edwards Aquifer water.</p>
+        <a href="#pebble" class="learn-more">View details →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="icon"><img src="images/icons/diamond.svg" class="service-icon" alt="Quartz finishes"></div>
+        <h3>Quartz Finishes</h3>
+        <p>Superior scale resistance, smooth underfoot, sparkle finish. San Antonio's most popular upgrade from basic plaster.</p>
+        <a href="#quartz" class="learn-more">View details →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="icon"><img src="images/icons/brick.svg" class="service-icon" alt="Tile and coping"></div>
+        <h3>Tile &amp; Coping</h3>
+        <p>Waterline tile and coping replacement — porcelain, mosaic, travertine, and flagstone to match any aesthetic.</p>
+        <a href="#tile" class="learn-more">View details →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="icon"><img src="images/icons/wrench.svg" class="service-icon" alt="Structural repair"></div>
+        <h3>Structural Repair</h3>
+        <p>Free crack assessment on every job. We distinguish surface-only from structural — and fix both correctly.</p>
+        <a href="#repair" class="learn-more">View details →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="icon"><img src="images/icons/waves.svg" class="service-icon" alt="Commercial pools"></div>
+        <h3>Commercial Pools</h3>
+        <p>Hotels, HOAs, and apartment complexes across San Antonio. Industrial-grade materials, minimal downtime scheduling.</p>
+        <a href="#commercial" class="learn-more">View details →</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section-cream" id="plaster">
+  <a id="quartz" style="display:block;position:relative;top:-80px;visibility:hidden"></a>
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <a id="quartz" style="display:block;position:relative;top:-80px;visibility:hidden"></a>
+    <div class="section-header reveal">
+      <p class="overline">Surface Options 1 &amp; 2</p>
       <h2>Plaster &amp; Quartz Finishes</h2>
-      <p style="font-size:1.05rem;line-height:1.85;color:#374151;margin-bottom:1.25rem">Our traditional plaster and quartz finishes are the most popular choices for San Antonio homeowners. Plaster delivers a clean, timeless white surface at an accessible price point. Quartz aggregate finishes add durability and stain resistance — particularly valuable in San Antonio's hard Edwards Aquifer water — with a subtle sparkle and a 12–15 year lifespan. We apply both with meticulous prep work and oversee the full curing process.</p>
-      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px">
-        <li style="padding:14px 18px;background:white;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>White plaster:</strong> $4–6 per sq ft. Classic look, 8–12 year lifespan.</li>
-        <li style="padding:14px 18px;background:white;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>Quartz aggregate:</strong> $6–9 per sq ft. Superior scale resistance for SA's hard water, 12–15 year lifespan.</li>
-      </ul>
+      <p>The most popular choices for San Antonio homeowners — tried-and-true plaster and the quartz upgrade that handles hard water.</p>
+    </div>
+    <div class="alt-row reveal">
+      <div class="alt-content">
+        <h3>Built for San Antonio's Hard Water</h3>
+        <p>Traditional plaster delivers a clean, timeless white surface at an accessible price point. Quartz aggregate adds durability and stain resistance — particularly valuable in SA's high-calcium Edwards Aquifer water (200–350 mg/L) — with a subtle sparkle and a 12–15 year lifespan. We apply both with meticulous prep work and oversee the full curing process.</p>
+        <ul class="check-list">
+          <li>Full surface prep and crack inspection before application</li>
+          <li>Startup chemistry calibrated for San Antonio's water hardness</li>
+          <li>7-year workmanship warranty on all plaster and quartz work</li>
+        </ul>
+      </div>
+      <div class="alt-image"><img src="images/ba2-after.jpg" alt="White plaster pool resurfacing San Antonio" style="width:100%;border-radius:12px" width="1024" height="716"></div>
+    </div>
+    <div class="price-cards">
+      <div class="price-card">
+        <strong>White Plaster</strong>
+        <span>$4–6 per sq ft &nbsp;·&nbsp; 8–12 year lifespan &nbsp;·&nbsp; Classic clean look</span>
+      </div>
+      <div class="price-card">
+        <strong>Quartz Aggregate</strong>
+        <span>$6–9 per sq ft &nbsp;·&nbsp; 12–15 year lifespan &nbsp;·&nbsp; Best for SA's hard water</span>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section-light" id="pebble">
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
+    <div class="section-header reveal">
+      <p class="overline">Surface Option 3</p>
       <h2>Pebble &amp; Exposed Aggregate Finishes</h2>
-      <p style="font-size:1.05rem;line-height:1.85;color:#374151;margin-bottom:1.25rem">Pebble finishes (PebbleTec, PebbleSheen) are the premium tier — naturally textured, visually striking, and built to outlast plaster in San Antonio's mineral-rich water. They resist chemical deterioration, staining, and etching at a level plaster simply can't match. We offer a wide range of pebble colors and sizes for full customization.</p>
-      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px">
-        <li style="padding:14px 18px;background:#f8fafc;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>Pebble Tec / PebbleSheen:</strong> $8–12 per sq ft. 15–20 year lifespan, best choice for SA's hard water.</li>
-        <li style="padding:14px 18px;background:#f8fafc;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>Glass bead finishes:</strong> Available for custom luxury projects. Brilliant reflective finish.</li>
-      </ul>
+      <p>PebbleTec and PebbleSheen are the premium tier — naturally textured, visually striking, and built to outlast plaster in mineral-rich water.</p>
+    </div>
+    <div class="alt-row reverse reveal">
+      <div class="alt-content">
+        <h3>The Long-Game Choice for SA Pools</h3>
+        <p>Pebble finishes resist chemical deterioration, staining, and etching at a level plaster simply can't match. The higher upfront cost pays for itself in extended lifespan and lower ongoing chemistry costs — especially in San Antonio's hard-water zone. We offer a wide range of pebble colors and sizes for full customization.</p>
+        <ul class="check-list">
+          <li>15–20 year lifespan under San Antonio conditions</li>
+          <li>Natural texture hides minor surface wear between resurfacings</li>
+          <li>Wide color selection to match any Hill Country landscape</li>
+        </ul>
+      </div>
+      <div class="alt-image"><img src="images/ba4-after.jpg" alt="Pebble finish pool San Antonio" style="width:100%;border-radius:12px" width="1024" height="716"></div>
+    </div>
+    <div class="price-cards">
+      <div class="price-card" style="background:#f8fafc">
+        <strong>PebbleTec / PebbleSheen</strong>
+        <span>$8–12 per sq ft &nbsp;·&nbsp; 15–20 year lifespan &nbsp;·&nbsp; Best for hard water</span>
+      </div>
+      <div class="price-card" style="background:#f8fafc">
+        <strong>Glass Bead Finish</strong>
+        <span>Custom pricing &nbsp;·&nbsp; Brilliant reflective finish for luxury builds</span>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section-cream" id="tile">
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <h2>Tile &amp; Coping Replacement</h2>
-      <p style="font-size:1.05rem;line-height:1.85;color:#374151;margin-bottom:1.25rem">Waterline tile and coping take the most visible abuse — calcium scaling, UV fading, and physical wear. We replace deteriorated coping and tiles with durable materials that complement your new surface finish. Options include porcelain, ceramic, mosaic, flagstone, and concrete pavers. All grouting and sealing is included.</p>
-      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;margin-top:1rem">
-        <li style="padding:14px 18px;background:white;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>Porcelain &amp; ceramic:</strong> Durable, wide range of colors and patterns. Most common replacement for degraded waterline tile.</li>
-        <li style="padding:14px 18px;background:white;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>Glass mosaic:</strong> Premium visual appeal, highly stain-resistant. Popular for full-perimeter replacements.</li>
-        <li style="padding:14px 18px;background:white;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>Travertine &amp; flagstone coping:</strong> Natural stone coping that complements Hill Country landscaping. Long lifespan with minimal maintenance.</li>
-      </ul>
-      <p style="margin-top:1.25rem"><a href="services/pool-tile-repair.html" style="color:#1a5e63;font-weight:600">Learn more about tile &amp; coping repair →</a></p>
+    <div class="section-header reveal">
+      <p class="overline">Tile &amp; Coping</p>
+      <h2>Waterline Tile &amp; Coping Replacement</h2>
+      <p>Waterline tile and coping take the most visible abuse — calcium scaling, UV fading, and physical wear. We replace deteriorated materials with options built to last.</p>
+    </div>
+    <div class="alt-row reveal">
+      <div class="alt-content">
+        <h3>Complete Edge Restoration</h3>
+        <p>Calcium from the Edwards Aquifer deposits on waterline tile faster than almost anywhere in Texas. We remove scale, replace deteriorated tile, and reset coping with materials that complement your new surface finish. Options include porcelain, ceramic, mosaic, flagstone, and concrete pavers — all grouting and sealing included.</p>
+        <ul class="check-list">
+          <li>Porcelain &amp; ceramic — durable, wide range of colors and patterns</li>
+          <li>Glass mosaic — highly stain-resistant, premium visual appeal</li>
+          <li>Travertine &amp; flagstone coping — natural stone, Hill Country-ready</li>
+        </ul>
+        <p style="margin-top:1rem"><a href="services/pool-tile-repair.html" style="color:#1a5e63;font-weight:600">Full tile &amp; coping repair details →</a></p>
+      </div>
+      <div class="alt-image"><img src="images/ba1-after.jpg" alt="Pool tile and coping replacement San Antonio" style="width:100%;border-radius:12px" width="1024" height="716"></div>
     </div>
   </div>
 </section>
 
 <section class="section section-light" id="repair">
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <h2>Structural Crack Repair</h2>
-      <p style="font-size:1.05rem;line-height:1.85;color:#374151;margin-bottom:1.25rem">San Antonio's limestone and caliche soil shifts with moisture changes, causing cracks in pool shells more often than most Texas markets. We assess every crack — distinguishing surface-only from structural — before any resurfacing begins. Structural repairs use staples, epoxy injections, or fiberglass overlays as appropriate. The assessment is included at no extra charge with every job.</p>
-      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;margin-top:1rem">
-        <li style="padding:14px 18px;background:white;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>Hairline cracks:</strong> Sealed with bonding agent before new finish is applied — typically surface-only, no structural concern.</li>
-        <li style="padding:14px 18px;background:white;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>Structural cracks:</strong> Chased, cleaned, and filled with hydraulic cement or epoxy. Stapled if active soil movement is present.</li>
-        <li style="padding:14px 18px;background:white;border-left:4px solid #10b981;border-radius:6px;color:#374151;line-height:1.7"><strong>Fiberglass overlay:</strong> For pools with severe or recurring cracking — adds a structural membrane before the new surface finish.</li>
-      </ul>
-      <p style="color:#64748b;font-style:italic;font-size:.95rem;margin-top:1.25rem">Resurfacing over an unrepaired structural crack is a temporary fix that fails within 1–2 years. We won't do it.</p>
+    <div class="section-header reveal">
+      <p class="overline">Structural Work</p>
+      <h2>Crack Assessment &amp; Structural Repair</h2>
+      <p>San Antonio's limestone and caliche soil shifts with moisture changes, causing pool shell cracks more often than most Texas markets. Every job includes a free structural assessment.</p>
+    </div>
+    <div class="alt-row reverse reveal">
+      <div class="alt-content">
+        <h3>We Assess Before We Apply</h3>
+        <p>We examine every crack — distinguishing surface-only from structural — before any resurfacing begins. Structural repairs use staples, epoxy injections, or fiberglass overlays as appropriate. Resurfacing over an unrepaired structural crack is a temporary fix that fails within 1–2 years. We won't do it.</p>
+        <ul class="check-list">
+          <li>Hairline cracks: sealed with bonding agent before new finish is applied</li>
+          <li>Structural cracks: chased, cleaned, filled with hydraulic cement or epoxy</li>
+          <li>Active soil movement: stapled for long-term stability before resurfacing</li>
+        </ul>
+      </div>
+      <div class="alt-image"><img src="images/10-services.webp" alt="Pool structural repair San Antonio" style="width:100%;border-radius:12px" width="1024" height="1024"></div>
+    </div>
+    <p style="max-width:680px;margin:1.5rem auto 0;text-align:center;color:#64748b;font-style:italic;font-size:.95rem">The structural assessment is included at no extra charge with every resurfacing job. If we find something, we stop, show you, and get your approval before any additional work proceeds.</p>
+  </div>
+</section>
+
+<section class="section section-cream" id="commercial">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="overline">Commercial</p>
+      <h2>Commercial Pool Resurfacing</h2>
+      <p>Hotels, HOAs, apartment complexes, community centers, and schools throughout the San Antonio area — industrial materials, minimal downtime.</p>
+    </div>
+    <div style="max-width:800px;margin:0 auto" class="reveal">
+      <p style="font-size:1.05rem;line-height:1.85;color:#374151;margin-bottom:1.5rem">Commercial projects require coordination to minimize downtime and meet health code requirements. We use industrial-grade materials and schedule efficiently to get high-traffic pools back online as fast as possible. Estimates are free — and we work around your operating schedule, not the other way around.</p>
+      <div class="commercial-grid">
+        <div class="commercial-card">
+          <div class="commercial-card-title">Hotels &amp; Resorts</div>
+          <div class="commercial-card-sub">Minimal downtime scheduling, health-code compliant materials</div>
+        </div>
+        <div class="commercial-card">
+          <div class="commercial-card-title">HOAs &amp; Apartments</div>
+          <div class="commercial-card-sub">Seasonal scheduling, multi-pool coordination</div>
+        </div>
+        <div class="commercial-card">
+          <div class="commercial-card-title">Schools &amp; Parks</div>
+          <div class="commercial-card-sub">Summer break scheduling, ADA-compliant options</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section-cream">
+<section class="section section-light">
   <div class="container">
-    <div style="max-width:800px;margin:0 auto">
-      <h2>Commercial Pool Resurfacing</h2>
-      <p style="font-size:1.05rem;line-height:1.85;color:#374151">We work with hotels, HOAs, apartment complexes, community centers, and schools throughout the San Antonio area. Commercial projects require coordination to minimize downtime and meet health code requirements. We use industrial-grade materials and schedule efficiently to get high-traffic pools back online as fast as possible.</p>
+    <div class="section-header reveal">
+      <p class="overline">The Process</p>
+      <h2>From Drain to Swim-Ready</h2>
+      <p>From the first day we're on site to the day you get back in the water — here's exactly what happens.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">1</div>
+        <div class="timeline-content">
+          <h4>Drain &amp; Full Assessment</h4>
+          <p>We drain the pool and inspect every square inch of the shell for cracks, delamination, and structural issues. You get a full report before any work begins — no surprises mid-project.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">2</div>
+        <div class="timeline-content">
+          <h4>Demo &amp; Surface Prep</h4>
+          <p>Old plaster is chipped out to the shell. Structural cracks are repaired. Tile and coping replacement happens here. The shell is cleaned, prepped, and bonded for the new surface.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">3</div>
+        <div class="timeline-content">
+          <h4>New Surface Application</h4>
+          <p>Plaster or aggregate is applied by our own crew — no subcontractors. Depending on finish type and pool size, application takes 1–2 days. Pebble finishes require one additional day.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">4</div>
+        <div class="timeline-content">
+          <h4>Fill &amp; Startup Chemistry</h4>
+          <p>We fill the pool and manage the startup chemistry protocol ourselves — calibrated specifically for San Antonio's Edwards Aquifer water. This is where most contractors cut corners. We don't.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">5</div>
+        <div class="timeline-content">
+          <h4>Swim-Ready</h4>
+          <p>Most jobs are complete in 5–10 days from drain to swim-ready. We walk you through the 30-day break-in protocol and give you written chemistry targets for the first month.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="cta-banner">
   <div class="container">
-    <h2>Get a Free Quote Today</h2>
-    <p>Every pool is different. Let us visit your property, assess your pool's condition, and provide an accurate, no-obligation estimate.</p>
-    <a href="contact.html" class="btn btn-primary">Request Free Estimate</a>
+    <h2>Get a Free Estimate Today</h2>
+    <p>Every pool is different. We come to you, inspect it, and give you a written quote — accurate, itemized, no pressure.</p>
+    <a href="tel:7262685597" class="btn btn-primary">📞 Call (726) 268-5597</a>
+    <a href="contact.html" class="btn btn-outline" style="margin-left:1rem;border-color:#fff;color:#fff">Request Free Estimate →</a>
   </div>
 </section>
 
@@ -176,7 +355,6 @@
     <div class="footer-bottom">&copy; 2026 Alamo Pool Resurfacing. All rights reserved.</div>
   </div>
 </footer>
-
 
 <script src="js/main.js"></script>
 

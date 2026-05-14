@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#10b981">
+<title>Lead Injection & Handling Protocol — Iron Tiger Digital × Keith Zars Pools</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310b981'/%3E%3Ctext x='32' y='44' font-family='system-ui' font-size='32' font-weight='800' text-anchor='middle' fill='%23fff'%3EITD%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+
+<style>
+:root {
+  --green: #10b981;
+  --green-dark: #059669;
+  --dark: #1a1a2e;
+  --gray: #5a5a5a;
+  --light: #eefaf4;
+  --border: #d2ecdf;
+  --badge-bg: #e6f7ef;
+  --badge-color: #059669;
+  --text: #222;
+  --warn-bg: #fffbeb;
+  --warn-border: #f59e0b;
+  --warn-text: #92400e;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+/* ─── HEADER ─── */
+header {
+  background: var(--dark);
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid var(--green);
+}
+header .eyebrow {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-bottom: .3rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color: #fff;
+  padding: 2rem 1.5rem 1.75rem;
+  border-radius: 0 0 16px 16px;
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+.hero .badge {
+  display: inline-block;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.4);
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .85rem;
+}
+.hero h2 {
+  margin: 0 0 .4rem;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+.hero p {
+  margin: 0;
+  opacity: .92;
+  font-size: 1rem;
+}
+
+/* ─── CARDS ─── */
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+}
+.card h3 {
+  margin: 0 0 1rem;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 700;
+}
+.card p { margin: 0 0 .75rem; font-size: .95rem; color: var(--text); }
+.card p:last-child { margin-bottom: 0; }
+
+/* ─── SECTION TITLES ─── */
+.section-label {
+  font-size: .7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--green-dark);
+  margin: 2rem 0 .5rem;
+  padding-left: .1rem;
+}
+
+/* ─── FLOW DIAGRAM ─── */
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: .5rem 0 .25rem;
+}
+.flow-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  position: relative;
+}
+.flow-step + .flow-step { margin-top: -.1rem; }
+.flow-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 36px;
+}
+.flow-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.flow-line {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+  min-height: 28px;
+}
+.flow-body {
+  flex: 1;
+  padding: .35rem 0 1.25rem;
+}
+.flow-body strong { display: block; font-weight: 700; font-size: .95rem; color: var(--dark); margin-bottom: .2rem; }
+.flow-body span { font-size: .88rem; color: var(--gray); line-height: 1.5; display: block; }
+.flow-body .tag {
+  display: inline-block;
+  margin-top: .4rem;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+}
+
+/* ─── DETAIL LISTS ─── */
+.detail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.detail-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: .8rem;
+  padding: .65rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: .93rem;
+  color: var(--text);
+}
+.detail-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.detail-list li:first-child { padding-top: 0; }
+.dl-label {
+  flex: 0 0 120px;
+  font-weight: 700;
+  font-size: .8rem;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding-top: .1rem;
+}
+.dl-val { flex: 1; font-size: .9rem; color: var(--text); line-height: 1.5; }
+.dl-val strong { color: var(--dark); }
+
+/* ─── PACKET ANATOMY ─── */
+.packet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .65rem;
+  margin-bottom: .75rem;
+}
+@media (max-width: 500px) { .packet-grid { grid-template-columns: 1fr; } }
+.packet-cell {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .75rem 1rem;
+}
+.packet-cell .pc-field {
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--green-dark);
+  margin-bottom: .2rem;
+}
+.packet-cell .pc-example {
+  font-size: .88rem;
+  color: var(--text);
+}
+.packet-cell .pc-note {
+  font-size: .75rem;
+  color: var(--gray);
+  margin-top: .15rem;
+}
+
+/* ─── SLA TABLE ─── */
+.sla-table { width: 100%; border-collapse: collapse; font-size: .84rem; margin-bottom: .5rem; }
+.sla-table thead tr { background: var(--badge-bg); }
+.sla-table th {
+  text-align: left;
+  padding: .45rem .7rem;
+  font-weight: 700;
+  color: var(--dark);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.sla-table td { padding: .45rem .7rem; border-bottom: 1px solid #f0f4f8; color: var(--text); vertical-align: top; }
+.sla-table tr:last-child td { border-bottom: none; }
+.sla-table tr:nth-child(even) td { background: #f9fafb; }
+.good { color: var(--green-dark); font-weight: 700; }
+.warn { color: #b45309; font-weight: 700; }
+.bad { color: #b91c1c; font-weight: 700; }
+
+/* ─── ALERT BOXES ─── */
+.alert {
+  border-radius: 10px;
+  padding: .85rem 1rem;
+  margin-bottom: .75rem;
+  font-size: .88rem;
+  line-height: 1.55;
+}
+.alert-green {
+  background: var(--badge-bg);
+  border: 1px solid var(--green);
+  color: var(--green-dark);
+}
+.alert-yellow {
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-border);
+  color: var(--warn-text);
+}
+.alert-dark {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: var(--dark);
+}
+.alert strong { font-weight: 700; }
+
+/* ─── INLINE CODE ─── */
+code {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: .1rem .35rem;
+  font-size: .82rem;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  color: var(--dark);
+}
+
+/* ─── CONTACT BLOCK ─── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+@media (max-width: 480px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-cell {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .85rem 1rem;
+}
+.contact-cell .cc-role {
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--green-dark);
+  margin-bottom: .3rem;
+}
+.contact-cell .cc-name {
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--dark);
+  margin-bottom: .15rem;
+}
+.contact-cell .cc-detail {
+  font-size: .82rem;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+/* ─── DISPUTE PROCESS ─── */
+.dispute-steps { list-style: none; margin: 0; padding: 0; counter-reset: dstep; }
+.dispute-steps li {
+  counter-increment: dstep;
+  display: flex;
+  gap: .85rem;
+  align-items: flex-start;
+  padding: .65rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: .9rem;
+  color: var(--text);
+}
+.dispute-steps li:last-child { border-bottom: none; }
+.dispute-steps li::before {
+  content: counter(dstep);
+  flex: 0 0 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--dark);
+  color: #fff;
+  font-size: .73rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: .1rem;
+}
+.dispute-steps li .ds-body strong { display: block; font-weight: 700; color: var(--dark); margin-bottom: .1rem; }
+.dispute-steps li .ds-body span { font-size: .85rem; color: var(--gray); }
+
+/* ─── CHECKLIST ─── */
+.checklist { list-style: none; margin: 0; padding: 0; }
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  padding: .5rem 0;
+  font-size: .9rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.checklist li:last-child { border-bottom: none; }
+.check-icon { flex-shrink: 0; width: 18px; height: 18px; border-radius: 4px; background: var(--green); display: flex; align-items: center; justify-content: center; margin-top: .1rem; }
+.check-icon svg { width: 11px; height: 11px; }
+
+/* ─── FOOTER ─── */
+footer {
+  text-align: center;
+  font-size: .78rem;
+  color: var(--gray);
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+footer strong { color: var(--green-dark); }
+
+/* ─── PRINT ─── */
+@media print {
+  body { background: #fff; }
+  .wrap { padding-bottom: 1rem; }
+  .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Iron Tiger Digital × Keith Zars Pools</div>
+  <h1>Lead Injection &amp; Handling Protocol</h1>
+</header>
+
+<div class="wrap">
+
+<div class="hero">
+  <span class="badge">Operational Reference · Confidential · May 2026</span>
+  <h2>How Leads Flow from Site to Close</h2>
+  <p>Every step of the lead lifecycle — delivery, follow-up, reporting, and dispute resolution — in one place.</p>
+</div>
+
+<div class="alert alert-dark" style="margin-bottom:1.25rem;">
+  <strong>Purpose of this document:</strong> This is the operational companion to the Lead Generation Agreement. It explains precisely how leads move from Iron Tiger Digital's site to Keith Zars Pools, how to handle them for maximum conversion, how to report closed jobs, and what to do when something goes wrong. Attach to your CRM onboarding or share with your ops lead.
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 1: END-TO-END LEAD FLOW
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 1 — End-to-End Lead Flow</h3>
+  <p style="font-size:.9rem;color:var(--gray);margin-bottom:1rem;">From homeowner search to signed contract — every handoff point mapped.</p>
+
+  <div class="flow">
+
+    <div class="flow-step">
+      <div class="flow-left">
+        <div class="flow-num">1</div>
+        <div class="flow-line"></div>
+      </div>
+      <div class="flow-body">
+        <strong>Homeowner searches → finds alamopoolresurfacing.com</strong>
+        <span>A homeowner in the San Antonio metro searches for pool construction or renovation on Google. Iron Tiger Digital's site ranks organically and appears in results. The homeowner reads the content and decides to reach out — by submitting a contact form or calling the tracked phone number on the site.</span>
+        <span class="tag">Organic intent — no paid clicks</span>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-left">
+        <div class="flow-num">2</div>
+        <div class="flow-line"></div>
+      </div>
+      <div class="flow-body">
+        <strong>Lead captured and validated</strong>
+        <span>The form submission or call is captured in real time. Iron Tiger Digital validates the lead against the criteria in Section 3 of the Agreement: full name present, working phone number, service address within 50 miles of San Antonio, and a project type that matches the site's scope (new build, renovation, or resurface). Incomplete or out-of-territory submissions are not forwarded.</span>
+        <span class="tag">Validation before delivery</span>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-left">
+        <div class="flow-num">3</div>
+        <div class="flow-line"></div>
+      </div>
+      <div class="flow-body">
+        <strong>Lead packet assembled and delivered within 1 hour</strong>
+        <span>Iron Tiger Digital compiles a private lead packet containing all captured data and emails it from <code>costa@irontigerleads.com</code> to the designated Keith Zars delivery address. During business hours (Mon–Fri 8 AM–8 PM CT, Sat 10 AM–5 PM CT), delivery happens within 1 hour of submission. After-hours leads arrive by 9 AM CT the next business morning.</span>
+        <span class="tag">Delivery SLA: 1 hour (business hours)</span>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-left">
+        <div class="flow-num">4</div>
+        <div class="flow-line"></div>
+      </div>
+      <div class="flow-body">
+        <strong>Keith Zars receives, triages, and calls within 5 minutes</strong>
+        <span>The lead arrives exclusively to Keith Zars Pools. Your team reviews the packet, dials the homeowner, and initiates the sales process. Speed-to-lead is the single highest-leverage variable in conversion — the research on this is consistent and clear (see Section 3 of this document).</span>
+        <span class="tag">Exclusive — no other contractor receives it</span>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-left">
+        <div class="flow-num">5</div>
+        <div class="flow-line"></div>
+      </div>
+      <div class="flow-body">
+        <strong>Job closes → Keith Zars reports close</strong>
+        <span>When a lead converts to a signed contract, reply to the original lead email with the project address and signed date — takes under 30 seconds. This triggers the billing cycle.</span>
+        <span class="tag">30-second report triggers invoice</span>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-left">
+        <div class="flow-num">6</div>
+        <div class="flow-line" style="background:transparent;"></div>
+      </div>
+      <div class="flow-body">
+        <strong>Iron Tiger Digital invoices $500 · Net-15</strong>
+        <span>An invoice is sent within 2 business days of the close report. Payment is due Net-15 by ACH, Stripe, or Zelle. No payment is due for any lead that doesn't close — zero dollars owed on unconverted leads regardless of how many are delivered.</span>
+        <span class="tag">Pay only on closed jobs</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 2: LEAD PACKET ANATOMY
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 2 — Lead Packet Anatomy</h3>
+  <p style="font-size:.9rem;color:var(--gray);margin-bottom:1rem;">Every lead packet delivered to Keith Zars Pools contains these fields. A live sample packet is at <a href="https://alamopoolresurfacing.com/lead/don-henderson/" target="_blank" style="color:var(--green-dark);font-weight:600;">alamopoolresurfacing.com/lead/don-henderson/</a></p>
+
+  <div class="packet-grid">
+    <div class="packet-cell">
+      <div class="pc-field">Full Name</div>
+      <div class="pc-example">Don Henderson</div>
+      <div class="pc-note">As entered on form or captured from call ID</div>
+    </div>
+    <div class="packet-cell">
+      <div class="pc-field">Phone Number</div>
+      <div class="pc-example">(210) 555-0182</div>
+      <div class="pc-note">Working number required before delivery</div>
+    </div>
+    <div class="packet-cell">
+      <div class="pc-field">Service Address</div>
+      <div class="pc-example">4821 Crestview Dr, San Antonio TX 78229</div>
+      <div class="pc-note">Property address within 50-mile territory</div>
+    </div>
+    <div class="packet-cell">
+      <div class="pc-field">Email Address</div>
+      <div class="pc-example">d.henderson@gmail.com</div>
+      <div class="pc-note">When provided — not required for valid lead</div>
+    </div>
+    <div class="packet-cell">
+      <div class="pc-field">Project Type</div>
+      <div class="pc-example">Pool Resurfacing / New Build / Renovation</div>
+      <div class="pc-note">As described by homeowner in form or call</div>
+    </div>
+    <div class="packet-cell">
+      <div class="pc-field">Project Description</div>
+      <div class="pc-example">"Plaster is peeling, pool 15 years old, want full resurface + new tile"</div>
+      <div class="pc-note">Homeowner's own words from form submission</div>
+    </div>
+    <div class="packet-cell">
+      <div class="pc-field">Lead Source</div>
+      <div class="pc-example">Form submission — alamopoolresurfacing.com</div>
+      <div class="pc-note">Form vs. phone call noted in every packet</div>
+    </div>
+    <div class="packet-cell">
+      <div class="pc-field">Timestamp</div>
+      <div class="pc-example">May 14, 2026 · 10:47 AM CT</div>
+      <div class="pc-note">Exact submission time for your records</div>
+    </div>
+  </div>
+
+  <div class="alert alert-green" style="margin-top:.5rem;">
+    <strong>Call leads:</strong> Phone inquiries come through a dedicated call-tracking number. A recording of the call is available on request — email costa@irontigerleads.com with the lead timestamp and it'll be sent within 24 hours. Useful when the homeowner provided minimal form detail.
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 3: SPEED-TO-LEAD
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 3 — Speed-to-Lead Protocol</h3>
+  <p style="font-size:.9rem;color:var(--gray);margin-bottom:1rem;">Speed-to-lead is the most controllable variable in your close rate. The data below reflects contractor and home services industry benchmarks — the pattern is consistent regardless of source.</p>
+
+  <table class="sla-table">
+    <thead>
+      <tr>
+        <th>Response Time</th>
+        <th>Likelihood of Contact</th>
+        <th>Effect on Close</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>&lt; 5 minutes</strong></td>
+        <td class="good">~9× more likely than 30-min</td>
+        <td class="good">Peak — homeowner still at the device</td>
+      </tr>
+      <tr>
+        <td><strong>5 – 30 minutes</strong></td>
+        <td style="color:#d97706;font-weight:600;">Acceptable</td>
+        <td style="color:#d97706;font-weight:600;">Still strong — call quickly</td>
+      </tr>
+      <tr>
+        <td><strong>30 min – 2 hours</strong></td>
+        <td class="warn">Contact rate drops sharply</td>
+        <td class="warn">Homeowner may have moved on</td>
+      </tr>
+      <tr>
+        <td><strong>&gt; 2 hours</strong></td>
+        <td class="bad">Significantly degraded</td>
+        <td class="bad">Lead goes cold rapidly</td>
+      </tr>
+      <tr>
+        <td><strong>After-hours leads</strong></td>
+        <td colspan="2" style="color:var(--dark);">Call first thing next morning — ideally within 30 min of 8 AM CT opening. Don't hold until afternoon.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert alert-yellow" style="margin-top:.75rem;">
+    <strong>The competing call risk:</strong> Iron Tiger Digital's exclusivity covers its own distribution — homeowners may contact other contractors on their own through other channels (Google, referrals, other sites). The faster you call, the more likely you are the first voice they hear. Exclusive delivery gives you the structural advantage; speed-to-lead is how you capitalize on it.
+  </div>
+
+  <p style="font-size:.88rem;color:var(--gray);margin-bottom:0;"><strong style="color:var(--text);">Recommended setup:</strong> Route the lead delivery email to a shared inbox (office manager + a salesperson) with a push notification on mobile. The goal is a human eyeball on every lead within 5 minutes of receipt, and a dial within 10.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 4: DELIVERY MECHANICS
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 4 — Delivery Mechanics</h3>
+
+  <ul class="detail-list">
+    <li>
+      <span class="dl-label">Sender</span>
+      <div class="dl-val"><strong>costa@irontigerleads.com</strong> — add this to your approved senders / safe sender list now. A single missed lead due to spam filtering is avoidable; don't let it happen.</div>
+    </li>
+    <li>
+      <span class="dl-label">Delivery window</span>
+      <div class="dl-val">Business hours: Mon–Fri 8 AM–8 PM CT, Sat 10 AM–5 PM CT. Leads received within these windows are delivered within 1 hour. All other leads (evening, Sunday, after 5 PM Sat) are delivered by 9 AM CT next business morning.</div>
+    </li>
+    <li>
+      <span class="dl-label">Delivery address</span>
+      <div class="dl-val">The email address designated by Keith Zars at signing. To change the delivery address at any time, email <strong>costa@irontigerleads.com</strong> — changes take effect within 24 hours.</div>
+    </li>
+    <li>
+      <span class="dl-label">Format</span>
+      <div class="dl-val">Plain-text email with all lead fields inline — no attachments, no portal login, no app required. Lead packet URL is included for reference (private, noindex, accessible only via link).</div>
+    </li>
+    <li>
+      <span class="dl-label">Missed delivery</span>
+      <div class="dl-val">If a lead email bounces or you believe a lead was not delivered, email <strong>costa@irontigerleads.com</strong> immediately. Include the approximate date and time and we'll resend within 2 hours. For a full lead log (all delivered leads with timestamps), request access at signing — a shared read-only sheet is available.</div>
+    </li>
+    <li>
+      <span class="dl-label">Phone tracking</span>
+      <div class="dl-val">All phone calls are routed through a dedicated call-tracking number on the site. Calls include caller ID and a recording. Recordings are available on request within 30 days of the call date.</div>
+    </li>
+    <li>
+      <span class="dl-label">Lead log</span>
+      <div class="dl-val">A shared read-only log of all leads delivered under this Agreement — name, timestamp, project type, and status — is available on request. This is your audit trail for dispute resolution and billing reconciliation.</div>
+    </li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 5: CRM INTAKE GUIDE
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 5 — CRM Intake &amp; Workflow Integration</h3>
+  <p style="font-size:.9rem;color:var(--gray);margin-bottom:1rem;">How to route leads from the delivery email into your existing sales workflow — regardless of which system you use.</p>
+
+  <p style="font-size:.9rem;color:var(--text);margin-bottom:.85rem;"><strong>Manual intake (any CRM or spreadsheet):</strong> When the lead email arrives, create a new contact or deal record using the fields from the packet. Recommended fields to capture:</p>
+
+  <ul class="checklist" style="margin-bottom:1rem;">
+    <li>
+      <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span><strong>Source tag:</strong> "Iron Tiger Digital / Alamo Pool" — separates this channel from referrals, Angi leads, and other sources in your reporting</span>
+    </li>
+    <li>
+      <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span><strong>Lead received date + time</strong> — critical for close reporting and billing reconciliation</span>
+    </li>
+    <li>
+      <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span><strong>Project type</strong> (resurface / renovation / new build) — helps your estimator prep before the first call</span>
+    </li>
+    <li>
+      <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span><strong>Contract signed date</strong> — needed for close reporting; log it at the moment of signature</span>
+    </li>
+    <li>
+      <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span><strong>Original lead email thread</strong> — keep it accessible; replying to that thread is how you report closes</span>
+    </li>
+  </ul>
+
+  <div class="alert alert-dark">
+    <strong>CRM automation (optional):</strong> If your CRM supports email parsing (HubSpot, Salesforce, Jobber, ServiceTitan, etc.), the lead delivery email format is consistent enough to auto-create a contact record on arrival. The packet fields — name, phone, address, project type — are labeled the same way in every email. Ask your CRM admin to set up an inbox rule that creates a new lead record when email arrives from <code>costa@irontigerleads.com</code>. Iron Tiger Digital can provide field labels in a structured format on request.
+  </div>
+
+  <p style="font-size:.88rem;color:var(--gray);margin-bottom:0;"><strong style="color:var(--text);">Recommended pipeline stages for ITD leads:</strong> New → Attempted Contact → Appointment Set → Estimate Sent → Closed Won → Closed Lost. Tag all "Closed Won" records with the signed date before replying to report the close.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 6: CLOSE REPORTING
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 6 — Close Reporting</h3>
+  <p style="font-size:.9rem;color:var(--gray);margin-bottom:.85rem;">Reporting a closed job is how you trigger invoicing. The process is intentionally minimal.</p>
+
+  <div class="alert alert-green" style="margin-bottom:1rem;">
+    <strong>The 30-second report:</strong> When a job closes, find the original lead delivery email and reply with two pieces of information: (1) the project address, and (2) the date the contract was signed. That's it. Iron Tiger Digital will send an invoice within 2 business days.
+  </div>
+
+  <ul class="detail-list">
+    <li>
+      <span class="dl-label">How to report</span>
+      <div class="dl-val">Reply to the original lead delivery email from <code>costa@irontigerleads.com</code>. Subject line can stay as-is — threading keeps the context. No new email or portal needed.</div>
+    </li>
+    <li>
+      <span class="dl-label">What to include</span>
+      <div class="dl-val">Project address (street address of the job) and signed contract date. Optional but appreciated: job type (resurface, renovation, new build) and approximate project value — helps Iron Tiger Digital calibrate lead quality over time, not used for billing.</div>
+    </li>
+    <li>
+      <span class="dl-label">When to report</span>
+      <div class="dl-val">At the time the contract is signed. Do not wait until the job is completed or invoiced to the homeowner — the billing trigger is <strong>signed contract</strong>, not project completion.</div>
+    </li>
+    <li>
+      <span class="dl-label">What if you forget</span>
+      <div class="dl-val">Report it when you remember — there's no late-reporting penalty. Iron Tiger Digital does not audit unreported closes. The close-report system is honor-based; the fee structure is designed to make honest reporting the rational choice (you only pay on value received).</div>
+    </li>
+    <li>
+      <span class="dl-label">Multiple closes in one month</span>
+      <div class="dl-val">Report each close separately by replying to its respective lead email. This keeps invoices matched to specific leads and simplifies AP reconciliation on your end.</div>
+    </li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 7: INVALID LEAD DISPUTES
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 7 — Disputing an Invalid Lead</h3>
+  <p style="font-size:.9rem;color:var(--gray);margin-bottom:.85rem;">Iron Tiger Digital validates every lead before delivery, but occasionally a lead slips through that shouldn't count as billable. Here's what qualifies and how to dispute it.</p>
+
+  <p style="font-size:.88rem;color:var(--text);font-weight:700;margin-bottom:.5rem;">Grounds for a valid dispute:</p>
+  <ul class="checklist" style="margin-bottom:1rem;">
+    <li>
+      <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span>Phone number is not in service or belongs to someone who has no knowledge of the inquiry</span>
+    </li>
+    <li>
+      <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span>Service address is outside the 50-mile San Antonio territory</span>
+    </li>
+    <li>
+      <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span>Lead is a duplicate — the same homeowner was delivered within the prior 60 days</span>
+    </li>
+    <li>
+      <div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span>Lead is clearly spam or a bot submission (no real project described, obviously false name)</span>
+    </li>
+  </ul>
+
+  <p style="font-size:.88rem;color:var(--text);font-weight:700;margin-bottom:.5rem;">Not grounds for a dispute:</p>
+  <ul class="checklist" style="margin-bottom:1rem;">
+    <li>
+      <div class="check-icon" style="background:#b91c1c;"><svg viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <span>Homeowner doesn't answer repeated calls — this is a follow-up challenge, not an invalid lead</span>
+    </li>
+    <li>
+      <div class="check-icon" style="background:#b91c1c;"><svg viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <span>Homeowner decides not to move forward after contact — intent was real at submission</span>
+    </li>
+    <li>
+      <div class="check-icon" style="background:#b91c1c;"><svg viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <span>Homeowner got a quote from another contractor on their own — exclusivity covers Iron Tiger Digital's distribution only</span>
+    </li>
+    <li>
+      <div class="check-icon" style="background:#b91c1c;"><svg viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <span>Lead didn't close — no payment is owed on unconverted leads regardless of reason</span>
+    </li>
+  </ul>
+
+  <p style="font-size:.88rem;color:var(--text);font-weight:700;margin-bottom:.75rem;">Dispute process:</p>
+  <ol class="dispute-steps">
+    <li>
+      <div class="ds-body">
+        <strong>Reply to the lead email within 5 business days of delivery</strong>
+        <span>Flag the issue in the reply: "This lead appears invalid — [reason]." Disputes submitted after 5 business days may not be credited.</span>
+      </div>
+    </li>
+    <li>
+      <div class="ds-body">
+        <strong>Iron Tiger Digital reviews within 2 business days</strong>
+        <span>We'll cross-reference the call recording (if applicable), form submission, and lead data. We'll email you the outcome.</span>
+      </div>
+    </li>
+    <li>
+      <div class="ds-body">
+        <strong>Resolution: credit or confirmation</strong>
+        <span>If the dispute is valid, the lead is removed from billable count and any invoice adjusted. If the lead meets delivery criteria, we'll explain why and the lead stands. Either way, you get a written response.</span>
+      </div>
+    </li>
+    <li>
+      <div class="ds-body">
+        <strong>Escalation window: 10 business days</strong>
+        <span>If you disagree with the outcome, both parties agree to resolve in good faith within 10 business days before pursuing any other remedy — per the Agreement.</span>
+      </div>
+    </li>
+  </ol>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 8: BILLING RECONCILIATION
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 8 — Billing &amp; Reconciliation</h3>
+
+  <ul class="detail-list">
+    <li>
+      <span class="dl-label">Invoice trigger</span>
+      <div class="dl-val">Close report received from Keith Zars (reply to lead email with project address + signed date). Invoices are not issued speculatively or in advance.</div>
+    </li>
+    <li>
+      <span class="dl-label">Invoice timing</span>
+      <div class="dl-val">Sent within 2 business days of the close report. Issued electronically — a pay link is included directly in the invoice email.</div>
+    </li>
+    <li>
+      <span class="dl-label">Payment due</span>
+      <div class="dl-val">Net-15 from invoice date. Invoices unpaid after 30 days may accrue interest at 1.5% per month on the outstanding balance.</div>
+    </li>
+    <li>
+      <span class="dl-label">Payment methods</span>
+      <div class="dl-val"><strong>ACH / bank transfer</strong> (preferred — no fee, most B2B clients use this) · <strong>Stripe</strong> (card, click-to-pay from invoice) · <strong>Zelle for Business</strong> (same-day option)</div>
+    </li>
+    <li>
+      <span class="dl-label">Billing disputes</span>
+      <div class="dl-val">If an invoice doesn't match your close records, email costa@irontigerleads.com with the invoice number and the discrepancy. Iron Tiger Digital can provide the signed contract date or invoice number you submitted for any line item. Both parties resolve billing disputes in good faith within 10 business days.</div>
+    </li>
+    <li>
+      <span class="dl-label">Monthly reconciliation</span>
+      <div class="dl-val">The shared lead log (available on request) shows every lead delivered with its timestamp. Cross-reference against your CRM's closed deals tagged "Iron Tiger Digital" to verify billing accuracy at month end.</div>
+    </li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 9: TERMINATION & TRANSITION
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 9 — Termination &amp; Transition Handling</h3>
+  <p style="font-size:.9rem;color:var(--gray);margin-bottom:.85rem;">How the relationship winds down if either party gives notice — and what stays owed.</p>
+
+  <ul class="detail-list">
+    <li>
+      <span class="dl-label">Notice required</span>
+      <div class="dl-val">30 days written notice by email — to <strong>costa@irontigerleads.com</strong> for notice to Iron Tiger Digital, or to the address on file for notice to Keith Zars Pools.</div>
+    </li>
+    <li>
+      <span class="dl-label">Leads in flight</span>
+      <div class="dl-val">Any lead delivered before the termination date remains billable if it closes — even if the close happens after notice is given. The 30-day notice period does not waive payment on leads already in your pipeline.</div>
+    </li>
+    <li>
+      <span class="dl-label">Lead delivery stop</span>
+      <div class="dl-val">Iron Tiger Digital stops delivering new leads effective the termination date. No leads are delivered after the notice period expires.</div>
+    </li>
+    <li>
+      <span class="dl-label">Zero-volume exit</span>
+      <div class="dl-val">If Iron Tiger Digital's San Antonio lead volume drops to zero for 60 consecutive days, Keith Zars Pools may terminate with written notice and no penalty period — no need to wait out the standard 30 days.</div>
+    </li>
+    <li>
+      <span class="dl-label">Asset ownership</span>
+      <div class="dl-val">All websites, domains, and rankings used to generate leads remain Iron Tiger Digital's property. Termination gives Keith Zars Pools no claim to those assets. The site stays live and generating leads — Iron Tiger Digital will re-engage a new contractor in the market.</div>
+    </li>
+    <li>
+      <span class="dl-label">Homeowner data</span>
+      <div class="dl-val">Lead data received during the agreement remains confidential per Section 8 of the Agreement, including after termination. Do not sell or distribute homeowner contact information to third parties.</div>
+    </li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 10: CONTACTS & ESCALATION
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 10 — Contacts &amp; Escalation</h3>
+
+  <div class="contact-grid" style="margin-bottom:1rem;">
+    <div class="contact-cell">
+      <div class="cc-role">Lead Delivery Issues</div>
+      <div class="cc-name">Costa Demetral</div>
+      <div class="cc-detail">costa@irontigerleads.com<br>(734) 476-1457<br>Response within 2 business hours</div>
+    </div>
+    <div class="contact-cell">
+      <div class="cc-role">Billing &amp; Invoice Questions</div>
+      <div class="cc-name">Costa Demetral</div>
+      <div class="cc-detail">costa@irontigerleads.com<br>Reference invoice number in subject<br>Resolution within 10 business days</div>
+    </div>
+    <div class="contact-cell">
+      <div class="cc-role">Lead Disputes</div>
+      <div class="cc-name">Reply to Lead Email</div>
+      <div class="cc-detail">Reply to the original delivery email<br>Within 5 business days of delivery<br>Review completed within 2 business days</div>
+    </div>
+    <div class="contact-cell">
+      <div class="cc-role">Close Reports</div>
+      <div class="cc-name">Reply to Lead Email</div>
+      <div class="cc-detail">Reply to original lead thread<br>Include: project address + signed date<br>Invoice sent within 2 business days</div>
+    </div>
+  </div>
+
+  <div class="alert alert-dark">
+    <strong>Sender whitelist reminder:</strong> Add <code>costa@irontigerleads.com</code> to your approved senders and share this with your office manager or AP contact. All lead delivery and billing communication comes from this address.
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     QUICK REFERENCE
+═══════════════════════════════════ -->
+<div style="background:var(--dark);color:#fff;border-radius:14px;padding:1.5rem 1.6rem;margin-bottom:1.5rem;">
+  <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--green);margin-bottom:1rem;">Quick Reference — Lead Lifecycle at a Glance</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;">
+    <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:.85rem 1rem;">
+      <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--green);margin-bottom:.4rem;">Lead arrives</div>
+      <div style="font-size:.85rem;color:#e2e8f0;line-height:1.5;">Call within <strong style="color:#fff;">5 minutes</strong>. Add to CRM. Tag "Iron Tiger Digital."</div>
+    </div>
+    <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:.85rem 1rem;">
+      <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--green);margin-bottom:.4rem;">Lead is invalid</div>
+      <div style="font-size:.85rem;color:#e2e8f0;line-height:1.5;">Reply to lead email within <strong style="color:#fff;">5 business days</strong>. State the reason.</div>
+    </div>
+    <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:.85rem 1rem;">
+      <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--green);margin-bottom:.4rem;">Job closes</div>
+      <div style="font-size:.85rem;color:#e2e8f0;line-height:1.5;">Reply to lead email: project address + signed date. Invoice arrives in <strong style="color:#fff;">2 business days</strong>.</div>
+    </div>
+    <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:.85rem 1rem;">
+      <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--green);margin-bottom:.4rem;">Invoice arrives</div>
+      <div style="font-size:.85rem;color:#e2e8f0;line-height:1.5;">Pay <strong style="color:#fff;">Net-15</strong> via ACH, Stripe, or Zelle. Contact costa@irontigerleads.com with any questions.</div>
+    </div>
+  </div>
+</div>
+
+
+</div><!-- /wrap -->
+
+<footer>
+  Costa Demetral &nbsp;·&nbsp; <strong>costa@irontigerleads.com</strong> &nbsp;·&nbsp; 734-476-1457 &nbsp;·&nbsp; Iron Tiger Digital
+  <br><span style="display:inline-block;background:var(--badge-bg);color:var(--badge-color);padding:.15rem .55rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.04em;">May 2026 · Confidential · Not for distribution</span>
+</footer>
+
+</body>
+</html>

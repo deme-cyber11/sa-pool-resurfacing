@@ -387,12 +387,23 @@ footer strong { color: var(--green-dark); }
 }
 
 /* ─── PRINT ─── */
+@page {
+  margin: 0.6in 0.65in;
+}
 @media print {
-  body { background: #fff; }
-  .wrap { padding-bottom: 1rem; }
-  .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { padding-bottom: 1rem; max-width: 100%; }
+  header, .hero, .card, .agreement-section, .roi-cell, .quality-cell, .payment-card, .roi-note {
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .card { margin-bottom: .75rem; }
   .sig-line { border-bottom: 1.5px solid #333; }
   .print-btn-row { display: none !important; }
+  .summary-list li { page-break-inside: avoid; break-inside: avoid; }
+  .clause { page-break-inside: avoid; break-inside: avoid; }
+  .steps li { page-break-inside: avoid; break-inside: avoid; }
 }
 
 .print-btn-row { margin-top: 1.5rem; text-align: center; }

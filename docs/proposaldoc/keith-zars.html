@@ -908,36 +908,25 @@ footer strong { color: var(--green-dark); }
 
       <div class="sig-party">
         <div class="sig-party-name">Iron Tiger Digital (Provider)</div>
-        <div class="esig-result-static">
-          <span class="esig-cursive">Costa Demetral</span>
-          <span class="esig-ts">Signed electronically &middot; May 14, 2026</span>
-        </div>
+        <div style="border-bottom:1.5px solid #999;min-height:48px;margin-bottom:.35rem;"></div>
         <div class="sig-line-label">Signature</div>
         <div class="sig-prefill">Costa Demetral</div>
         <div class="sig-line-label">Printed Name</div>
         <div class="sig-prefill" style="font-size:.88rem;font-weight:400;color:var(--gray);">Founder, Iron Tiger Digital</div>
         <div class="sig-line-label">Title</div>
-        <div class="sig-prefill" style="font-size:.88rem;font-weight:400;color:var(--gray);">May 14, 2026</div>
+        <div style="border-bottom:1.5px solid #999;min-height:36px;margin-bottom:.35rem;"></div>
         <div class="sig-line-label">Date</div>
       </div>
 
       <div class="sig-party">
         <div class="sig-party-name">Keith Zars Pools (Client)</div>
-        <div class="esig-area">
-          <input type="text" id="esig-input-kz" class="esig-name-input" placeholder="Type full name to sign" value="" />
-          <button class="esig-btn" id="esig-btn-kz" onclick="applySig('kz')">&#9998;&nbsp; Apply Signature</button>
-          <div class="esig-result" id="esig-result-kz" style="display:none;">
-            <span class="esig-cursive" id="esig-cursive-kz"></span>
-            <span class="esig-ts" id="esig-ts-kz"></span>
-            <button class="esig-clear" onclick="clearSig('kz')">clear</button>
-          </div>
-        </div>
+        <div style="border-bottom:1.5px solid #999;min-height:48px;margin-bottom:.35rem;"></div>
         <div class="sig-line-label">Signature</div>
         <div class="sig-prefill">Sean MacDonald</div>
         <div class="sig-line-label">Printed Name</div>
         <div class="sig-prefill" style="font-size:.88rem;font-weight:400;color:var(--gray);">Sales Manager, Keith Zars Pools</div>
         <div class="sig-line-label">Title</div>
-        <div><input type="date" id="esig-date-kz" class="esig-date-input" /></div>
+        <div style="border-bottom:1.5px solid #999;min-height:36px;margin-bottom:.35rem;"></div>
         <div class="sig-line-label">Date</div>
         <div style="border-bottom:1.5px solid #999;padding:.15rem 0 .4rem;margin-bottom:.35rem;min-height:36px;display:flex;align-items:flex-end;">
           <div style="display:flex;flex-direction:column;gap:.15rem;">
@@ -954,7 +943,7 @@ footer strong { color: var(--green-dark); }
     </div>
 
     <div class="print-btn-row">
-      <button onclick="window.print()" style="background:var(--green-dark);color:#fff;border:none;padding:.7rem 1.75rem;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;">Print / Save PDF</button>
+      <button onclick="window.print()" style="background:var(--green-dark);color:#fff;border:none;padding:.7rem 1.75rem;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;">Print / Save PDF for HelloSign</button>
     </div>
   </div>
 
@@ -984,33 +973,5 @@ footer strong { color: var(--green-dark); }
   <br><span class="date-badge">May 2026 · Confidential · Not for distribution</span>
 </footer>
 
-<script>
-function applySig(party) {
-  var input = document.getElementById('esig-input-' + party);
-  var name = input.value.trim();
-  if (!name) { input.focus(); input.style.borderBottomColor = '#e53e3e'; return; }
-  var now = new Date();
-  var ts = now.toLocaleString('en-US', {
-    month: 'long', day: 'numeric', year: 'numeric',
-    hour: 'numeric', minute: '2-digit', timeZoneName: 'short',
-    timeZone: 'America/Chicago'
-  });
-  document.getElementById('esig-cursive-' + party).textContent = name;
-  document.getElementById('esig-ts-' + party).textContent = 'Signed electronically · ' + ts;
-  document.getElementById('esig-result-' + party).style.display = 'flex';
-  input.style.display = 'none';
-  document.getElementById('esig-btn-' + party).style.display = 'none';
-  if (party === 'kz') {
-    var d = document.getElementById('esig-date-kz');
-    if (!d.value) { d.value = now.toISOString().split('T')[0]; }
-  }
-}
-function clearSig(party) {
-  document.getElementById('esig-result-' + party).style.display = 'none';
-  document.getElementById('esig-input-' + party).style.display = 'block';
-  document.getElementById('esig-btn-' + party).style.display = '';
-  document.getElementById('esig-input-' + party).style.borderBottomColor = '';
-}
-</script>
 </body>
 </html>

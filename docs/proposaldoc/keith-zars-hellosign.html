@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#10b981">
+<title>Lead Generation Agreement — Iron Tiger Digital × Keith Zars Pools</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310b981'/%3E%3Ctext x='32' y='44' font-family='system-ui' font-size='32' font-weight='800' text-anchor='middle' fill='%23fff'%3EITD%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap">
+
+<style>
+:root {
+  --green: #10b981;
+  --green-dark: #059669;
+  --dark: #1a1a2e;
+  --gray: #5a5a5a;
+  --light: #eefaf4;
+  --border: #d2ecdf;
+  --badge-bg: #e6f7ef;
+  --badge-color: #059669;
+  --text: #222;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+/* ─── HEADER ─── */
+header {
+  background: var(--dark);
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid var(--green);
+}
+header .eyebrow {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-bottom: .3rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color: #fff;
+  padding: 2rem 1.5rem 1.75rem;
+  border-radius: 0 0 16px 16px;
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+.hero .badge {
+  display: inline-block;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.4);
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .85rem;
+}
+.hero h2 {
+  margin: 0 0 .4rem;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+.hero p {
+  margin: 0;
+  opacity: .92;
+  font-size: 1rem;
+}
+
+/* ─── CARDS ─── */
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+}
+.card h3 {
+  margin: 0 0 1rem;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 700;
+}
+.card p { margin: 0 0 .75rem; font-size: .95rem; color: var(--text); }
+.card p:last-child { margin-bottom: 0; }
+
+/* ─── DEAL SUMMARY BULLETS ─── */
+.summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.summary-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: .85rem;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: .95rem;
+  color: var(--text);
+}
+.summary-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.summary-list li:first-child { padding-top: 0; }
+.summary-list .s-label {
+  flex: 0 0 110px;
+  font-weight: 700;
+  font-size: .82rem;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding-top: .1rem;
+}
+.summary-list .s-val { flex: 1; }
+
+/* ─── ROI TABLE ─── */
+.roi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 520px) {
+  .roi-grid { grid-template-columns: 1fr; }
+}
+.roi-cell {
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: .9rem 1rem;
+  text-align: center;
+}
+.roi-cell.highlight {
+  border-color: var(--green);
+  background: var(--light);
+}
+.roi-cell .roi-val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.03em;
+  line-height: 1;
+}
+.roi-cell.highlight .roi-val { color: var(--green-dark); }
+.roi-cell .roi-label {
+  font-size: .75rem;
+  color: var(--gray);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-top: .3rem;
+}
+.roi-note {
+  background: var(--badge-bg);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  padding: .8rem 1rem;
+  font-size: .88rem;
+  color: var(--green-dark);
+  font-weight: 600;
+}
+
+/* ─── STEPS ─── */
+.steps { list-style: none; margin: 0; padding: 0; }
+.steps li {
+  display: flex;
+  gap: .9rem;
+  align-items: flex-start;
+  margin-bottom: .85rem;
+  font-size: .95rem;
+}
+.steps li:last-child { margin-bottom: 0; }
+.step-num {
+  flex: 0 0 28px;
+  height: 28px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: .1rem;
+}
+.steps li .step-body { flex: 1; }
+.steps li .step-body > strong { display: block; font-weight: 700; margin-bottom: .15rem; color: var(--dark); }
+.steps li .step-body span { color: var(--gray); font-size: .88rem; }
+
+/* ─── QUALITY GRID ─── */
+.quality-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+@media (max-width: 480px) {
+  .quality-grid { grid-template-columns: 1fr; }
+}
+.quality-cell {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .85rem 1rem;
+}
+.quality-cell .qc-head {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--green-dark);
+  margin-bottom: .3rem;
+}
+.quality-cell .qc-body {
+  font-size: .88rem;
+  color: var(--gray);
+  line-height: 1.45;
+}
+/* ─── AGREEMENT ─── */
+.agreement-section {
+  background: #fff;
+  border: 2px solid var(--dark);
+  border-radius: 14px;
+  padding: 1.75rem 1.6rem;
+  margin-bottom: 1.1rem;
+}
+.agreement-section .ag-title {
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--border);
+}
+.clause {
+  margin-bottom: 1.1rem;
+}
+.clause:last-of-type { margin-bottom: 0; }
+.clause .cl-num {
+  font-size: .72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--green-dark);
+  margin-bottom: .2rem;
+}
+.clause .cl-head {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: .25rem;
+}
+.clause .cl-body {
+  font-size: .88rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+.clause .cl-body strong { color: var(--text); font-weight: 600; }
+
+/* ─── SIGNATURE BLOCK ─── */
+.sig-block {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1.5px solid var(--border);
+}
+.sig-block .sig-title {
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.sig-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 480px) {
+  .sig-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+.sig-party { }
+.sig-party .sig-party-name {
+  font-size: .82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+.sig-line {
+  border-bottom: 1.5px solid #999;
+  margin-bottom: .35rem;
+  height: 36px;
+}
+.sig-line-label {
+  font-size: .72rem;
+  color: var(--gray);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+}
+
+/* ─── PAYMENT INFO ─── */
+.payment-card {
+  background: var(--badge-bg);
+  border: 1.5px solid var(--green);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  margin-top: .85rem;
+}
+.payment-card .pc-head {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--green-dark);
+  margin-bottom: .4rem;
+}
+.payment-card .pc-body {
+  font-size: .9rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+.payment-card .pc-alt {
+  font-size: .82rem;
+  color: var(--gray);
+  margin-top: .5rem;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  text-align: center;
+  font-size: .78rem;
+  color: var(--gray);
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+footer strong { color: var(--green-dark); }
+
+.date-badge {
+  display: inline-block;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  padding: .15rem .55rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+/* ─── PRINT ─── */
+@media print {
+  body { background: #fff; }
+  .wrap { padding-bottom: 1rem; }
+  .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sig-line { border-bottom: 1.5px solid #333; }
+  .print-btn-row { display: none !important; }
+}
+
+.print-btn-row { margin-top: 1.5rem; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Iron Tiger Digital × Keith Zars Pools</div>
+  <h1>Lead Generation Proposal &amp; Service Agreement</h1>
+</header>
+
+<div class="wrap">
+
+<div class="hero">
+  <span class="badge">Prepared May 2026 · Confidential</span>
+  <h2>$500 Per Completed Job</h2>
+  <p>Inbound homeowners. Exclusive delivery. Only pay when the job closes. No retainer, no lock-in.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     LEAD PACKET HIGHLIGHT (top of doc)
+═══════════════════════════════════ -->
+<div class="card" style="border:2px solid var(--green-dark);background:var(--light);margin-bottom:1.25rem;">
+  <h3 style="color:var(--green-dark);margin-bottom:.5rem;font-size:.75rem;letter-spacing:.12em;">The Deliverable — Sample Lead Packet</h3>
+  <p style="font-size:.93rem;color:var(--text);margin-bottom:.6rem;">Every qualified homeowner generates a private, time-stamped lead packet — full contact info, project description, property address, and call/form data — delivered to Keith Zars within 1 hour. Here's what you'll receive:</p>
+  <a href="https://alamopoolresurfacing.com/lead/don-henderson/" target="_blank" style="display:inline-block;background:var(--green-dark);color:#fff;font-size:.95rem;font-weight:700;padding:.6rem 1.1rem;border-radius:8px;text-decoration:none;margin-bottom:.5rem;">View Sample Lead Packet →</a>
+  <p style="font-size:.78rem;color:var(--gray);margin:0;">Packets are noindex — only accessible via the direct link Iron Tiger Digital shares with you at delivery.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 1: DEAL SUMMARY
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 1 — Deal Summary</h3>
+  <ul class="summary-list">
+    <li>
+      <span class="s-label">What it is</span>
+      <span class="s-val">Iron Tiger Digital delivers inbound homeowner leads from <strong>alamopoolresurfacing.com</strong> — homeowners who searched for new pool construction or major renovation in the San Antonio metro area and submitted a contact form. Keith Zars Pools receives each lead exclusively.</span>
+    </li>
+    <li>
+      <span class="s-label">Cost</span>
+      <span class="s-val"><strong>$500 per completed job.</strong> With Iron Tiger Digital, you only pay for deals when they are closed and a contract is signed. No setup fee, no monthly retainer, no minimum volume commitment.</span>
+    </li>
+    <li>
+      <span class="s-label">Billing</span>
+      <span class="s-val">Net-15 (payment due within 15 days of invoice) from invoice date, triggered when Keith Zars reports a contract signed with deposit received. Iron Tiger Digital invoices electronically — pay by ACH/bank transfer. No new accounts required.</span>
+    </li>
+    <li>
+      <span class="s-label">Exit</span>
+      <span class="s-val">Month-to-month. Either party terminates with <strong>30 days written notice</strong>. No penalties, no wind-down fees.</span>
+    </li>
+  </ul>
+
+  <div style="margin-top:1.1rem;background:#d1fae5;border-left:4px solid var(--green-dark);border-radius:8px;padding:.85rem 1rem;">
+    <p style="margin:0;font-size:.95rem;color:var(--dark);font-weight:700;">Zero risk to try. Seriously.</p>
+    <p style="margin:.35rem 0 0;font-size:.87rem;color:var(--dark);">No setup fee. No monthly commitment. No payment until a lead converts to a <em>signed contract</em>. If it doesn't close, it costs Keith Zars nothing — Iron Tiger Digital carries the risk.</p>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 2A: ROI MATH
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 2A — Return on Investment</h3>
+
+  <p style="font-size:.9rem;color:var(--gray);margin-bottom:1rem;">These are organic, exclusive leads — one homeowner, one site, one contractor. Here's what each lead type is worth at close.</p>
+
+  <div class="roi-grid" style="grid-template-columns:1fr 1fr;max-width:340px;margin-bottom:1rem;">
+    <div class="roi-cell">
+      <div class="roi-val">$500</div>
+      <div class="roi-label">Our flat rate</div>
+    </div>
+    <div class="roi-cell highlight">
+      <div class="roi-val">$0</div>
+      <div class="roi-label">Cost if lead doesn't close</div>
+    </div>
+  </div>
+
+  <!-- Job type ROI table -->
+  <div style="margin-bottom:1rem;overflow-x:auto;">
+    <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray);margin-bottom:.5rem;">What $500 costs as % of job value — by job type</p>
+    <table style="width:100%;border-collapse:collapse;font-size:.84rem;">
+      <thead>
+        <tr style="background:var(--badge-bg);">
+          <th style="text-align:left;padding:.45rem .6rem;font-weight:700;color:var(--dark);">Job Type</th>
+          <th style="text-align:right;padding:.45rem .6rem;font-weight:700;color:var(--dark);">Avg Job Value</th>
+          <th style="text-align:right;padding:.45rem .6rem;font-weight:700;color:var(--dark);">$500 as %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#f0fdf4;">
+          <td style="padding:.4rem .6rem;color:var(--text);">New pool build</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--text);">$55k–$95k</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--green-dark);font-weight:700;">0.5–0.9% ✓</td>
+        </tr>
+        <tr style="background:#f0fdf4;">
+          <td style="padding:.4rem .6rem;color:var(--text);">Full renovation</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--text);">$20k–$45k</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--green-dark);font-weight:700;">1.1–2.5% ✓</td>
+        </tr>
+        <tr style="background:#fffbeb;">
+          <td style="padding:.4rem .6rem;color:var(--text);">Resurface / replaster</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--text);">$8k–$18k</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:#b45309;font-weight:700;">2.8–6.3%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="roi-note">
+    Every lead comes from a homeowner who found the site organically, read the content, and chose to reach out. Not a scraped list, not a shared marketplace, not a paid click. These are <strong>qualified, inbound homeowners</strong> with real intent.
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 2B: MARKET COMPARISON
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 2B — Market Comparison</h3>
+
+  <!-- Cost comparison callout -->
+  <div style="background:#fff;border:2px solid var(--green-dark);border-radius:12px;padding:1rem 1.15rem;margin-bottom:.85rem;">
+    <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green-dark);margin-bottom:.65rem;">How this compares to what you're already paying</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:.4rem;margin-bottom:.65rem;">
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:.88rem;padding:.5rem .7rem;background:#fef2f2;border-radius:7px;gap:.5rem;">
+        <span style="color:var(--text);font-weight:600;flex:1;">Google Ads (pool keywords)</span>
+        <span style="color:#b91c1c;font-weight:700;text-align:right;flex:0 0 auto;">$150–$400/lead — paid win or lose</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:.88rem;padding:.5rem .7rem;background:#fef2f2;border-radius:7px;gap:.5rem;">
+        <span style="color:var(--text);font-weight:600;flex:1;">Angi / HomeAdvisor</span>
+        <span style="color:#b91c1c;font-weight:700;text-align:right;flex:0 0 auto;">$50–$150/lead — shared with 3–5 competitors</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:.88rem;padding:.5rem .7rem;background:#d1fae5;border-radius:7px;gap:.5rem;">
+        <span style="color:var(--dark);font-weight:800;flex:1;">Iron Tiger Digital</span>
+        <span style="color:var(--green-dark);font-weight:800;text-align:right;flex:0 0 auto;">$500 only when the job closes</span>
+      </div>
+    </div>
+    <p style="font-size:.82rem;color:var(--gray);margin:0;">With Google Ads or Angi, you pay whether the lead books or ghosts you. With Iron Tiger Digital, <strong style="color:var(--text);">zero dollars leave your account until a signed contract is in hand.</strong></p>
+  </div>
+
+  <!-- 10-lead scenario comparison -->
+  <div style="margin-bottom:1rem;overflow-x:auto;">
+    <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray);margin-bottom:.5rem;">Same 10-lead scenario — what each model actually costs</p>
+    <p style="font-size:.8rem;color:var(--gray);margin-bottom:.7rem;">Assumptions: 10 leads delivered, $12k avg resurface/replaster job. Angi/HomeAdvisor leads are shared with 3–5 competitors → lower close rate. Iron Tiger Digital leads are exclusive → higher close rate.</p>
+    <table style="width:100%;border-collapse:collapse;font-size:.83rem;">
+      <thead>
+        <tr style="background:var(--badge-bg);">
+          <th style="text-align:left;padding:.45rem .6rem;font-weight:700;color:var(--dark);border-bottom:2px solid #e5e7eb;"> </th>
+          <th style="text-align:right;padding:.45rem .6rem;font-weight:700;color:#b91c1c;border-bottom:2px solid #e5e7eb;">Angi / HomeAdvisor<br><span style="font-weight:400;font-size:.75rem;">$150/lead, shared</span></th>
+          <th style="text-align:right;padding:.45rem .6rem;font-weight:700;color:#b91c1c;border-bottom:2px solid #e5e7eb;">Google Ads<br><span style="font-weight:400;font-size:.75rem;">~$300/lead, paid clicks</span></th>
+          <th style="text-align:right;padding:.45rem .6rem;font-weight:700;color:var(--green-dark);border-bottom:2px solid #e5e7eb;">Iron Tiger Digital<br><span style="font-weight:400;font-size:.75rem;">$500/close only</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:.4rem .6rem;color:var(--text);font-weight:600;border-bottom:1px solid #f3f4f6;">Upfront cost for 10 leads</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:#b91c1c;font-weight:700;border-bottom:1px solid #f3f4f6;">$1,500</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:#b91c1c;font-weight:700;border-bottom:1px solid #f3f4f6;">$3,000</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--green-dark);font-weight:700;border-bottom:1px solid #f3f4f6;">$0</td>
+        </tr>
+        <tr style="background:#f9fafb;">
+          <td style="padding:.4rem .6rem;color:var(--text);font-weight:600;border-bottom:1px solid #f3f4f6;">Leads that don't close</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:#b91c1c;font-weight:700;border-bottom:1px solid #f3f4f6;">8 (cost: $1,200 sunk)</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:#b91c1c;font-weight:700;border-bottom:1px solid #f3f4f6;">8 (cost: $2,400 sunk)</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--green-dark);font-weight:700;border-bottom:1px solid #f3f4f6;">7 (cost: $0)</td>
+        </tr>
+        <tr>
+          <td style="padding:.4rem .6rem;color:var(--text);font-weight:600;border-bottom:1px solid #f3f4f6;">Jobs that close</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--text);border-bottom:1px solid #f3f4f6;">2 (20% — shared leads)</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--text);border-bottom:1px solid #f3f4f6;">2 (20% — paid clicks)</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--text);border-bottom:1px solid #f3f4f6;">3 (30% — exclusive)</td>
+        </tr>
+        <tr style="background:#f9fafb;">
+          <td style="padding:.4rem .6rem;color:var(--text);font-weight:600;border-bottom:1px solid #f3f4f6;">Total marketing spend</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:#b91c1c;font-weight:700;border-bottom:1px solid #f3f4f6;">$1,500</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:#b91c1c;font-weight:700;border-bottom:1px solid #f3f4f6;">$3,000</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--green-dark);font-weight:700;border-bottom:1px solid #f3f4f6;">$1,500</td>
+        </tr>
+        <tr style="background:#fef2f2;">
+          <td style="padding:.4rem .6rem;color:var(--text);font-weight:700;border-bottom:1px solid #f3f4f6;">Effective cost per closed job</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:#b91c1c;font-weight:800;border-bottom:1px solid #f3f4f6;">$750</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:#b91c1c;font-weight:800;border-bottom:1px solid #f3f4f6;">$1,500</td>
+          <td style="padding:.4rem .6rem;text-align:right;border-bottom:1px solid #f3f4f6;"> </td>
+        </tr>
+        <tr style="background:#d1fae5;">
+          <td style="padding:.4rem .6rem;color:var(--dark);font-weight:700;">Iron Tiger Digital: cost per closed job</td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--gray);font-size:.8rem;"> </td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--gray);font-size:.8rem;"> </td>
+          <td style="padding:.4rem .6rem;text-align:right;color:var(--green-dark);font-weight:800;font-size:1rem;">$500</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:.78rem;color:var(--gray);margin-top:.5rem;margin-bottom:0;">Close rates based on contractor industry surveys.</p>
+  </div>
+
+  <p style="font-size:.82rem;color:var(--gray);margin:0;"><strong style="color:var(--text);">Volume ramp:</strong> As site rankings mature, this channel typically delivers <strong>4–10 leads/month</strong>. Early months may run lighter as organic rankings build; by month three, volume normalizes.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 3: WHAT IS A VALID LEAD
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 3 — What Is a Valid Lead</h3>
+  <p style="font-size:.95rem;color:var(--text);margin-bottom:.85rem;">Every lead we deliver meets these criteria before it ever reaches your inbox:</p>
+  <ul class="summary-list">
+    <li>
+      <span class="s-label">Source</span>
+      <span class="s-val">Inbound form submission or phone call from <strong>alamopoolresurfacing.com</strong> — an organic visitor who searched for pool construction or renovation, read the site, and took action. Phone calls are routed through a dedicated call-tracking number on the site; recordings are available on request.</span>
+    </li>
+    <li>
+      <span class="s-label">Territory</span>
+      <span class="s-val">Homeowner located within <strong>50 miles of San Antonio</strong> — covers San Antonio metro, New Braunfels, Seguin, Boerne, Kerrville, and surrounding communities.</span>
+    </li>
+    <li>
+      <span class="s-label">Contact info</span>
+      <span class="s-val">Full name, working phone number, service address, and type of work requested. Incomplete submissions are not forwarded.</span>
+    </li>
+    <li>
+      <span class="s-label">Exclusivity</span>
+      <span class="s-val">Delivered to Keith Zars Pools only. The same lead is never sent to another contractor.</span>
+    </li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 4: HOW IT WORKS
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 4 — How It Works</h3>
+  <ol class="steps">
+    <li>
+      <span class="step-num">1</span>
+      <div class="step-body">
+        <strong style="margin-bottom:.35rem;">Homeowner submits via Iron Tiger Digital lead gen site</strong>
+        <span>A homeowner searching for new pool construction or major renovation in the San Antonio metro area finds <strong>alamopoolresurfacing.com</strong>, reads the content, and submits a contact form with their name, address, phone, and project description.</span>
+      </div>
+    </li>
+    <li>
+      <span class="step-num">2</span>
+      <div class="step-body">
+        <strong>Iron Tiger Digital delivers a full lead packet within 1 hour</strong>
+        <span>Keith Zars Pools receives an email with the full lead record: name, address, phone, email (if provided), project description, and timestamp. No portal login needed. A shared read-only lead log and call recordings are available on request. <strong>Sample lead packet:</strong> <a href="https://alamopoolresurfacing.com/lead/don-henderson/" target="_blank" style="color:var(--green-dark);">alamopoolresurfacing.com/lead/don-henderson/</a></span>
+      </div>
+    </li>
+    <li>
+      <span class="step-num">3</span>
+      <div class="step-body">
+        <strong style="margin-bottom:.35rem;">Keith Zars follows up and closes the job</strong>
+        <span>The lead is <strong>exclusively yours</strong> from the moment it's delivered. Iron Tiger Digital does not send the same lead to any other contractor. Your team calls, books the appointment, and closes the deal.</span>
+      </div>
+    </li>
+    <li>
+      <span class="step-num">4</span>
+      <div class="step-body">
+        <strong>Iron Tiger Digital invoices $500 when the contract is signed and deposit received</strong>
+        <span>When a contract is signed and deposit received, reply to the lead email with the project address and signed date — takes 30 seconds. Iron Tiger Digital sends an invoice within 2 business days — pay by ACH/bank transfer. No payment due on a lead until a contract is signed and deposit received.</span>
+      </div>
+    </li>
+  </ol>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 4B: PAYMENT
+═══════════════════════════════════ -->
+<div class="card">
+  <h3>Section 5 — Payment</h3>
+
+  <div class="payment-card">
+    <div class="pc-head">Payment — ACH / Bank Transfer</div>
+    <div class="pc-body">
+      Iron Tiger Digital invoices electronically. Payment is by <strong>ACH / bank transfer</strong> — Net-15 from invoice date; standard B2B; no fee on your end. Routing and account details are included on every invoice.
+    </div>
+    <div class="pc-alt">No new accounts required.</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 6: SERVICE AGREEMENT
+═══════════════════════════════════ -->
+<div class="agreement-section">
+  <div class="ag-title">Section 6 — Service Agreement (Binding Terms)</div>
+
+  <div class="clause">
+    <div class="cl-num">1. Parties &amp; Effective Date</div>
+    <div class="cl-head">Iron Tiger Digital and Keith Zars Pools</div>
+    <div class="cl-body">
+      This Agreement is between <strong>Iron Tiger Digital</strong>, 5900 Balcones Drive STE 100, Austin TX 78731 (costa@irontigerleads.com · (225) 535-4918), and <strong>Keith Zars Pools</strong>, effective as of <strong>[Signing Date]</strong>. Iron Tiger Digital is the "Provider." Keith Zars Pools is the "Client."
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">2. Lead Definition</div>
+    <div class="cl-head">What constitutes a billable lead</div>
+    <div class="cl-body">
+      A "Lead" is an inbound form or phone inquiry from Provider's lead generation site — a homeowner within the agreed service territory who is interested in new pool construction or major renovation. To be valid, a Lead must include a full name, a working phone number, and a service address within the territory.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">3. Delivery Process</div>
+    <div class="cl-head">How leads are delivered</div>
+    <div class="cl-body">
+      Each Lead is emailed from <strong>costa@irontigerleads.com</strong> to the address designated by Client at signing within 1 hour of receipt during business hours (Mon–Fri 8 AM–8 PM CT, Sat 10 AM–5 PM CT). The email includes name, phone, email, address, project description, and timestamp. Phone leads come through a dedicated call-tracking number — recordings available on request. Leads received after hours, on Sunday, or after 5 PM CT Saturday are delivered by 9 AM CT the next business morning. Add costa@irontigerleads.com to your approved senders to ensure leads reach your inbox.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">4. Exclusivity</div>
+    <div class="cl-head">Each lead is delivered to Client only</div>
+    <div class="cl-body">
+      Each Lead is delivered to Client only — Iron Tiger Digital will not sell, share, or transfer it to any other party. Note: homeowners may contact other contractors on their own; Iron Tiger Digital's exclusivity covers its own distribution only. <strong>All websites, domains, and rankings used to generate Leads remain Iron Tiger Digital's property.</strong> This Agreement transfers no ownership in those assets, and termination gives Client no claim to them.
+
+      <br><br><strong>Iron Tiger Digital will not enter a lead generation agreement with a direct competitor in the San Antonio market while this Agreement is active.</strong>
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">5. Service Territory</div>
+    <div class="cl-head">San Antonio metro and surrounding areas within 50 miles</div>
+    <div class="cl-body">
+      Leads come from homeowners within <strong>50 miles of San Antonio, Texas</strong> — including San Antonio metro, New Braunfels, Seguin, Boerne, Kerrville, and surrounding communities.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">6. Fees &amp; Payment</div>
+    <div class="cl-head">$500/completed job · Net-15 · Invoice on close report</div>
+    <div class="cl-body">
+      Client pays <strong>$500 per completed job</strong> — defined as a signed contract with deposit received from a Lead delivered under this Agreement. When a contract is signed and deposit received, Client reports it to Iron Tiger Digital. Iron Tiger Digital invoices within 2 business days. Payment is due <strong>Net-15</strong> (within 15 days of invoice) via ACH/bank transfer. No setup fee, no retainer, no minimum volume. Invoices unpaid after 30 days may accrue 1.5% monthly interest. Provider may request a signed contract date or invoice number to verify job close upon dispute. In the event of a billing dispute, both parties agree to resolve in good faith within 10 business days before pursuing any other remedy.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">7. No Conversion Guarantee</div>
+    <div class="cl-head">Provider delivers intent; Client closes the job</div>
+    <div class="cl-body">
+      Iron Tiger Digital delivers intent — it does not guarantee appointments, close rates, or signed contracts. Those outcomes are Client's responsibility.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">8. Confidentiality</div>
+    <div class="cl-head">Lead data stays private</div>
+    <div class="cl-body">
+      Both parties keep Lead data confidential — homeowner names, addresses, phone numbers, and project details. Client won't resell or distribute Lead data to third parties. Iron Tiger Digital won't disclose Client's lead volume, close rates, or pricing to competitors. These obligations survive termination.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">9. Term &amp; Termination</div>
+    <div class="cl-head">Month-to-month · 30 days written notice</div>
+    <div class="cl-body">
+      This Agreement is <strong>month-to-month</strong>, starting on the Effective Date. Either party can terminate with <strong>30 days written notice by email</strong> — to costa@irontigerleads.com for notices to Iron Tiger Digital, or to the address on file for Client. On termination, Iron Tiger Digital stops delivering Leads. All invoices for Leads delivered before termination remain due. No early-termination penalties. If Iron Tiger Digital's San Antonio lead volume drops to zero for 60 consecutive days, Client may terminate with written notice and no penalty period.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">10. Limitation of Liability</div>
+    <div class="cl-head">Provider's maximum liability capped at invoice credits</div>
+    <div class="cl-body">
+      Iron Tiger Digital's maximum liability to Client won't exceed the total fees invoiced in the 3 months before the claim. Neither party is liable to the other for indirect, incidental, or consequential damages — including lost profits, lost revenue, or reputational harm — even if warned of the possibility.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">11. Governing Law</div>
+    <div class="cl-head">State of Texas</div>
+    <div class="cl-body">
+      This Agreement is governed by <strong>Texas law</strong>. Any disputes that can't be resolved informally will be handled in state or federal courts in Bexar County, Texas.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">12. TCPA Compliance</div>
+    <div class="cl-head">Consent and telecommunications law</div>
+    <div class="cl-body">
+      Iron Tiger Digital generates Leads from opt-in forms with written consent disclosing that homeowners may be contacted by a licensed pool contractor — covering TCPA prior express written consent. Client is solely responsible for its own outreach practices and TCPA compliance, including FCC rules and the National Do Not Call Registry.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">13. Independent Contractor</div>
+    <div class="cl-head">Neither party is an agent or employee of the other</div>
+    <div class="cl-body">
+      Iron Tiger Digital and Keith Zars Pools are independent contractors. Nothing in this Agreement creates a partnership, joint venture, agency relationship, or employment relationship. Neither party has authority to bind the other to any obligation without prior written consent.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">14. Mutual Indemnification</div>
+    <div class="cl-head">Each party is responsible for its own acts</div>
+    <div class="cl-body">
+      Each party ("Indemnifying Party") will defend, indemnify, and hold harmless the other party and its officers, employees, and agents from any third-party claims, losses, damages, or costs (including reasonable attorneys' fees) arising from: (a) the Indemnifying Party's material breach of this Agreement; or (b) the Indemnifying Party's own negligence or misconduct. This includes Client's sole responsibility for its outreach practices and compliance with applicable telecommunications laws, including TCPA and the National Do Not Call Registry.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">15. Entire Agreement</div>
+    <div class="cl-head">This document is the complete agreement</div>
+    <div class="cl-body">
+      This Agreement is the complete understanding between the Parties on lead generation services and replaces all prior conversations, emails, and other agreements on this subject, whether written or verbal. Any changes must be in writing and signed by both Parties.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">16. Electronic Signatures</div>
+    <div class="cl-head">Digital signatures are fully binding</div>
+    <div class="cl-body">
+      The Parties agree that electronic signatures — including HelloSign (Dropbox Sign), DocuSign, a typed name, or a scanned handwritten signature — are valid, binding, and enforceable to the same extent as original ink signatures, under the federal E-SIGN Act and the Texas Uniform Electronic Transactions Act (UETA). Either Party may request a traditional wet-ink copy if preferred.
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="cl-num">17. Severability</div>
+    <div class="cl-head">Invalid provisions don't void the rest</div>
+    <div class="cl-body">
+      If any part of this Agreement is found invalid or unenforceable, it will be modified just enough to make it valid — or removed if modification isn't possible. The rest of the Agreement stays in effect.
+    </div>
+  </div>
+
+  <!-- SIGNATURE BLOCK -->
+  <div class="sig-block">
+    <div class="sig-title">Signatures — By signing below, each Party agrees to the terms of this Agreement</div>
+    <div style="background:#f0fdf4;border:1px solid var(--green);border-radius:10px;padding:.65rem 1rem;margin-bottom:1.5rem;font-size:.83rem;color:var(--green-dark);font-weight:600;">
+      Electronic signatures are valid and binding under the federal E-SIGN Act and Texas UETA (Clause 16).
+    </div>
+
+    <div class="sig-grid">
+
+      <div class="sig-party">
+        <div class="sig-party-name">Iron Tiger Digital (Provider)</div>
+        <div style="border-bottom:1.5px solid #999;min-height:48px;margin-bottom:.35rem;"></div>
+        <div class="sig-line-label">Signature</div>
+        <div style="border-bottom:1.5px solid #999;min-height:36px;margin-bottom:.35rem;"></div>
+        <div class="sig-line-label">Printed Name</div>
+        <div style="border-bottom:1.5px solid #999;min-height:36px;margin-bottom:.35rem;"></div>
+        <div class="sig-line-label">Title</div>
+        <div style="border-bottom:1.5px solid #999;min-height:36px;margin-bottom:.35rem;"></div>
+        <div class="sig-line-label">Date</div>
+      </div>
+
+      <div class="sig-party">
+        <div class="sig-party-name">Keith Zars Pools (Client)</div>
+        <div style="border-bottom:1.5px solid #999;min-height:48px;margin-bottom:.35rem;"></div>
+        <div class="sig-line-label">Signature</div>
+        <div style="border-bottom:1.5px solid #999;min-height:36px;margin-bottom:.35rem;"></div>
+        <div class="sig-line-label">Printed Name</div>
+        <div style="border-bottom:1.5px solid #999;min-height:36px;margin-bottom:.35rem;"></div>
+        <div class="sig-line-label">Title</div>
+        <div style="border-bottom:1.5px solid #999;min-height:36px;margin-bottom:.35rem;"></div>
+        <div class="sig-line-label">Date</div>
+        <div style="border-bottom:1.5px solid #999;padding:.15rem 0 .4rem;margin-bottom:.35rem;min-height:36px;display:flex;align-items:flex-end;">
+          <div style="display:flex;flex-direction:column;gap:.15rem;">
+            <span style="font-size:.83rem;color:var(--dark);font-weight:600;letter-spacing:.01em;">smcdonald@keithzarspools.com</span>
+            <span style="font-size:.83rem;color:var(--dark);font-weight:600;letter-spacing:.01em;">jfrobles@keithzarspools.com</span>
+            <span style="font-size:.83rem;color:var(--dark);font-weight:600;letter-spacing:.01em;">ksisneros@keithzarspools.com</span>
+          </div>
+        </div>
+        <div class="sig-line-label">Lead Delivery Email (where leads should be sent)</div>
+        <div style="border-bottom:1.5px solid #999;padding:.15rem 0 .2rem;margin-bottom:.35rem;min-height:36px;display:flex;align-items:flex-end;font-size:.95rem;font-weight:600;color:var(--dark);">ACH / Bank Transfer</div>
+        <div class="sig-line-label">Preferred Payment Method</div>
+      </div>
+
+    </div>
+
+    <div class="print-btn-row">
+      <button onclick="window.print()" style="background:var(--green-dark);color:#fff;border:none;padding:.7rem 1.75rem;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;">Print / Save PDF for HelloSign</button>
+    </div>
+  </div>
+
+</div><!-- /agreement-section -->
+
+<div class="card" style="border-top:3px solid var(--green-dark);margin-top:1.5rem;">
+  <h3 style="color:var(--green-dark);margin-bottom:.5rem;">Exhibit A — Sample Lead Packet</h3>
+  <p style="font-size:.93rem;color:var(--text);margin-bottom:.75rem;">A Lead Packet is the primary deliverable under this Agreement. It is a private, time-stamped record delivered to Keith Zars Pools for each qualified lead — containing full contact info, project description, property address, and relevant call or form data.</p>
+  <p style="font-size:.93rem;color:var(--text);margin-bottom:.5rem;"><strong>Live sample:</strong></p>
+  <a href="https://alamopoolresurfacing.com/lead/don-henderson/" target="_blank" style="display:inline-block;font-size:1rem;font-weight:600;color:var(--green-dark);word-break:break-all;">alamopoolresurfacing.com/lead/don-henderson/</a>
+  <p style="font-size:.8rem;color:var(--gray);margin-top:.6rem;margin-bottom:0;">Each packet is noindex — only accessible via direct link shared with the client.</p>
+</div>
+
+
+<div style="text-align:center;padding:1.75rem 2rem;background:var(--badge-bg);border:1px solid var(--green);border-radius:12px;margin-bottom:1.5rem;">
+  <p style="font-size:1.1rem;font-weight:700;color:var(--dark);margin:0 0 .9rem;">Ready to move forward?</p>
+  <p style="font-size:.97rem;color:var(--text);margin:0 0 .85rem;line-height:1.7;">
+    Email <strong style="color:var(--green-dark);">costa@irontigerleads.com</strong> or call <strong style="color:var(--green-dark);">(225) 535-4918</strong>
+  </p>
+  <p style="font-size:.85rem;color:var(--gray);margin:0;font-weight:500;">We'll get you set up same day.</p>
+</div>
+
+</div><!-- /wrap -->
+
+<footer>
+  Costa Demetral &nbsp;·&nbsp; <strong>costa@irontigerleads.com</strong> &nbsp;·&nbsp; (225) 535-4918 &nbsp;·&nbsp; Iron Tiger Digital
+  <br><span class="date-badge">May 2026 · Confidential · Not for distribution</span>
+</footer>
+
+</body>
+</html>

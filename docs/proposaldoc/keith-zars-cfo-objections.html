@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>CFO Call Objection Guide — Iron Tiger Digital × Keith Zars Pools</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+
+<style>
+:root {
+  --green: #10b981;
+  --green-dark: #059669;
+  --dark: #1a1a2e;
+  --gray: #5a5a5a;
+  --light: #eefaf4;
+  --border: #d2ecdf;
+  --badge-bg: #e6f7ef;
+  --badge-color: #059669;
+  --text: #222;
+  --warn-bg: #fffbeb;
+  --warn-border: #f59e0b;
+  --warn-text: #92400e;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  margin: 0;
+  background: #f8f9fb;
+  color: var(--dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+header {
+  background: var(--dark);
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid var(--green);
+}
+header .eyebrow {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-bottom: .3rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--dark), #2d2d4e);
+  color: #fff;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 1.5rem;
+}
+.hero .badge {
+  display: inline-block;
+  background: rgba(16,185,129,.25);
+  border: 1px solid rgba(16,185,129,.5);
+  padding: .2rem .7rem;
+  border-radius: 999px;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+  margin-bottom: .75rem;
+}
+.hero h2 {
+  margin: 0 0 .35rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+.hero p {
+  margin: 0;
+  opacity: .8;
+  font-size: .9rem;
+}
+
+/* Quick-ref bar */
+.quick-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .6rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 540px) { .quick-bar { grid-template-columns: 1fr 1fr; } }
+.qb-cell {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .7rem .85rem;
+  text-align: center;
+}
+.qb-cell .qb-val {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--green-dark);
+  letter-spacing: -.02em;
+  line-height: 1;
+}
+.qb-cell .qb-label {
+  font-size: .68rem;
+  color: var(--gray);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-top: .25rem;
+}
+
+/* Section labels */
+.section-label {
+  font-size: .68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--green-dark);
+  margin: 1.75rem 0 .6rem;
+  padding-left: .1rem;
+}
+
+/* Objection cards */
+.obj-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem 1.1rem 1rem;
+  margin-bottom: .75rem;
+  border-left: 4px solid var(--border);
+  position: relative;
+}
+.obj-card.hard { border-left-color: #dc2626; }
+.obj-card.medium { border-left-color: #f59e0b; }
+.obj-card.easy { border-left-color: var(--green); }
+
+.obj-tag {
+  display: inline-block;
+  font-size: .62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: .15rem .45rem;
+  border-radius: 999px;
+  margin-bottom: .45rem;
+}
+.obj-tag.hard { background: #fee2e2; color: #b91c1c; }
+.obj-tag.medium { background: #fef3c7; color: #92400e; }
+.obj-tag.easy { background: var(--badge-bg); color: var(--badge-color); }
+
+.obj-q {
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: .5rem;
+  line-height: 1.4;
+}
+.obj-q::before { content: '"'; opacity: .4; margin-right: .1rem; }
+.obj-q::after { content: '"'; opacity: .4; margin-left: .1rem; }
+
+.obj-a {
+  font-size: .88rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+}
+.obj-a strong { color: var(--dark); font-weight: 700; }
+
+.obj-anchor {
+  font-size: .72rem;
+  color: var(--green-dark);
+  font-weight: 600;
+  margin-top: .5rem;
+  display: block;
+}
+
+/* Closing tips */
+.tip-list { list-style: none; margin: 0; padding: 0; }
+.tip-list li {
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+  padding: .6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: .9rem;
+  color: var(--text);
+}
+.tip-list li:last-child { border-bottom: none; }
+.tip-num {
+  flex: 0 0 24px;
+  height: 24px;
+  background: var(--dark);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .7rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: .15rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  margin: 0 0 .85rem;
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 700;
+}
+
+.alert {
+  border-radius: 10px;
+  padding: .8rem 1rem;
+  font-size: .88rem;
+  line-height: 1.55;
+  margin-bottom: .75rem;
+}
+.alert-yellow {
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-border);
+  color: var(--warn-text);
+}
+.alert strong { font-weight: 700; }
+
+footer {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--gray);
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+@media print {
+  body { background: #fff; }
+  .wrap { padding-bottom: 0; }
+  .obj-card { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Iron Tiger Digital — Internal Reference Only</div>
+  <h1>CFO Call Objection Guide · Keith Zars Pools</h1>
+</header>
+
+<div class="wrap">
+
+<div class="hero">
+  <span class="badge">Not for client distribution · May 2026</span>
+  <h2>Handle every pushback cold.</h2>
+  <p>12 objections ranked by difficulty. Know the clause, know the counter, keep the conversation moving.</p>
+</div>
+
+<!-- Quick-ref numbers -->
+<div class="quick-bar">
+  <div class="qb-cell">
+    <div class="qb-val">$500</div>
+    <div class="qb-label">Per closed job</div>
+  </div>
+  <div class="qb-cell">
+    <div class="qb-val">$0</div>
+    <div class="qb-label">On unconverted leads</div>
+  </div>
+  <div class="qb-cell">
+    <div class="qb-val">Net-15</div>
+    <div class="qb-label">Payment terms</div>
+  </div>
+  <div class="qb-cell">
+    <div class="qb-val">30 days</div>
+    <div class="qb-label">Notice to exit</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════
+     HARD OBJECTIONS
+══════════════════════════ -->
+<div class="section-label">Hard objections — CFO instinct, need a real answer</div>
+
+<div class="obj-card hard">
+  <span class="obj-tag hard">Billing trust</span>
+  <div class="obj-q">How do I know you won't just invoice us for jobs we didn't close?</div>
+  <p class="obj-a"><strong>You're the one who triggers the invoice.</strong> We never send a bill until you reply to the lead email with the project address and signed date. There's no audit, no guessing — if you don't report it, you don't get invoiced. The close-report system is honor-based and designed so that paying is always the rational choice: you only pay on jobs where you've already collected money from the homeowner.</p>
+  <span class="obj-anchor">→ Agreement Clause 6 + Handling Doc Section 6</span>
+</div>
+
+<div class="obj-card hard">
+  <span class="obj-tag hard">Cost comparison</span>
+  <div class="obj-q">Our Google Ads cost is way less than $500 per lead.</div>
+  <p class="obj-a">We're <strong>$500 per closed job, not per lead</strong>. If you pay $50/lead on Google with a 10% close rate, that's $500 per closed job — identical. If your Google close rate is lower than 10%, this channel is actually cheaper. The difference: your Google cost is variable and retroactive. Our rate is fixed and only triggered on value received. At 25% close rate, your cost-per-job is $2,000 through Google vs. $500 here.</p>
+  <span class="obj-anchor">→ Agreement Section 2 (ROI Math) — the stress-test table</span>
+</div>
+
+<div class="obj-card hard">
+  <span class="obj-tag hard">Exclusivity</span>
+  <div class="obj-q">What stops you from selling the same lead to five other pool companies?</div>
+  <p class="obj-a">The agreement is explicit: <strong>once delivered, we don't sell, transfer, or share that lead with any other party</strong>. We can't prevent a homeowner from independently calling other contractors, but our distribution is exclusive to Keith Zars. If we were caught sharing leads, the relationship and our reputation both end — we have no incentive to cheat an arrangement that's good for both sides.</p>
+  <span class="obj-anchor">→ Agreement Clause 4 (Exclusivity)</span>
+</div>
+
+<div class="obj-card hard">
+  <span class="obj-tag hard">Liability exposure</span>
+  <div class="obj-q">What's our maximum financial exposure here? What if this goes sideways?</div>
+  <p class="obj-a"><strong>Zero retainer, zero setup fee, zero minimum commitment.</strong> Your only financial exposure is $500 per job you choose to report as closed — and that's only after you've collected from the homeowner. Our liability to you is capped at dispute credits (Clause 11). Worst case: you receive leads, none close, you owe nothing. Best case: you're paying $500 on jobs that bill $50k–$150k.</p>
+  <span class="obj-anchor">→ Agreement Clause 6 + Clause 11 (Limitation of Liability)</span>
+</div>
+
+
+<!-- ══════════════════════════
+     MEDIUM OBJECTIONS
+══════════════════════════ -->
+<div class="section-label">Medium objections — process questions, clear answers</div>
+
+<div class="obj-card medium">
+  <span class="obj-tag medium">Payment terms</span>
+  <div class="obj-q">Net-15 is too tight for our AP cycle. We need Net-30.</div>
+  <p class="obj-a">Net-15 is the default — <strong>it's negotiable before you sign.</strong> Just note your preference in writing when you return the agreement and we'll adjust the clause. The late-interest provision (1.5%/mo after 30 days) would shift accordingly. We've worked Net-30 with larger contractors without issue.</p>
+  <span class="obj-anchor">→ Agreement Clause 6 — amend before signing</span>
+</div>
+
+<div class="obj-card medium">
+  <span class="obj-tag medium">Volume risk</span>
+  <div class="obj-q">What if lead volume is low — like 2 leads a month? We can't build a pipeline on that.</div>
+  <p class="obj-a">The site is live and ranking — lead flow is organic, not guaranteed volume. But there's a built-in protection: <strong>if volume drops to zero for 60 consecutive days, you can terminate immediately</strong> with no notice period required. And since there's no retainer, a slow month costs you nothing. You're not betting a monthly fee on volume.</p>
+  <span class="obj-anchor">→ Handling Doc Section 9 (zero-volume exit)</span>
+</div>
+
+<div class="obj-card medium">
+  <span class="obj-tag medium">Exit terms</span>
+  <div class="obj-q">What if we want to get out? Are we locked into a contract?</div>
+  <p class="obj-a"><strong>Month-to-month. 30 days written notice. No penalties.</strong> Email us tomorrow and you're out in 30 days. The only obligations that survive termination are invoices for leads already in your pipeline that close during the notice period — jobs you chose to take and close. No wind-down fees, no early-termination clauses.</p>
+  <span class="obj-anchor">→ Agreement Clause 10 (Term &amp; Termination)</span>
+</div>
+
+<div class="obj-card medium">
+  <span class="obj-tag medium">Asset ownership</span>
+  <div class="obj-q">If this works really well, can we eventually buy the site?</div>
+  <p class="obj-a">The site stays with Iron Tiger Digital — that's the model. <strong>You're paying for results, not infrastructure.</strong> We handle SEO, hosting, content, and ranking upkeep indefinitely. If you owned the site, you'd be managing all of that. Termination grants no claim to the domain or rankings (Clause 4). The good news: if you exit, you take your homeowner data with you — it's yours within the confidentiality terms.</p>
+  <span class="obj-anchor">→ Agreement Clause 4 (last sentence)</span>
+</div>
+
+
+<!-- ══════════════════════════
+     EASY OBJECTIONS
+══════════════════════════ -->
+<div class="section-label">Easy objections — soft resistance, flip quickly</div>
+
+<div class="obj-card easy">
+  <span class="obj-tag easy">Status quo</span>
+  <div class="obj-q">We already have a full pipeline from Google and referrals. We don't need more leads.</div>
+  <p class="obj-a">This is purely additive. <strong>No retainer means zero fixed cost when leads don't flow.</strong> If your sales team is at capacity, you don't have to close every lead — you can be selective. You only pay when you choose to report a close. It's a second channel with no overhead on your end and no obligation to chase every inquiry you receive.</p>
+</div>
+
+<div class="obj-card easy">
+  <span class="obj-tag easy">Vendor overhead</span>
+  <div class="obj-q">We don't want to manage another vendor relationship. We're stretched thin.</div>
+  <p class="obj-a">The operational overhead is minimal by design. <strong>No portal. No app. No account setup.</strong> Leads arrive via email. When a job closes, you reply to that email with two sentences. Disputes are a reply to the same thread. Billing disputes go to one email address. The entire relationship runs through your inbox — no new tools required.</p>
+  <span class="obj-anchor">→ Handling Doc Section 4 (Delivery Mechanics)</span>
+</div>
+
+<div class="obj-card easy">
+  <span class="obj-tag easy">Lead validity</span>
+  <div class="obj-q">What happens if we get a garbage lead — wrong number, out of area?</div>
+  <p class="obj-a"><strong>We validate before delivery</strong> — incomplete or out-of-territory submissions don't reach you. If a bad one slips through, reply to the lead email within 14 calendar days with the reason. We review in 2 business days and credit your next invoice if the dispute is valid. Valid grounds: wrong/disconnected number, address outside territory, exact duplicate, obvious spam. Not valid: lead didn't answer, changed their mind, or chose a competitor.</p>
+  <span class="obj-anchor">→ Agreement Clause 7 + Handling Doc Section 7</span>
+</div>
+
+<div class="obj-card easy">
+  <span class="obj-tag easy">Billing reconciliation</span>
+  <div class="obj-q">How do we reconcile what we actually owe at the end of the month?</div>
+  <p class="obj-a">We provide a shared read-only lead log on request — every lead delivered with timestamp, name, project type, and status. Cross-reference it against your CRM's Iron Tiger Digital-tagged deals. Each invoice maps to a specific lead ID. If there's ever a discrepancy, email with the invoice number and we resolve within 10 business days.</p>
+  <span class="obj-anchor">→ Handling Doc Section 8 (Billing &amp; Reconciliation)</span>
+</div>
+
+
+<!-- ══════════════════════════
+     CLOSING GUIDANCE
+══════════════════════════ -->
+<div class="section-label">Closing the CFO</div>
+
+<div class="card">
+  <h3>If they're still hesitant after addressing objections</h3>
+  <ul class="tip-list">
+    <li>
+      <span class="tip-num">1</span>
+      <span><strong>Use the zero-downside frame.</strong> "Walk me through the scenario where you come out worse off. You receive leads, some close — you pay $500 per closed job on $50k+ projects. If none close, you owe nothing. What's the risk you're trying to protect against?" Make them articulate it. Usually they can't.</span>
+    </li>
+    <li>
+      <span class="tip-num">2</span>
+      <span><strong>Reference the ROI math they already know.</strong> "You're already spending on Google. What does your current cost-per-closed-job look like? If it's above $500, this channel is additive and cheaper." CFOs respond to numbers they already own.</span>
+    </li>
+    <li>
+      <span class="tip-num">3</span>
+      <span><strong>Offer a pilot framing.</strong> "Sign month-to-month, see how the first 30–60 days of leads perform. If it's not working, 30 days notice and you're out clean." Removes the commitment fear without giving up anything.</span>
+    </li>
+    <li>
+      <span class="tip-num">4</span>
+      <span><strong>Don't negotiate the $500 rate.</strong> The rate is set because a pool job is $50k–$150k. Discounting signals the leads aren't worth the ask. Hold the rate; negotiate terms (Net-30, territory, dispute window) if needed.</span>
+    </li>
+    <li>
+      <span class="tip-num">5</span>
+      <span><strong>Get verbal yes, then route to signature.</strong> "If the terms work for you, I can have the agreement in your inbox today. DocuSign — takes 2 minutes." Don't end the call on a 'think about it.' Get a clear next step.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="alert alert-yellow">
+  <strong>Don't over-negotiate against yourself.</strong> This CFO's job is to find risk. Your job is to show there isn't any. Every objection above has a clean answer — use it, then be quiet. The silence after a good answer is where the yes lives.
+</div>
+
+</div>
+
+<footer>
+  Costa Demetral &nbsp;·&nbsp; <strong>costa@irontigerleads.com</strong> &nbsp;·&nbsp; (225) 535-4918 &nbsp;·&nbsp; Iron Tiger Digital
+  <br>Internal use only · Not for client distribution · May 2026
+</footer>
+
+</body>
+</html>

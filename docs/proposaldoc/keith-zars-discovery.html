@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keith Zars × Alamo Pool — Discovery & Growth Plan</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+:root {
+  --blue: #1e40af;
+  --blue-light: #3b82f6;
+  --blue-pale: #eff6ff;
+  --blue-border: #bfdbfe;
+  --amber: #d97706;
+  --amber-pale: #fffbeb;
+  --amber-border: #fde68a;
+  --green: #059669;
+  --green-pale: #ecfdf5;
+  --green-border: #a7f3d0;
+  --purple: #7c3aed;
+  --purple-pale: #f5f3ff;
+  --purple-border: #ddd6fe;
+  --dark: #0f172a;
+  --gray: #64748b;
+  --light: #f8fafc;
+  --border: #e2e8f0;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+/* Header */
+header {
+  background: var(--dark);
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-bottom: 4px solid var(--blue-light);
+}
+.header-inner { max-width: 780px; margin: 0 auto; }
+.eyebrow {
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  opacity: .6;
+  margin-bottom: .3rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+header .sub { opacity: .7; font-size: .9rem; margin-top: .25rem; }
+
+/* Section headers */
+.section-label {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin: 2.5rem 0 .75rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.card h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+.card h3 {
+  margin: 1.25rem 0 .5rem;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+.card p { margin: 0 0 .75rem; font-size: .93rem; color: #334155; }
+.card p:last-child { margin-bottom: 0; }
+
+/* Color variants */
+.card.blue  { border-left: 4px solid var(--blue-light);  background: var(--blue-pale);  }
+.card.amber { border-left: 4px solid var(--amber);       background: var(--amber-pale); }
+.card.green { border-left: 4px solid var(--green);       background: var(--green-pale); }
+.card.purple{ border-left: 4px solid var(--purple);      background: var(--purple-pale);}
+
+/* Comparison table */
+.compare-table { width: 100%; border-collapse: collapse; margin-top: .5rem; font-size: .88rem; }
+.compare-table th {
+  background: var(--dark);
+  color: #fff;
+  padding: .65rem 1rem;
+  text-align: left;
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.compare-table th:first-child { border-radius: 8px 0 0 0; }
+.compare-table th:last-child  { border-radius: 0 8px 0 0; }
+.compare-table td {
+  padding: .65rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:nth-child(even) td { background: #f8fafc; }
+.tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  padding: .15rem .55rem;
+  border-radius: 999px;
+  margin-left: .3rem;
+  vertical-align: middle;
+}
+.tag.gap    { background: #fee2e2; color: #b91c1c; }
+.tag.thin   { background: #fef3c7; color: #92400e; }
+.tag.match  { background: #d1fae5; color: #065f46; }
+
+/* Question lists */
+.q-list { list-style: none; padding: 0; margin: 0; }
+.q-list li {
+  display: flex;
+  gap: .75rem;
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: .93rem;
+  align-items: flex-start;
+}
+.q-list li:last-child { border-bottom: none; }
+.q-num {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--blue-light);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .1rem;
+}
+.q-num.amber  { background: var(--amber); }
+.q-num.green  { background: var(--green); }
+.q-num.purple { background: var(--purple); }
+.q-text strong {
+  display: block;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: .2rem;
+}
+.q-text span { color: #475569; font-size: .88rem; }
+
+/* Reactivation strategies */
+.strat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; margin-top: .75rem; }
+@media (max-width: 560px) { .strat-grid { grid-template-columns: 1fr; } }
+.strat-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  background: #fff;
+}
+.strat-card .strat-title {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: .35rem;
+}
+.strat-card .strat-body { font-size: .83rem; color: #475569; line-height: 1.55; }
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: rgba(255,255,255,.6);
+  text-align: center;
+  padding: 1.25rem;
+  font-size: .78rem;
+  margin-top: 3rem;
+}
+footer strong { color: #fff; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="eyebrow">Iron Tiger Digital — Internal Strategy Doc</div>
+    <h1>Keith Zars Pools × Alamo Pool Resurfacing — Discovery & Growth Plan</h1>
+    <div class="sub">Service gap analysis · Discovery questions · Lead reactivation strategy · May 2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ─────────────────────────────────────────────────
+     SECTION 1: SERVICE GAP ANALYSIS
+───────────────────────────────────────────────── -->
+<div class="section-label">01 — Service Gap Analysis</div>
+
+<div class="card">
+  <h2>KZ Services vs. Alamo Site Coverage</h2>
+  <p>Keith Zars runs four revenue lines across six SA-area locations. Our site was built around resurfacing leads. Below is how our current content maps to their actual business — and where there are gaps.</p>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th style="width:30%">KZ Service Line</th>
+        <th style="width:35%">Current Alamo Site Coverage</th>
+        <th style="width:35%">Gap / Opportunity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>New Pool Construction</strong><br>Custom residential builds, full outdoor living</td>
+        <td><code>new-pool-construction.html</code> exists <span class="tag match">match</span></td>
+        <td>Page is thin. KZ positions construction as "luxury outdoor retreat." Alamo page reads functional. Needs premium angle + design consultation CTA.</td>
+      </tr>
+      <tr>
+        <td><strong>Pool Renovation</strong><br>Resurfacing, structural upgrades, full redesigns</td>
+        <td>Core focus of the site. Multiple pages. <span class="tag match">match</span></td>
+        <td>Strong coverage. Could add "full backyard transformation" angle to capture higher-ticket renovation leads KZ actually wants.</td>
+      </tr>
+      <tr>
+        <td><strong>Tile &amp; Coping</strong><br>Waterline tile, coping replacement, retiling</td>
+        <td><code>pool-tile-repair.html</code> exists <span class="tag thin">thin</span></td>
+        <td>KZ does full tile work including new tile installation and coping — not just repair. Page needs to expand to full tile replacement and cleaning, not just repair. <strong>High-priority gap.</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Weekly Pool Cleaning</strong><br>Recurring maintenance contracts, chemical balancing</td>
+        <td>Not covered <span class="tag gap">gap</span></td>
+        <td>KZ's highest-volume recurring revenue. A maintenance landing page would capture homeowners searching "pool cleaning San Antonio" — wide audience, easy upsell path to resurfacing.</td>
+      </tr>
+      <tr>
+        <td><strong>Pool Service &amp; Repair</strong><br>Equipment fixes, leak detection, pump/heater repair</td>
+        <td>Not covered <span class="tag gap">gap</span></td>
+        <td>Service calls are often the entry point to renovation upsells. "Pool won't run" → inspection → "your plaster is also failing." A service page widens our funnel top.</td>
+      </tr>
+      <tr>
+        <td><strong>Commercial Pools</strong><br>HOAs, hotels, apartment complexes</td>
+        <td>Not covered <span class="tag gap">gap</span></td>
+        <td>KZ explicitly serves commercial. A commercial page or FAQ section could capture property manager searches. High ticket, longer sales cycle.</td>
+      </tr>
+      <tr>
+        <td><strong>Financing</strong><br>Payment plans, financing partners</td>
+        <td>Not mentioned <span class="tag gap">gap</span></td>
+        <td>KZ prominently offers financing. Adding a one-liner ("Financing available — ask us") in CTAs and FAQ reduces sticker-shock drop-off on renovation leads.</td>
+      </tr>
+      <tr>
+        <td><strong>Multi-location Coverage</strong><br>SA, New Braunfels, Boerne, Kerrville, Bee Cave, Corpus Christi</td>
+        <td>SA + Hill Country general <span class="tag thin">thin</span></td>
+        <td>KZ has dedicated offices in New Braunfels and Boerne. Our location pages cover some areas but lack dedicated NB/Boerne/Kerrville pages. Add sub-pages or at minimum expand service area list.</td>
+      </tr>
+      <tr>
+        <td><strong>Warranty Program</strong><br>Extended warranty on builds and equipment</td>
+        <td>Not mentioned <span class="tag gap">gap</span></td>
+        <td>KZ advertises a warranty program as a trust signal. Adding a contractor warranty FAQ answer differentiates us from low-end competition on the SERP.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card amber">
+  <h2>Top 3 Priority Site Changes</h2>
+  <p><strong>1. Expand tile page → full tile cleaning + replacement service.</strong> Tile cleaning and retiling is one of the most common follow-on services after a new pool build ages out. KZ builds thousands of pools — their customers will be searching this in 5-10 years. We need to own that SERP now.</p>
+  <p><strong>2. Add pool maintenance / weekly cleaning landing page.</strong> Wide top-of-funnel. Homeowners who start searching for cleaners often discover resurfacing needs. ITD benefits by generating more diverse lead types for KZ.</p>
+  <p><strong>3. Add financing mention + commercial pool section.</strong> Low-lift content additions that improve conversion on high-ticket leads and open a new commercial audience.</p>
+</div>
+
+
+<!-- ─────────────────────────────────────────────────
+     SECTION 2: DISCOVERY QUESTIONS — SITE TAILORING
+───────────────────────────────────────────────── -->
+<div class="section-label">02 — Discovery Questions: Site &amp; Lead Tailoring</div>
+
+<div class="card">
+  <h2>Questions to Ask Before Expanding the Site</h2>
+  <p>These questions will let us prioritize which new pages to build and how to position the copy so leads match exactly what KZ wants to close.</p>
+
+  <ul class="q-list">
+    <li>
+      <div class="q-num">1</div>
+      <div class="q-text">
+        <strong>Which renovation job do you close at the highest rate — resurfacing, tile &amp; coping, or full redesigns?</strong>
+        <span>Tells us where to put the most content depth and conversion optimization.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num">2</div>
+      <div class="q-text">
+        <strong>What's your minimum project size for renovation leads? Do you have a hard floor?</strong>
+        <span>We can add qualification language to the form so sub-threshold leads self-filter out before reaching your inbox.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num">3</div>
+      <div class="q-text">
+        <strong>Do you want weekly cleaning leads, or only bigger renovation and construction work?</strong>
+        <span>Determines whether it's worth building a maintenance landing page for your territory.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num">4</div>
+      <div class="q-text">
+        <strong>Which zip codes or neighborhoods are your highest-close, highest-ticket areas in SA?</strong>
+        <span>We can build hyper-local pages (Stone Oak, Alamo Heights, Helotes, etc.) to dominate those pockets in map pack and organic.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num">5</div>
+      <div class="q-text">
+        <strong>Do you take commercial pool work — HOAs, hotels, apartment complexes?</strong>
+        <span>If yes, it justifies a commercial landing page. If no, we should add disqualifying language so we don't waste anyone's time on those inquiries.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num">6</div>
+      <div class="q-text">
+        <strong>What's the one type of call your team groans at receiving — the lead you never want?</strong>
+        <span>We'll add language on the site that actively disqualifies that caller before they submit a form.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num">7</div>
+      <div class="q-text">
+        <strong>Do you offer financing? Do customers ask about it before calling, or after the quote?</strong>
+        <span>If customers ask upfront, we need to mention it on the site. If only post-quote, it's a closer tool and we can skip it on the landing page.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num">8</div>
+      <div class="q-text">
+        <strong>What's your typical close rate on resurfacing inquiries vs. new construction?</strong>
+        <span>Helps us calibrate how aggressively to push volume vs. quality. High close rate = flood the zone. Low close rate = add more pre-qualification.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num">9</div>
+      <div class="q-text">
+        <strong>Are there specific finishes (Pebble Tec, quartz, tile brands) you want to feature or steer people toward?</strong>
+        <span>We can write content around those finishes to pre-sell customers on the premium options before they even call, which shortens your sales conversation.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num">10</div>
+      <div class="q-text">
+        <strong>How does a typical customer find you today — Google Search, Google Maps, referral, or something else?</strong>
+        <span>If most of their customers come from referral, we want to position Alamo as the digital capture for people who haven't heard of KZ yet — net new audience, not overlap.</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<!-- ─────────────────────────────────────────────────
+     SECTION 3: ADDITIONAL BUSINESS ADDRESS QUESTION
+───────────────────────────────────────────────── -->
+<div class="section-label">03 — Business Location Expansion (GBP)</div>
+
+<div class="card blue">
+  <h2>Google Business Profile — Secondary Address Question</h2>
+  <p>KZ already operates out of four verified locations (San Antonio, New Braunfels, Kerrville, Corpus Christi). Each of those is a potential territory where we could build a separate rank-and-rent site or optimize existing pages to feed that specific office.</p>
+  <p>Ask KZ directly:</p>
+
+  <ul class="q-list">
+    <li>
+      <div class="q-num" style="background:#1e40af">A</div>
+      <div class="q-text">
+        <strong>Do you operate out of any secondary locations, storage yards, service facilities, or satellite offices — particularly on the south side of SA, Boerne side, or Hill Country?</strong>
+        <span>Even a consistent address where trucks park overnight or equipment is stored can qualify for a Google Business Profile. A second GBP in a different part of the metro significantly expands map pack coverage, especially in lower-competition suburbs.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num" style="background:#1e40af">B</div>
+      <div class="q-text">
+        <strong>Does any team member (operations manager, field supervisor) work out of a home office or base that's in a different quadrant of the city than the main San Pedro Ave. location?</strong>
+        <span>A service-area business can use a practitioner's address. Not a workaround — Google explicitly allows this for service businesses with multiple coverage zones.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num" style="background:#1e40af">C</div>
+      <div class="q-text">
+        <strong>Are there any pool supply partners, distributor relationships, or co-located businesses where KZ crew regularly stages work?</strong>
+        <span>Partner locations sometimes qualify if there's a genuine operational presence. Worth exploring if they have relationships with tile suppliers or plaster vendors with physical addresses.</span>
+      </div>
+    </li>
+  </ul>
+
+  <p style="margin-top:1rem;"><strong>Why this matters:</strong> KZ's main GBP at San Pedro Ave. wins map pack results for central/north SA searches. A second verified location south of Loop 410 or in New Braunfels captures entirely different search clusters without competing with their existing profile.</p>
+</div>
+
+
+<!-- ─────────────────────────────────────────────────
+     SECTION 4: EXPANSION PLANS & HOW ITD HELPS
+───────────────────────────────────────────────── -->
+<div class="section-label">04 — Business Expansion: Questions &amp; Partnership Angles</div>
+
+<div class="card green">
+  <h2>Expansion Plan Discovery Questions</h2>
+
+  <ul class="q-list">
+    <li>
+      <div class="q-num green">1</div>
+      <div class="q-text">
+        <strong>What markets are you planning to expand into in the next 12–24 months?</strong>
+        <span>KZ already has Corpus Christi and Kerrville. Austin metro (Bee Cave) is on their radar. We can build rank-and-rent sites in those markets 6–12 months before KZ arrives so there's already a flowing lead source the day they open.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num green">2</div>
+      <div class="q-text">
+        <strong>Are you hiring service technicians or project managers right now?</strong>
+        <span>Hiring signals capacity growth. If they're adding techs, they need more leads to keep those techs busy — the timing for expanding our lead agreement is perfect.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num green">3</div>
+      <div class="q-text">
+        <strong>Is there a service line you're trying to grow but haven't been able to market effectively?</strong>
+        <span>Sometimes companies have capacity in a service (e.g., commercial renovations, retiling) but their own marketing doesn't push it. We can build a targeted landing page specifically for that service and generate those exact calls.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num green">4</div>
+      <div class="q-text">
+        <strong>Do you have a referral program for past customers? What does it look like?</strong>
+        <span>If they have a referral engine, we can build landing pages that funnel referral traffic back through a trackable ITD link — giving us credit for influenced referrals and giving KZ more visibility into where referrals originate.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num green">5</div>
+      <div class="q-text">
+        <strong>If you could clone your best type of customer, what does that person look like?</strong>
+        <span>Demographic + project profile. Lets us build hyper-targeted content (neighborhood pages, price-point anchoring, luxury language) that attracts that exact buyer rather than spraying wide.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num green">6</div>
+      <div class="q-text">
+        <strong>How are you thinking about commercial vs. residential mix going forward?</strong>
+        <span>If they're pushing commercial, we can build an HOA and property manager-specific landing page. Commercial leads close differently — longer cycle but much higher ticket. We'd price those separately.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num green">7</div>
+      <div class="q-text">
+        <strong>Any interest in a white-label or co-branded lead nurture system for your existing customer base?</strong>
+        <span>See Section 5. This is the biggest untapped revenue sitting in their CRM right now — 40 years of past customers who are due for resurfacing, tile work, or an upgrade. We can build the system that reactivates it.</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<!-- ─────────────────────────────────────────────────
+     SECTION 5: LEAD REACTIVATION SYSTEM
+───────────────────────────────────────────────── -->
+<div class="section-label">05 — Lead Reactivation System for KZ</div>
+
+<div class="card purple">
+  <h2>The Opportunity: 40 Years of Sleeping Revenue</h2>
+  <p>Keith Zars has been building pools since 1985. Their CRM contains thousands of past customers — pool builds from the 80s, 90s, and 2000s, renovation jobs, repair tickets, lapsed maintenance contracts, and lost quotes that never closed. Most of this contact history is sitting dormant, never touched after the job ended.</p>
+  <p><strong>The math on KZ's dormant base:</strong> A pool built in 2010 is now 16 years old. White plaster lifespan is 8–12 years. A quartz finish runs 15–20. Conservatively, thousands of their past builds are statistically overdue for resurfacing, tile cleaning, or a full renovation upgrade right now. They just aren't being asked.</p>
+</div>
+
+<div class="card">
+  <h2>5 Reactivation Tracks We Can Build for KZ</h2>
+
+  <div class="strat-grid">
+    <div class="strat-card">
+      <div class="strat-title">🗓 Pool Age Milestone Triggers</div>
+      <div class="strat-body">Automated email sent at 8, 10, and 12 years after build or last resurface. Subject: "Your pool turns 10 this year — here's what to expect." Plants the resurfacing seed before the customer even notices a problem. Low-cost, high-ROI drip that runs without staff attention.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-title">🧹 Tile Cleaning / Maintenance Upsell</div>
+      <div class="strat-body">Every pool built by KZ has tile. Calcium scale buildup starts showing at 3–5 years, especially with SA's hard water. A "your tile is due for a cleaning" email sent to anyone with a 5+ year-old build is a low-ticket, high-conversion reactivation. Service appointment → estimate conversation → renovation upsell.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-title">🔧 Repair-to-Renovation Bridge</div>
+      <div class="strat-body">When a service tech closes a repair ticket, tag the customer for a 30-day follow-up: "Your equipment needed repair, which often means the surface is also showing wear — want a free inspection?" Converts service customers into renovation leads automatically. Requires a simple CRM tag + email trigger.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-title">📅 Pre-Summer Inspection Campaign</div>
+      <div class="strat-body">February–March: "Before the SA heat hits, get your pool inspected — we'll check surface, tile, and equipment for free." The free inspection gets a KZ tech on-site at every customer's house. In-person = close rate multiplier. This campaign alone could generate 30–50 warm leads per season.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-title">💬 Lost Quote Reactivation</div>
+      <div class="strat-body">Leads who got a quote but didn't sign in a prior year. "Prices have gone up industry-wide — your 2022 quote is still valid if you want to lock it in." Urgency + familiarity combo. These are the easiest closes because they already said yes once, just not right then.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-title">⭐ Upgrade &amp; Modernization Track</div>
+      <div class="strat-body">Target builds from 2005–2015 with a "pool modernization" angle: smart controls, LED lighting, sun shelf additions, pebble upgrades. Different frame than "resurfacing" — sounds aspirational, not maintenance. Targets homeowners who might not think their pool "needs" work but respond to an upgrade pitch. Higher ticket, longer close cycle.</div>
+    </div>
+  </div>
+</div>
+
+<div class="card amber">
+  <h2>What ITD Builds to Power This System</h2>
+  <p><strong>1. Lead reactivation landing page</strong> — A dedicated page on alamopoolresurfacing.com (or a standalone domain) targeted at SA homeowners whose pools are 8–15 years old. Captures organic search traffic for "pool resurfacing cost San Antonio" from homeowners who are already in the problem-aware stage. Feeds KZ directly.</p>
+  <p><strong>2. Tile cleaning landing page</strong> — Targets "pool tile cleaning San Antonio" searches. Lower competition, easier to rank. Homeowner books a cleaning → KZ tech is on-site → renovation conversation happens naturally.</p>
+  <p><strong>3. Email sequence system (CRM-agnostic)</strong> — If KZ shares a customer export (name, email, build year), we build an automated Brevo sequence that fires the milestone emails, inspection invites, and upgrade offers on schedule. Runs forever with zero ongoing effort from KZ staff.</p>
+  <p><strong>4. "Your pool age" quiz/calculator</strong> — An interactive widget on the site: "Enter your pool's age and finish type — we'll tell you if it's time to resurface." Captures email + self-qualifies the lead in one step. Feeds both the organic site and the reactivation email list.</p>
+
+  <h3>Questions to Unlock the Reactivation Conversation</h3>
+  <ul class="q-list">
+    <li>
+      <div class="q-num" style="background:#d97706">1</div>
+      <div class="q-text">
+        <strong>Do you have a CRM with past customer build/install dates, or is that data in your service software?</strong>
+        <span>Tells us whether this is a simple export or requires custom data pulling. Most pool CRMs (Skimmer, ServiceTitan, even QuickBooks) can export a customer list with job type and date.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num" style="background:#d97706">2</div>
+      <div class="q-text">
+        <strong>How often does your team currently reach back out to past customers proactively?</strong>
+        <span>Most pool companies: never. If the answer is "we send a newsletter sometimes," there's a massive gap we can fill with automated, triggered outreach instead of batch-and-blast.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num" style="background:#d97706">3</div>
+      <div class="q-text">
+        <strong>What percentage of your annual renovation revenue comes from past KZ customers vs. new-to-KZ homeowners?</strong>
+        <span>Industry benchmark is 30–40% of service revenue from repeat/past customers. If they're under that, the reactivation opportunity is massive and easy to quantify in dollars.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num" style="background:#d97706">4</div>
+      <div class="q-text">
+        <strong>Does your team do proactive inspection calls or do customers only reach out when something breaks?</strong>
+        <span>Reactive-only = money left on the table. If we build the inspection campaign funnel, we convert them from reactive to proactive — and ITD gets credit for every job that closes from it.</span>
+      </div>
+    </li>
+    <li>
+      <div class="q-num" style="background:#d97706">5</div>
+      <div class="q-text">
+        <strong>Would you be open to a pilot — a 90-day reactivation campaign to 200 past customers — to prove the ROI before committing to a full system?</strong>
+        <span>Low-risk proof of concept. We take a segment of their oldest builds (2008–2013), run a 3-email sequence, and track inspection appointments booked and jobs closed. One closed renovation at $6,000+ pays for the pilot and then some.</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="card blue" style="border-left:4px solid #1e40af;">
+  <h2>Revenue Projection: What the Reactivation System Is Worth</h2>
+  <p>Conservative scenario — targeting only past builds, no lapsed quotes:</p>
+  <p><strong>Assumptions:</strong> KZ has built ~3,000 pools since 1985. Roughly 800 of those are statistically overdue for resurfacing (builds from 2005–2015). Average resurfacing job: $6,500. Industry email reactivation close rate for in-network past customers: 4–8%.</p>
+  <p><strong>Low end:</strong> 800 contacts × 4% = 32 jobs × $6,500 avg = <strong>$208,000 in renovation revenue</strong> from one campaign to a list they already own.</p>
+  <p><strong>High end:</strong> 800 contacts × 8% = 64 jobs × $8,000 avg (many will upgrade to quartz/pebble) = <strong>$512,000 in revenue</strong>.</p>
+  <p>ITD's angle: we build the system, we track attribution, we charge per closed job that comes through our funnel — same model as the current lead agreement.</p>
+</div>
+
+</div><!-- /wrap -->
+
+<footer>
+  <strong>Iron Tiger Digital</strong> — Internal Strategy Doc · Keith Zars × Alamo Pool Resurfacing · May 2026<br>
+  Costa Demetral · costa@irontigerleads.com · (225) 535-4918
+</footer>
+
+</body>
+</html>

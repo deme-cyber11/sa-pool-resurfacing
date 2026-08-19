@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Antonio Pool Resurfacing — Lead Packet · Keith Zars Pools · June 2026</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1a1a2e">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310b981'/%3E%3Ctext x='32' y='44' font-family='system-ui' font-size='32' font-weight='800' text-anchor='middle' fill='%23fff'%3EITL%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+
+<style>
+:root {
+  --accent:      #10b981;
+  --accent-dark: #059669;
+  --dark:        #1a1a2e;
+  --gray:        #5a5a5a;
+  --light:       #f1f5f9;
+  --border:      #dde1e8;
+  --badge-bg:    #d1fae5;
+  --badge-color: #047857;
+  --urgent:      #b45309;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 660px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+
+header {
+  background: var(--dark);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  border-bottom: 4px solid var(--accent);
+}
+header .eyebrow {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-bottom: .25rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  padding: 1.75rem 1.5rem;
+  border-radius: 0 0 14px 14px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.hero .badge {
+  display: inline-block;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.4);
+  padding: .25rem .7rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.hero h2 { margin: 0 0 .35rem; font-size: 1.6rem; font-weight: 800; letter-spacing: -.02em; }
+.hero p  { margin: 0; opacity: .95; font-size: .95rem; }
+
+.summary-row {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.summary-stat {
+  flex: 1;
+  min-width: 110px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .85rem 1rem;
+  text-align: center;
+}
+.summary-stat .val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: .2rem;
+}
+.summary-stat .lbl {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: .85rem;
+  gap: 1rem;
+}
+.card h3 {
+  margin: 0 0 .85rem;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 700;
+}
+.card-header h3 { margin: 0; }
+.lead-num {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.lead-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -.01em;
+  margin: 0 0 .2rem;
+}
+.lead-sub {
+  font-size: .85rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.status {
+  display: inline-block;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.status.urgent    { background: #fef3c7; color: var(--urgent); }
+.status.scheduled { background: #ede9fe; color: #6d28d9; }
+.status.flexible  { background: #d1fae5; color: #065f46; }
+
+.field { margin-bottom: .65rem; display: flex; gap: .8rem; align-items: baseline; }
+.field:last-child { margin-bottom: 0; }
+.field .label {
+  flex: 0 0 78px;
+  font-size: .78rem;
+  color: var(--gray);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.field .value {
+  flex: 1;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--dark);
+  word-break: break-word;
+}
+.field .value a {
+  color: var(--accent-dark);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent);
+}
+.field .value.urgent { color: var(--urgent); }
+.field .value .quiet {
+  display: block;
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--gray);
+  margin-top: .1rem;
+}
+
+.subhead {
+  margin: 1.1rem 0 .65rem;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  font-weight: 700;
+  border-top: 1px solid var(--border);
+  padding-top: .9rem;
+}
+
+.note {
+  background: var(--light);
+  border-left: 4px solid var(--accent);
+  padding: .85rem 1rem;
+  border-radius: 4px;
+  margin-top: .75rem;
+  font-style: italic;
+  color: #3a3a3a;
+  font-size: .9rem;
+}
+.note.photos { font-style: normal; }
+.note.photos strong { color: var(--accent-dark); font-style: normal; }
+
+.cta-card {
+  background: var(--dark);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.cta-card h3 {
+  margin: 0 0 .5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.cta-card p { margin: 0 0 1rem; opacity: .85; font-size: .92rem; }
+.cta-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: .85rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: .01em;
+  margin: .25rem;
+  transition: background .15s;
+}
+.cta-btn:hover { background: var(--accent-dark); }
+.cta-btn.secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.terms {
+  font-size: .8rem;
+  color: var(--gray);
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.terms ul { margin: .5rem 0 0; padding-left: 1.1rem; }
+.terms li { margin-bottom: .25rem; }
+
+footer {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--gray);
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+footer strong { color: var(--accent-dark); }
+
+.timestamp {
+  display: inline-block;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  padding: .15rem .55rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+</style>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Iron Tiger Leads</div>
+  <h1>San Antonio, TX — Pool Resurfacing · Lead Packet</h1>
+</header>
+
+<div class="wrap">
+
+<div class="hero">
+  <span class="badge">Prepared for Keith Zars Pools · June 2026</span>
+  <h2>San Antonio Pool Resurfacing Leads</h2>
+  <p>Inbound homeowner inquiries across the San Antonio metro — verified contact info, scoped specs, and project photos.</p>
+</div>
+
+<div class="summary-row">
+  <div class="summary-stat"><div class="val">3</div><div class="lbl">Total leads</div></div>
+  <div class="summary-stat"><div class="val">1</div><div class="lbl">Pebble Tec / spa</div></div>
+  <div class="summary-stat"><div class="val">$0</div><div class="lbl">No fee — sample</div></div>
+</div>
+
+
+
+<!-- ─── Lead: Kimberly Gill ──────────────────────────────────────────── -->
+<div class="card">
+  <div class="card-header">
+    <div>
+      <div class="lead-title">Kimberly Gill</div>
+      <div class="lead-sub">San Antonio 78240 · Full coping replacement + deck addition</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.4rem">
+      <span class="status flexible">Getting estimates</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <span class="label">Contact</span>
+    <span class="value">Kimberly Gill<br>
+      <a href="tel:16143458824">(614) 345-8824</a>
+      <span class="quiet"><a href="mailto:musigill@yahoo.com">musigill@yahoo.com</a></span>
+    </span>
+  </div>
+  <div class="field">
+    <span class="label">Address</span>
+    <span class="value">9823 Strathaven St, San Antonio TX 78240</span>
+  </div>
+  <div class="field">
+    <span class="label">Service</span>
+    <span class="value">Full coping replacement (can&#x27;t match original — replacing all) · Pool deck addition to one side (old wood deck torn down years ago)</span>
+  </div>
+  <div class="field">
+    <span class="label">Timeline</span>
+    <span class="value">Getting multiple estimates — ready to move when quote is right</span>
+  </div>
+  <div class="field">
+    <span class="label">Source</span>
+    <span class="value">alamopoolresurfacing.com — organic web form, Aug 18, 2026</span>
+  </div>
+  <div class="note">Can&#x27;t source an exact match for existing coping, so she&#x27;s replacing the full perimeter. Also wants a new deck poured on one side of the pool — the original wood deck rotted and was torn out years ago. Scope is clear; just shopping estimates.</div>
+  <div class="subhead">Why this lead is solid</div>
+  <div class="field">
+    <span class="label">Location</span>
+    <span class="value">San Antonio 78240 — inside service area</span>
+  </div>
+  <div class="field">
+    <span class="label">Intent</span>
+    <span class="value">Came direct via pool-specific site, not a directory or ad</span>
+  </div>
+  <div class="field">
+    <span class="label">Scope</span>
+    <span class="value">Work is decided, not exploratory — coping replacement + deck addition both confirmed</span>
+  </div>
+</div>
+
+
+<!-- ─── Lead: Mary Hutton ──────────────────────────────────────────── -->
+<div class="card">
+  <div class="card-header">
+    <div>
+      <div class="lead-title">Mary Hutton</div>
+      <div class="lead-sub">Fair Oaks Ranch, TX · Lagoon-style plaster pool · localized chip repair</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.4rem">
+      <span class="status flexible">Price-shopping</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <span class="label">Contact</span>
+    <span class="value">Mary Hutton<br>
+      <a href="tel:12107445958">(210) 744-5958</a>
+    </span>
+  </div>
+  <div class="field">
+    <span class="label">Service</span>
+    <span class="value">Plaster repair — one localized chip/impact spot at the edge of a lagoon-style pool</span>
+  </div>
+  <div class="field">
+    <span class="label">Property</span>
+    <span class="value">Lagoon-style freeform pool, plaster surface; last resurfaced ~10 yrs ago (installer since closed). Primary home.</span>
+  </div>
+  <div class="field">
+    <span class="label">Address</span>
+    <span class="value">7245 Silver Spur Trail, Fair Oaks Ranch, TX 78015</span>
+  </div>
+  <div class="field">
+    <span class="label">Timeline</span>
+    <span class="value">Shopping for a fair price — no firm date set</span>
+  </div>
+  <div class="field">
+    <span class="label">Source</span>
+    <span class="value">alamopoolresurfacing.com — inbound call, homeowner submitted</span>
+  </div>
+  <div class="field">
+    <span class="label">Received</span>
+    <span class="value">June 8, 2026</span>
+  </div>
+  <div class="note">Just one chip/impact spot at the edge; rest of the pool is fine. Wants a straight quote; offered to send a photo of the damaged area.</div>
+  <div class="subhead">Photos + dimensions</div>
+  <div class="note photos"><strong>Homeowner offered to send a photo of the chip — awaiting upload.</strong></div>
+  <div class="subhead">Why this lead is solid</div>
+  <div class="field">
+    <span class="label">Intent</span>
+    <span class="value">Called the pool-resurfacing site directly for an estimate — not a directory</span>
+  </div>
+  <div class="field">
+    <span class="label">Scope</span>
+    <span class="value">Small, well-defined repair — fast to quote, easy first job</span>
+  </div>
+  <div class="field">
+    <span class="label">Geography</span>
+    <span class="value">Fair Oaks Ranch / San Antonio metro — in service area</span>
+  </div>
+  <div class="field">
+    <span class="label">Competition</span>
+    <span class="value">Price-shopping — first responsive, fair quote has the edge</span>
+  </div>
+</div>
+
+
+
+<!-- ─── Lead 01: Kristen Mole ────────────────────────────────────────── -->
+<div class="card">
+  <div class="card-header">
+    <div>
+      <div class="lead-title">Kristen Mole</div>
+      <div class="lead-sub">Boerne, TX 78006 · Pebble Tec spa · deep-blue tile line</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.4rem">
+      <span class="status urgent">Ready to move</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <span class="label">Contact</span>
+    <span class="value">Kristen Mole<br>
+      <a href="tel:13103447668">(310) 344-7668</a>
+    </span>
+  </div>
+  <div class="field">
+    <span class="label">Address</span>
+    <span class="value">307 Augusta, Boerne, TX 78006</span>
+  </div>
+  <div class="field">
+    <span class="label">Service</span>
+    <span class="value">Pebble Tec resurfacing · tile-line replacement (deep blue) · most cost-efficient light fix</span>
+  </div>
+  <div class="field">
+    <span class="label">Spa</span>
+    <span class="value">In-ground gunite spa / jacuzzi · seats 8 · originally built by Keith Zars Pools</span>
+  </div>
+  <div class="field">
+    <span class="label">Timeline</span>
+    <span class="value urgent">Next few weeks</span>
+  </div>
+  <div class="field">
+    <span class="label">Property</span>
+    <span class="value">Primary home</span>
+  </div>
+  <div class="field">
+    <span class="label">Source</span>
+    <span class="value">alamopoolresurfacing.com <span class="quiet">organic — homeowner submitted</span></span>
+  </div>
+  <div class="field">
+    <span class="label">Received</span>
+    <span class="value"><span class="timestamp">June 1, 2026</span></span>
+  </div>
+  <div class="note">Pebble surface is deteriorating overall — rough with visible wear at ~15–18 yrs, at the end of its lifespan. Wants the single thin tile line swapped for a deep blue tile. One large light is dead; homeowner is fine capping it off entirely and would only replace it if that's the better-value call. Knows what they want, ready to move.</div>
+
+  <div class="subhead">Spa photos + dimensions</div>
+  <div class="note photos"><strong>Awaiting upload</strong> — spa (wide angle) · Pebble surface detail · tile line · dimensions sketch. Lead came in by phone; homeowner is completing the follow-up form. Photos &amp; dimensions will be attached here when received.</div>
+
+  <div class="subhead">Why this lead is solid</div>
+  <div class="field">
+    <span class="label">Urgency</span>
+    <span class="value">Next few weeks — homeowner ready to schedule</span>
+  </div>
+  <div class="field">
+    <span class="label">Intent</span>
+    <span class="value">Came in via pool-resurfacing-specific site, not a directory</span>
+  </div>
+  <div class="field">
+    <span class="label">Prep</span>
+    <span class="value">Scope already decided — surface, deep-blue tile, and light all specced</span>
+  </div>
+  <div class="field">
+    <span class="label">Project</span>
+    <span class="value">Established gunite spa, Pebble Tec — premium-finish ticket</span>
+  </div>
+</div>
+
+<div class="cta-card">
+  <h3>Questions? Ready to move on a lead?</h3>
+  <p>Reply to this email or call Costa directly — first to move gets the job.</p>
+  <a href="mailto:costa@irontigerleads.com?subject=San%20Antonio%20Pool%20Leads%20-%20Keith%20Zars%20Packet&body=Hi%20Costa%20-%20I%27d%20like%20to%20follow%20up%20on%20the%20lead%20packet." class="cta-btn">Email Costa</a>
+  <a href="tel:+12255354918" class="cta-btn secondary">Call (225) 535-4918</a>
+</div>
+
+<div class="terms">
+  <strong>About these leads:</strong>
+  <ul>
+    <li>I own alamopoolresurfacing.com and a network of pool-resurfacing lead-gen sites — I get a steady flow of homeowner inquiries across the San Antonio metro.</li>
+    <li>I'm looking for a reliable pool resurfacing contractor in the San Antonio area to be my go-to for this lead flow.</li>
+    <li>This is a sample packet — no fee. If the quality is there and things close well, I'm open to a more formal ongoing partnership.</li>
+  </ul>
+</div>
+
+<footer>
+  Iron Tiger Leads &nbsp;·&nbsp; <strong>costa@irontigerleads.com</strong> &nbsp;·&nbsp; (225) 535-4918 &nbsp;·&nbsp; Lead ID: SA-POOL-2026-06-01
+</footer>
+
+</div>
+
+</body>
+</html>

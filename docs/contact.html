@@ -97,39 +97,57 @@
       <div class="contact-form">
         <h2>Get Your Free Estimate</h2>
         <p class="form-subtitle">Tell us about your pool and we'll schedule a free on-site visit.</p>
-        <form action="https://formspree.io/info@alamopoolresurfacing.com" method="POST">
+        <div id="form-success" style="display:none;background:#ecfdf5;border:1.5px solid #10b981;border-radius:10px;padding:20px;color:#065f46">
+          <strong>Thanks — we got your request.</strong><br>Our team will reach out shortly. Need us sooner? Call <a href="tel:+17262685597">(726) 268-5597</a>.
+        </div>
+        <form id="contact-form" action="https://lead-manager-api.irontigerdigital.workers.dev/ingest" method="POST">
+          <input type="hidden" name="site" value="alamopoolresurfacing.com">
+          <input type="hidden" name="_subject" value="New Contact Request — Alamo Pool Resurfacing">
+          <input type="hidden" name="_redirect" value="https://alamopoolresurfacing.com/contact.html#success">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="First and last name" required>
+            <input type="text" id="name" name="name" placeholder="First and last name" autocomplete="name" required>
           </div>
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="(210) 555-0000" required>
+            <input type="tel" id="phone" name="phone" placeholder="(210) 555-0000" autocomplete="tel" inputmode="tel" pattern="\+?1?[\s.\-]?\(?[0-9]{3}\)?[\s.\-]?[0-9]{3}[\s.\-]?[0-9]{4}" title="10-digit phone number, e.g. (210) 555-0000" required>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com">
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Street Address</label>
+            <input type="text" id="address" name="address" placeholder="123 Main St" autocomplete="address-line1" required>
           </div>
           <div class="form-group">
             <label for="city">City / Neighborhood</label>
-            <input type="text" id="city" name="city" placeholder="e.g. Stone Oak, Boerne, New Braunfels">
+            <input type="text" id="city" name="city" placeholder="e.g. Stone Oak, Boerne, New Braunfels" autocomplete="address-level2" required>
           </div>
           <div class="form-group">
             <label for="surface">Current Surface Type</label>
-            <select id="surface" name="service">
-              <option value="">Not sure / unknown</option>
+            <select id="surface" name="service" required>
+              <option value="" disabled selected>Select one</option>
               <option value="plaster">White plaster / marcite</option>
               <option value="quartz">Quartz aggregate</option>
               <option value="pebble">Pebble Tec / PebbleSheen</option>
               <option value="other">Other</option>
+              <option value="unknown">Not sure / unknown</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Describe the issue (optional)</label>
-            <textarea id="message" name="message" placeholder="Rough surface, staining, cracks, algae problems, want an upgrade — whatever brought you here"></textarea>
+            <label for="message">Describe the issue</label>
+            <textarea id="message" name="message" placeholder="Rough surface, staining, cracks, algae problems, want an upgrade — whatever brought you here" required></textarea>
           </div>
           <button type="submit" class="form-submit">Request Free Estimate →</button>
         </form>
+        <script>
+        if (window.location.hash === '#success') {
+          document.getElementById('contact-form').style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        }
+        </script>
       </div>
 
       <div>

@@ -298,6 +298,95 @@ footer strong { color: var(--green-dark); }
   margin-bottom: 1rem;
   font-weight: 500;
 }
+:root { --accent: var(--green-dark); }
+.tab-bar {
+  display: flex;
+  gap: .5rem;
+  margin: 1.25rem 0 1rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+}
+.tab-btn {
+  padding: .55rem 1.1rem;
+  font-size: .82rem;
+  font-weight: 700;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--gray);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  border-radius: 4px 4px 0 0;
+  transition: color .15s, border-color .15s;
+  font-family: inherit;
+  letter-spacing: .02em;
+}
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── Status board ── */
+.sb-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .5rem 1rem;
+  align-items: center;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+.sb-row:first-child { border-radius: 10px 10px 0 0; }
+.sb-row:last-child { border-bottom: none; border-radius: 0 0 10px 10px; }
+.sb-name { font-weight: 700; font-size: .88rem; }
+.sb-desc { font-size: .75rem; color: var(--gray); margin-top: .1rem; }
+.sb-badge {
+  padding: .3rem .75rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  font-family: inherit;
+  letter-spacing: .03em;
+  transition: opacity .15s;
+  user-select: none;
+}
+.sb-badge:active { opacity: .75; }
+.sb-badge[data-status="Active"]        { background: #d1fae5; color: #065f46; }
+.sb-badge[data-status="Contacted"]     { background: #dbeafe; color: #1e40af; }
+.sb-badge[data-status="Quote Sent"]    { background: #fef3c7; color: #92400e; }
+.sb-badge[data-status="Closed / Lost"] { background: #fee2e2; color: #991b1b; }
+.sb-wrap {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+  overflow: hidden;
+  margin-top: .5rem;
+}
+.sb-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .5rem 1rem;
+  padding: .5rem 1rem;
+  background: var(--dark);
+  color: rgba(255,255,255,.6);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.sb-hint {
+  font-size: .72rem;
+  color: var(--gray);
+  text-align: center;
+  margin-top: .75rem;
+}
+.sb-badge.sb-saving{opacity:.55}.sb-badge.sb-error{background:#fdecea!important;color:#b42318!important;border-color:#b42318!important}
+
 </style>
 </head>
 <body>
@@ -318,6 +407,13 @@ footer strong { color: var(--green-dark); }
 <div class="claimed-banner">
   ✓ Active packet — Keith Zars Pools &nbsp;·&nbsp; Lead 10: June 20 &nbsp;·&nbsp; Lead 09: Sept 15 &nbsp;·&nbsp; Lead 08: Sept 11 &nbsp;·&nbsp; Lead 07: Sept 11 &nbsp;·&nbsp; Lead 06: Aug 18 &nbsp;·&nbsp; Lead 05: Aug 10 &nbsp;·&nbsp; Lead 04: July 17 &nbsp;·&nbsp; Lead 03: June 8 &nbsp;·&nbsp; Lead 02: June 2 &nbsp;·&nbsp; Lead 01: May 8, 2026
 </div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('leads')">Lead Details</button>
+  <button class="tab-btn" onclick="switchTab('status')">Status Board</button>
+</div>
+
+<div id="tab-leads" class="tab-panel active">
 
 <div class="lead-divider"><span>Lead 10 — Jake Morris · San Antonio, TX</span></div>
 
@@ -777,6 +873,55 @@ footer strong { color: var(--green-dark); }
   </div>
 </div>
 
+</div><!-- /#tab-leads -->
+
+<div id="tab-status" class="tab-panel">
+  <div class="sb-wrap">
+    <div class="sb-header"><span>Lead</span><span>Status</span></div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 10 — Jake Morris</div><div class="sb-desc">15731 Dawn Crest, San Antonio · Plaster resurfacing</div></div>
+      <button class="sb-badge" data-id="jake-morris" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 09 — Mike Gittinger</div><div class="sb-desc">3619 Barrington Street, San Antonio · Plaster replaster</div></div>
+      <button class="sb-badge" data-id="mike-gittinger" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 08 — Michelle De La Torre</div><div class="sb-desc">12607 Chateau Forest Ln, San Antonio · Plaster resurfacing</div></div>
+      <button class="sb-badge" data-id="michelle-de-la-torre" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 07 — Guillermo Moya</div><div class="sb-desc">6315 Echo Hill, Leon Valley · Plaster resurfacing</div></div>
+      <button class="sb-badge" data-id="guillermo-moya" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 06 — Kimberly Gill</div><div class="sb-desc">9823 Strathaven St, San Antonio · Full coping replacement</div></div>
+      <button class="sb-badge" data-id="kimberly-gill" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 05 — Terri Roberts</div><div class="sb-desc">112 River Valley, Castroville · Tile replacement · fading plaster repair · crack investigation</div></div>
+      <button class="sb-badge" data-id="terri-roberts" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 04 — Michael Davis</div><div class="sb-desc">13803 Bentridge Drive, San Antonio · Full pool resurfacing</div></div>
+      <button class="sb-badge" data-id="michael-davis" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 03 — Mary Hutton</div><div class="sb-desc">7245 Silver Spur Trail, Fair Oaks Ranch · Plaster repair</div></div>
+      <button class="sb-badge" data-id="mary-hutton" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 02 — Kristen Mole</div><div class="sb-desc">307 Augusta, Boerne · Pebble Tec resurfacing · deep-blue tile-line replacement · dead light cap-off</div></div>
+      <button class="sb-badge" data-id="kristen-mole" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+    <div class="sb-row">
+      <div><div class="sb-name">Lead 01 — Don Henderson</div><div class="sb-desc">807 Lodge Creek, New Braunfels · Pool resurfacing</div></div>
+      <button class="sb-badge" data-id="don-henderson" data-status="Active" onclick="cycleStatus(this)">Active</button>
+    </div>
+  </div>
+  <p class="sb-hint">Tap a status to cycle: Active → Contacted → Quote Sent → Closed / Lost. Saves for everyone with this link, on any device.</p>
+</div><!-- /#tab-status -->
+
 <div class="cta">
   <h3>Questions? Costa is your point of contact.</h3>
   <p>For questions about any lead in this packet, reach out directly.</p>
@@ -801,6 +946,110 @@ footer strong { color: var(--green-dark); }
 function openLb(el){var img=el.querySelector('img');document.getElementById('lb-img').src=img.src;document.getElementById('lb').classList.add('open');}
 function closeLb(){document.getElementById('lb').classList.remove('open');}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// ── Status board — saved to the server so every device and every person
+// with this link sees the same thing. ─────────────────────────────────────
+// 2026-09-16: the previous version sent the PIN in a place the server did not
+// read, so EVERY save was rejected — and it never checked the response, so the
+// new status was painted from this browser's local storage and looked saved.
+// It was only ever saved on the device that clicked. Now: the server is the
+// source of truth (strongly consistent D1), every save is checked, a failed
+// save reverts and says so, and open pages refresh themselves.
+var STATUSES = ['Active', 'Contacted', 'Quote Sent', 'Closed / Lost'];
+var LS_PREFIX = 'kz-pools-sb-';
+var API = 'https://lead-manager-api.irontigerdigital.workers.dev/api/packet-status?pin=3636';
+var PACKET = 'kz-pools';
+var pending = {};  // id -> true while a save is in flight (don't let a poll overwrite it)
+
+function paint(btn, status, note) {
+  btn.dataset.status = status;
+  btn.textContent = status;
+  btn.classList.remove('sb-saving', 'sb-error');
+  if (note === 'saving') btn.classList.add('sb-saving');
+  if (note === 'error') { btn.classList.add('sb-error'); btn.textContent = status + ' — not saved, tap to retry'; }
+}
+
+function save(btn, status, at) {
+  var id = btn.dataset.id;
+  pending[id] = true;
+  return fetch(API, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ pin: '3636', packet: PACKET, id: id, status: status, at: at })
+  })
+    .then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.ok) throw new Error(j.error || r.status); return j; }); })
+    .then(function (j) {
+      delete pending[id];
+      paint(btn, j.status);            // server's answer wins (it may be newer)
+      try { localStorage.setItem(LS_PREFIX + id, j.status); } catch (e) {}
+      return true;
+    })
+    .catch(function () {
+      delete pending[id];
+      paint(btn, status, 'error');
+      btn.dataset.retry = status;
+      return false;
+    });
+}
+
+function cycleStatus(btn) {
+  var id = btn.dataset.id;
+  if (pending[id]) return;
+  var base = btn.dataset.retry || btn.dataset.status;
+  var next = btn.dataset.retry ? base : STATUSES[(STATUSES.indexOf(base) + 1) % STATUSES.length];
+  delete btn.dataset.retry;
+  var prev = btn.dataset.status;
+  paint(btn, next, 'saving');
+  save(btn, next, Date.now()).then(function (ok) {
+    if (!ok) btn.dataset.prev = prev;
+  });
+}
+
+function refresh() {
+  return fetch(API + '&packet=' + PACKET + '&cb=' + Date.now())
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var remote = (data && data.statuses) || {};
+      document.querySelectorAll('.sb-badge').forEach(function (btn) {
+        var id = btn.dataset.id;
+        if (pending[id] || btn.dataset.retry) return;
+        if (remote[id] && STATUSES.indexOf(remote[id]) > -1) {
+          paint(btn, remote[id]);
+          try { localStorage.setItem(LS_PREFIX + id, remote[id]); } catch (e) {}
+        }
+      });
+      return remote;
+    });
+}
+
+// Load: paint the cached value instantly, then let the server correct it.
+document.querySelectorAll('.sb-badge').forEach(function (btn) {
+  try {
+    var cached = localStorage.getItem(LS_PREFIX + btn.dataset.id);
+    if (cached && STATUSES.indexOf(cached) > -1) paint(btn, cached);
+  } catch (e) {}
+});
+refresh().then(function (remote) {
+  // One-time rescue: statuses set on this device that never reached the server
+  // (every save before the fix). Sent with at=0 so they can NEVER override a
+  // value someone saved on the server since.
+  document.querySelectorAll('.sb-badge').forEach(function (btn) {
+    var id = btn.dataset.id, cached = null;
+    try { cached = localStorage.getItem(LS_PREFIX + id); } catch (e) {}
+    if (cached && cached !== 'Active' && !remote[id] && STATUSES.indexOf(cached) > -1) save(btn, cached, 0);
+  });
+}).catch(function () {});
+
+// Keep every open copy of this page in sync.
+setInterval(function () { if (!document.hidden) refresh().catch(function () {}); }, 20000);
+document.addEventListener('visibilitychange', function () { if (!document.hidden) refresh().catch(function () {}); });
 </script>
 </body>
 </html>

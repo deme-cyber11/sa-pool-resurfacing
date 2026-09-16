@@ -387,6 +387,35 @@ footer strong { color: var(--green-dark); }
 }
 .sb-badge.sb-saving{opacity:.55}.sb-badge.sb-error{background:#fdecea!important;color:#b42318!important;border-color:#b42318!important}
 
+.summary-row {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.summary-stat {
+  flex: 1;
+  min-width: 110px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .85rem 1rem;
+  text-align: center;
+}
+.summary-stat .val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: .2rem;
+}
+.summary-stat .lbl {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--gray);
+  font-weight: 600;
+}
 </style>
 </head>
 <body>
@@ -404,8 +433,9 @@ footer strong { color: var(--green-dark); }
   <p>Ten inbound homeowners via alamopoolresurfacing.com — full contact below.</p>
 </div>
 
-<div class="claimed-banner">
-  ✓ Active packet — Keith Zars Pools &nbsp;·&nbsp; Lead 10: Sept 15 &nbsp;·&nbsp; Lead 09: Sept 11 &nbsp;·&nbsp; Lead 08: Sept 11 &nbsp;·&nbsp; Lead 07: Aug 18 &nbsp;·&nbsp; Lead 06: Aug 10 &nbsp;·&nbsp; Lead 05: July 17 &nbsp;·&nbsp; Lead 04: June 20 &nbsp;·&nbsp; Lead 03: June 8 &nbsp;·&nbsp; Lead 02: June 2 &nbsp;·&nbsp; Lead 01: May 8, 2026
+<div class="summary-row">
+  <div class="summary-stat"><div class="val">10</div><div class="lbl">Total leads</div></div>
+  <div class="summary-stat"><div class="val">Sept 15</div><div class="lbl">Latest lead</div></div>
 </div>
 
 <div class="tab-bar">

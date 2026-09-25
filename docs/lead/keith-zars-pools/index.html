@@ -428,14 +428,14 @@ footer strong { color: var(--green-dark); }
 <div class="wrap">
 
 <div class="hero">
-  <span class="badge">10 active leads · Keith Zars Pools</span>
+  <span class="badge"><span id="stat-badge">11</span> active leads · Keith Zars Pools</span>
   <h2>SA Pool Leads — Keith Zars</h2>
-  <p>Ten inbound homeowners via alamopoolresurfacing.com — full contact below.</p>
+  <p><span id="stat-intro">11</span> inbound homeowners via alamopoolresurfacing.com — full contact below.</p>
 </div>
 
 <div class="summary-row">
-  <div class="summary-stat"><div class="val">10</div><div class="lbl">Total leads</div></div>
-  <div class="summary-stat"><div class="val">Sept 15</div><div class="lbl">Latest lead</div></div>
+  <div class="summary-stat"><div class="val" id="stat-total">11</div><div class="lbl">Total leads</div></div>
+  <div class="summary-stat"><div class="val" id="stat-latest">Sept 25</div><div class="lbl">Latest lead</div></div>
 </div>
 
 <div class="tab-bar">
@@ -1121,6 +1121,30 @@ refresh().then(function (remote) {
 // Keep every open copy of this page in sync.
 setInterval(function () { if (!document.hidden) refresh().catch(function () {}); }, 20000);
 document.addEventListener('visibilitychange', function () { if (!document.hidden) refresh().catch(function () {}); });
+</script>
+
+<script>
+// Count the leads and read the newest Received date, rather than trusting numbers
+// typed into the header. Those said 10 and "Sept 15" while the page carried ELEVEN
+// leads and the newest, Caroline Kalkhoff, arrived on September 25. Appending a lead
+// and forgetting the header is the only way this ever goes wrong, so the header now
+// derives from the leads themselves.
+(function () {
+  var rows = document.querySelectorAll('#tab-status .sb-row');
+  var n = rows.length;
+  if (!n) return;                                   // never blank the header out
+  var set = function (id, v) { var el = document.getElementById(id); if (el) el.textContent = v; };
+  set('stat-total', n); set('stat-intro', n); set('stat-badge', n);
+
+  var newest = null;
+  document.querySelectorAll('#tab-leads .timestamp').forEach(function (el) {
+    var d = new Date(el.textContent.trim());
+    if (!isNaN(d) && (!newest || d > newest)) newest = d;
+  });
+  if (newest) {
+    set('stat-latest', newest.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
+  }
+})();
 </script>
 </body>
 </html>

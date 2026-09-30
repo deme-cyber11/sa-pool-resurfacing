@@ -416,6 +416,31 @@ footer strong { color: var(--green-dark); }
   color: var(--gray);
   font-weight: 600;
 }
+/* Per-lead notes (2026-09-30) */
+.sb-row, .sb-header { grid-template-columns: 1fr auto auto; }
+.sb-note-btn {
+  padding: .3rem .7rem; border-radius: 999px; font: 700 .72rem/1 inherit; font-family: inherit;
+  letter-spacing: .03em; cursor: pointer; white-space: nowrap;
+  background: #fff; color: var(--dark); border: 1.5px solid var(--border);
+  display: inline-flex; align-items: center; gap: .35rem;
+}
+.sb-note-btn:hover, .sb-note-btn[aria-expanded="true"] { border-color: var(--accent); }
+.sb-note-btn .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); display: none; }
+.sb-note-btn.has-note .dot { display: inline-block; }
+.sb-note-panel { grid-column: 1 / -1; display: none; background: #f7f8fa; border: 1px solid var(--border); border-radius: 8px; padding: .6rem; }
+.sb-note-panel.open { display: block; }
+.sb-note-panel textarea {
+  width: 100%; box-sizing: border-box; min-height: 84px; resize: vertical; font: .85rem/1.45 inherit; font-family: inherit;
+  border: 1px solid var(--border); border-radius: 6px; padding: .5rem .6rem; background: #fff; color: #1a1a1a;
+}
+.sb-note-panel textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: var(--accent); }
+.sb-note-actions { display: flex; align-items: center; gap: .5rem; margin-top: .45rem; flex-wrap: wrap; }
+.sb-note-actions button { font: 700 .75rem/1 inherit; font-family: inherit; border-radius: 6px; padding: .45rem .9rem; cursor: pointer; }
+.sb-note-save { background: var(--dark); color: #fff; border: none; }
+.sb-note-cancel { background: transparent; color: var(--dark); border: 1px solid var(--border); }
+.sb-note-msg { font-size: .72rem; color: var(--gray); margin-left: auto; }
+.sb-note-msg.err { color: #991b1b; font-weight: 700; }
+@media (max-width: 480px) { .sb-note-btn { padding: .3rem .55rem; } }
 </style>
 </head>
 <body>
@@ -1064,7 +1089,7 @@ footer strong { color: var(--green-dark); }
 
 <div id="tab-status" class="tab-panel">
   <div class="sb-wrap">
-    <div class="sb-header"><span>Lead</span><span>Status</span></div>
+    <div class="sb-header"><span>Lead</span><span>Notes</span><span>Status</span></div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 14 — Buddy Riley</div><div class="sb-desc">6318 Mallard Point, Windcrest · Pebble</div></div>
       <button class="sb-badge" data-id="buddy-riley" data-status="Active" onclick="cycleStatus(this)">Active</button>
@@ -1122,7 +1147,7 @@ footer strong { color: var(--green-dark); }
       <button class="sb-badge" data-id="don-henderson" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
   </div>
-  <p class="sb-hint">Tap a status to cycle: Active → Contacted → Quote Sent → Closed / Lost. Saves for everyone with this link, on any device.</p>
+  <p class="sb-hint">Tap a status to cycle: Active → Contacted → Quote Sent → Closed / Lost. Saves for everyone with this link, on any device. Tap Notes to keep notes on a lead.</p>
 </div><!-- /#tab-status -->
 
 <div class="cta">
@@ -1176,7 +1201,7 @@ function paint(btn, status, note) {
   btn.textContent = status;
   btn.classList.remove('sb-saving', 'sb-error');
   if (note === 'saving') btn.classList.add('sb-saving');
-  if (note === 'error') { btn.classList.add('sb-error'); btn.textContent = status + ' — not saved, tap to retry'; }
+  if (note === 'error') { btn.classList.add('sb-error'); btn.textContent = status + '. Not saved, tap to retry'; }
 }
 
 function save(btn, status, at) {
@@ -1253,6 +1278,118 @@ refresh().then(function (remote) {
 // Keep every open copy of this page in sync.
 setInterval(function () { if (!document.hidden) refresh().catch(function () {}); }, 20000);
 document.addEventListener('visibilitychange', function () { if (!document.hidden) refresh().catch(function () {}); });
+
+// ── Per-lead notes (2026-09-30) ──
+// One note per lead, saved on the server (/api/packet-notes) so it shows on every device.
+// The Notes button is added to every row by script, so rows added later get one too.
+var NOTES_API = 'https://lead-manager-api.irontigerdigital.workers.dev/api/packet-notes';
+var notes = {};         // id -> { note, at }
+var noteDirty = {};     // id -> true while the box is open with unsaved typing
+
+function ensureNoteButtons() {
+  document.querySelectorAll('.sb-row .sb-badge').forEach(function (badge) {
+    var row = badge.closest('.sb-row');
+    if (row.querySelector('.sb-note-btn')) return;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'sb-note-btn'; b.setAttribute('aria-expanded', 'false');
+    b.innerHTML = '<span class="dot"></span>Notes';
+    b.onclick = function () { toggleNote(b); };
+    badge.parentNode.insertBefore(b, badge);
+  });
+}
+function noteRow(el) { return el.closest('.sb-row'); }
+function noteBtnFor(row) { return row.querySelector('.sb-note-btn'); }
+function noteId(row) { return row.querySelector('.sb-badge').dataset.id; }
+function fmtAt(at) {
+  if (!at) return '';
+  var d = new Date(at);
+  return 'Saved ' + d.toLocaleDateString([], { month: 'short', day: 'numeric' }) + ', ' + d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+}
+function paintNoteBtn(row) {
+  var n = notes[noteId(row)];
+  noteBtnFor(row).classList.toggle('has-note', !!(n && n.note && n.note.trim()));
+}
+function notePanel(row) {
+  var panel = row.querySelector('.sb-note-panel');
+  if (panel) return panel;
+  panel = document.createElement('div');
+  panel.className = 'sb-note-panel';
+  panel.innerHTML = '<textarea placeholder="Called, left voicemail. Quote sent. Follow up Friday."></textarea>' +
+    '<div class="sb-note-actions"><button type="button" class="sb-note-save">Save</button>' +
+    '<button type="button" class="sb-note-cancel">Close</button><span class="sb-note-msg"></span></div>';
+  row.appendChild(panel);
+  var ta = panel.querySelector('textarea');
+  ta.addEventListener('input', function () { noteDirty[noteId(row)] = true; setNoteMsg(row, 'Not saved yet'); });
+  ta.addEventListener('keydown', function (e) { if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') saveNote(row); });
+  panel.querySelector('.sb-note-save').onclick = function () { saveNote(row); };
+  panel.querySelector('.sb-note-cancel').onclick = function () { closeNote(row); };
+  return panel;
+}
+function setNoteMsg(row, text, isErr) {
+  var m = notePanel(row).querySelector('.sb-note-msg');
+  m.textContent = text || '';
+  m.classList.toggle('err', !!isErr);
+}
+function toggleNote(btn) {
+  var row = noteRow(btn), panel = notePanel(row);
+  if (panel.classList.contains('open')) return closeNote(row);
+  var n = notes[noteId(row)];
+  panel.querySelector('textarea').value = (n && n.note) || '';
+  setNoteMsg(row, n && n.at ? fmtAt(n.at) : '');
+  panel.classList.add('open');
+  btn.setAttribute('aria-expanded', 'true');
+  panel.querySelector('textarea').focus();
+}
+function closeNote(row) {
+  var id = noteId(row);
+  if (noteDirty[id] && !confirm('Close without saving this note?')) return;
+  delete noteDirty[id];
+  notePanel(row).classList.remove('open');
+  noteBtnFor(row).setAttribute('aria-expanded', 'false');
+}
+function saveNote(row) {
+  var id = noteId(row), panel = notePanel(row), text = panel.querySelector('textarea').value;
+  var saveBtn = panel.querySelector('.sb-note-save');
+  saveBtn.disabled = true;
+  setNoteMsg(row, 'Saving...');
+  fetch(NOTES_API, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ pin: '3636', packet: PACKET, id: id, note: text, at: Date.now() })
+  })
+    .then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.ok) throw new Error(j.error || r.status); return j; }); })
+    .then(function (j) {
+      notes[id] = { note: j.note, at: j.at };
+      delete noteDirty[id];
+      if (j.stale) { panel.querySelector('textarea').value = j.note; setNoteMsg(row, 'Someone saved a newer note. Showing theirs.', true); }
+      else setNoteMsg(row, fmtAt(j.at));
+      paintNoteBtn(row);
+    })
+    .catch(function () { setNoteMsg(row, 'Not saved. Check your connection and tap Save again.', true); })
+    .then(function () { saveBtn.disabled = false; });
+}
+function refreshNotes() {
+  return fetch(NOTES_API + '?pin=3636&packet=' + PACKET + '&cb=' + Date.now())
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (!data || !data.ok) return;
+      notes = data.notes || {};
+      document.querySelectorAll('.sb-row').forEach(function (row) {
+        if (!row.querySelector('.sb-badge')) return;
+        paintNoteBtn(row);
+        var id = noteId(row), panel = row.querySelector('.sb-note-panel');
+        if (panel && panel.classList.contains('open') && !noteDirty[id]) {
+          var n = notes[id];
+          panel.querySelector('textarea').value = (n && n.note) || '';
+          setNoteMsg(row, n && n.at ? fmtAt(n.at) : '');
+        }
+      });
+    });
+}
+ensureNoteButtons();
+refreshNotes().catch(function () {});
+setInterval(function () { if (!document.hidden) refreshNotes().catch(function () {}); }, 20000);
+document.addEventListener('visibilitychange', function () { if (!document.hidden) refreshNotes().catch(function () {}); });
 </script>
 
 <script>

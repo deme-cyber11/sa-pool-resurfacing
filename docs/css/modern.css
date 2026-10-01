@@ -345,3 +345,84 @@ body.dm-legal .footer-bottom p { margin: 0; font-size: .82rem; color: rgba(255,2
 body.dm .dm-idx-hero h1 { color: #fff; font-size: clamp(2.4rem, 5vw, 3.6rem); margin: 0 0 12px; }
 body.dm .dm-idx-hero .subtitle { color: rgba(255,255,255,.82); font-size: 1.1rem; margin: 0; }
 body.dm .hero-badge { color: var(--sand-l); background: rgba(11,43,45,.45); border-color: rgba(233,201,163,.35); }
+
+/* ---------- phone + tablet pass (2026-10-01 r2). Media-scoped only: desktop (over 1024px) is untouched. ---------- */
+@media (max-width: 1024px) {
+  /* tablet landscape keeps the desktop nav, so give each link a 44px touch row */
+  body.dm .header .nav-links > a:not(.nav-cta), body.dm .header .nav-dropdown > a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
+  body.dm .header .nav-links > a:not(.nav-cta)::after { bottom: 6px; }
+  body.dm .header ul.nav-links > li > a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
+  body.dm .nav-cta, body.dm .header .btn-nav { min-height: 44px; }
+  body.dm nav.breadcrumb a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
+  body.dm .footer-contact a, body.dm .footer-links a, body.dm .footer-col a { display: inline-flex; align-items: center; min-height: 44px; }
+  body.dm .faq-answer-inner a[href^="tel:"] { display: inline-block; padding: 13px 0; }
+  body.dm .info-item a[href^="tel:"], body.dm .info-item a[href^="mailto:"] { display: inline-flex; align-items: center; min-height: 44px; }
+  body.dm-legal .logo { min-height: 44px; }
+  body.dm-legal .legal-content li > a[href^="tel:"], body.dm-legal .legal-content li > a[href^="mailto:"] { display: inline-block; padding: 12px 0; }
+  body.dm-legal > footer a[href^="tel:"], body.dm-legal > footer a[href^="mailto:"] { display: inline-flex; align-items: center; min-height: 44px; }
+  body.dm-legal ul.nav-links a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
+  body.dm-guide .cta-block a.cta-form { display: flex; align-items: center; justify-content: center; min-height: 44px; }
+  /* the water-quality guide carries a floating call/quote pair that no stylesheet defined */
+  body.dm-guide .floating-cta { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 998; display: flex; gap: 10px; }
+  body.dm-guide .floating-cta a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 999px; color: #fff; font-weight: 700; font-size: .95rem; text-decoration: none; box-shadow: 0 4px 18px rgba(0,0,0,.28); }
+  body.dm-guide .floating-cta .fcta-call { background: var(--terra); }
+  body.dm-guide .floating-cta .fcta-quote { background: var(--teal); }
+  body.dm-guide .floating-cta svg { width: 20px; height: 20px; }
+  body.dm-guide { padding-bottom: 76px; }
+  /* 404: phone and tablet get a small link row so the page is never a dead end */
+  body.dm-e404 .dm-e404-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 8px; margin: 28px auto 0; max-width: 520px; }
+  body.dm-e404 .dm-e404-nav a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 12px; color: var(--teal); font-weight: 600; }
+}
+@media (min-width: 1025px) {
+  body.dm-e404 .dm-e404-nav { display: none; }
+}
+@media (max-width: 900px) {
+  /* privacy page: no menu script exists, so the links sit in a second header row instead of being hidden */
+  body.dm-legal > header > nav { height: auto; flex-wrap: wrap; gap: 0 12px; padding: 10px 0 4px; }
+  body.dm-legal .logo { min-height: 44px; }
+  body.dm-legal ul.nav-links { width: 100%; justify-content: space-between; gap: 0 4px; flex-wrap: wrap; }
+  body.dm-legal ul.nav-links > li:not(:last-child) { display: block; }
+  body.dm-legal ul.nav-links > li.dropdown:has(> a[href="#"]) { display: none; }
+  body.dm-legal ul.nav-links .dropdown-menu, body.dm-legal .dropdown-arrow { display: none; }
+  body.dm-legal ul.nav-links a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
+}
+@media (max-width: 768px) {
+  /* phone menu: full-width 48px rows and a 44px toggle */
+  body.dm .header .hamburger { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+  body.dm .header .nav-links > a, body.dm .header .nav-dropdown, body.dm .header .nav-dropdown > a { width: 100%; }
+  body.dm .header .nav-links > a, body.dm .header .nav-dropdown > a, body.dm .header .nav-dropdown .dropdown-menu a { display: flex; align-items: center; justify-content: center; min-height: 48px; }
+  body.dm .header .nav-links > a.nav-cta { min-height: 52px; }
+  /* sticky call bar: the tel link on service and blog pages had white text on no background */
+  body.dm .mobile-cta { left: 12px; right: 12px; transform: none; }
+  body.dm .mobile-cta a { flex: 1 1 auto; min-width: 0; min-height: 48px; padding: .75rem 1rem; }
+  body.dm .mobile-cta a[href^="tel:"]:not([style*="background"]) { background: var(--terra); }
+  /* water-quality guide: its old nav had no toggle, so the links get a second header row (Free Estimate stays beside the logo) */
+  body.dm-guide .header > .nav.container { height: auto; display: grid; grid-template-columns: auto auto auto 1fr; column-gap: 4px; align-items: center; padding: 8px 0 2px; }
+  body.dm-guide .header > .nav.container > .logo { grid-column: 1 / 4; grid-row: 1; }
+  body.dm-guide .header ul.nav-links { display: contents; }
+  body.dm-guide .header ul.nav-links > li { grid-row: 2; }
+  body.dm-guide .header ul.nav-links > li:last-child { grid-column: 4; grid-row: 1; justify-self: end; }
+  body.dm-guide .header ul.nav-links a { color: var(--ink); border-bottom: 0; padding: 0 6px; font-size: .95rem; }
+  body.dm-guide .header ul.nav-links a.btn-nav { color: #fff; padding: 0 16px; white-space: nowrap; }
+  /* privacy page: styles.v1 turns any .nav-links into an off-canvas drawer at this width, and this page has no toggle */
+  body.dm-legal ul.nav-links { position: static; transform: none; height: auto; overflow: visible; background: none; flex-direction: row; padding: 0; z-index: auto; }
+  body.dm-legal ul.nav-links a { color: var(--ink); border-bottom: 0; padding: 0 6px; font-size: .95rem; }
+  body.dm-legal ul.nav-links a.nav-cta { color: #fff; padding: 0 16px; white-space: nowrap; }
+  body.dm-legal > header > nav { display: grid; grid-template-columns: auto auto auto 1fr; column-gap: 4px; align-items: center; padding: 8px 0 2px; }
+  body.dm-legal > header > nav > .logo { grid-column: 1 / 4; grid-row: 1; }
+  body.dm-legal > header > nav > .menu-toggle { display: none; }
+  body.dm-legal ul.nav-links { display: contents; }
+  body.dm-legal ul.nav-links > li { grid-row: 2; }
+  body.dm-legal ul.nav-links > li:last-child { grid-column: 4; grid-row: 1; justify-self: end; }
+  body.dm .dm-svc-hero .hero-content > p { margin-left: 0; }
+}
+@media (max-width: 640px) {
+  body.dm-guide .resource-body p[style*="font-size"] { font-size: 15px !important; }
+  body.dm .mobile-cta a { white-space: normal; text-align: center; line-height: 1.2; }
+  body.dm .mobile-cta .mobile-cta-quote { flex: 0 0 auto !important; }
+  body.dm-legal .footer-bottom p { font-size: 15px; }
+  body.dm-guide .header .nav .logo a { font-size: 1.15rem; }
+  body.dm-guide .header ul.nav-links a.btn-nav { padding: 0 12px; font-size: .88rem; }
+  body.dm-guide .header ul.nav-links a:not(.btn-nav) { padding: 0 3px; font-size: .9rem; }
+  body.dm-legal ul.nav-links a.nav-cta { padding: 0 12px; font-size: .88rem; }
+}

@@ -40,7 +40,8 @@ h3{font-size:1.45rem;font-weight:800;letter-spacing:-.015em;margin-top:.35rem}
 .card p{color:var(--gray);font-size:.95rem}
 .card .ic{width:38px;height:38px;border-radius:10px;background:var(--green-tint);color:var(--green-dark);display:grid;place-items:center;margin-bottom:.7rem}
 .card .ic svg{width:20px;height:20px}
-.price{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:1rem;margin-top:1.2rem}
+.price{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.2rem}
+@media (max-width:1000px){.price{grid-template-columns:1fr 1fr}}
 .price .p{border:1px solid var(--green-line);background:var(--green-tint);border-radius:14px;padding:1.2rem 1.25rem}
 .price .p b{display:block;font-size:1.9rem;font-weight:800;color:var(--dark);letter-spacing:-.02em}
 .price .p span{display:block;font-weight:700;font-size:.92rem}
@@ -101,12 +102,13 @@ footer{text-align:center;color:#9ca3af;font-size:.8rem;padding:2rem 1rem 2.5rem}
 
   <section>
     <div class="label">What it costs</div>
-    <h3>Simple, per-lead pricing</h3>
-    <p class="lede">You know the cost the day a lead arrives. Nothing to set up and nothing monthly.</p>
+    <h3>Simple pricing, one total per won job</h3>
+    <p class="lede">You pay $50 when a lead arrives. If it becomes a signed job, that job costs one set total, and the $50 you already paid counts toward it. Nothing to set up and nothing monthly.</p>
     <div class="price">
       <div class="p"><b>$50</b><span>Per lead delivered</span><small>Billed weekly by bank transfer, due in 7 days.</small></div>
-      <div class="p"><b>$500</b><span>Closed-job fee, $8K to $15K jobs</span><small>Once, only if the lead becomes a signed job.</small></div>
-      <div class="p"><b>$750</b><span>Closed-job fee, jobs over $15K</span><small>Due 7 days after the homeowner's final payment.</small></div>
+      <div class="p"><b>$150</b><span>Total per won job under $5K</span><small>$100 more when the job closes.</small></div>
+      <div class="p"><b>$500</b><span>Total per won job, $5K to $15K</span><small>$450 more when the job closes.</small></div>
+      <div class="p"><b>$750</b><span>Total per won job over $15K</span><small>$700 more, due 7 days after the homeowner's final payment.</small></div>
     </div>
     <ul class="terms">
       <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg>No setup fee, no monthly fee, no minimum volume.</li>
@@ -124,13 +126,13 @@ footer{text-align:center;color:#9ca3af;font-size:.8rem;padding:2rem 1rem 2.5rem}
       <table>
         <thead><tr><th>Your close rate</th><th>Jobs won a year</th><th>Revenue at $11K</th><th>Total Iron Tiger cost</th><th>Cost as share of revenue</th></tr></thead>
         <tbody>
-          <tr><td>10%</td><td>3.6</td><td>$39,600</td><td>$3,600</td><td class="n">9.1%</td></tr>
-          <tr><td>20%</td><td>7.2</td><td>$79,200</td><td>$5,400</td><td class="n">6.8%</td></tr>
-          <tr><td>30%</td><td>10.8</td><td>$118,800</td><td>$7,200</td><td class="n">6.1%</td></tr>
+          <tr><td>10%</td><td>3.6</td><td>$39,600</td><td>$3,420</td><td class="n">8.6%</td></tr>
+          <tr><td>20%</td><td>7.2</td><td>$79,200</td><td>$5,040</td><td class="n">6.4%</td></tr>
+          <tr><td>30%</td><td>10.8</td><td>$118,800</td><td>$6,660</td><td class="n">5.6%</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note">Total cost is 36 leads at $50 plus a $500 closed-job fee per won job. Jobs over $15,000 carry $750 instead. You pay the closed-job fee only after you have been paid, so it never comes out of cash you have not collected.</p>
+    <p class="note">Total cost is 36 leads at $50, plus $450 more per won job, so each won job totals $500 with its lead fee. Jobs over $15,000 total $750 instead. You pay the closed-job fee only after you have been paid, so it never comes out of cash you have not collected.</p>
     <div class="grid2">
       <div class="card"><div class="ic"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.75 10.818v2.614A3.13 3.13 0 0 0 11.888 13c.482-.315.612-.648.612-.875 0-.227-.13-.56-.612-.875a3.13 3.13 0 0 0-1.138-.432ZM8.33 8.62c.053.055.115.11.184.164.208.16.46.284.736.363V6.603a2.45 2.45 0 0 0-.35.13c-.14.065-.27.143-.386.233-.377.292-.514.627-.514.909 0 .184.058.39.202.592.037.051.08.102.128.152Z"/><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-8-6a.75.75 0 0 1 .75.75v.316a3.78 3.78 0 0 1 1.653.713c.426.33.744.74.925 1.2a.75.75 0 0 1-1.395.55 1.35 1.35 0 0 0-.447-.563 2.187 2.187 0 0 0-.736-.363V9.3c.698.093 1.383.32 1.959.696.787.514 1.29 1.27 1.29 2.13 0 .86-.504 1.616-1.29 2.13-.576.377-1.261.603-1.96.696v.299a.75.75 0 1 1-1.5 0v-.3c-.697-.092-1.382-.318-1.958-.695-.482-.315-.857-.717-1.078-1.188a.75.75 0 1 1 1.359-.636c.08.173.245.376.54.569.313.205.706.353 1.138.432v-2.748a3.782 3.782 0 0 1-1.653-.713C6.9 9.433 6.5 8.681 6.5 7.875c0-.805.4-1.558 1.097-2.096a3.78 3.78 0 0 1 1.653-.713V4.75A.75.75 0 0 1 10 4Z" clip-rule="evenodd"/></svg></div><h4>A variable cost, not a retainer</h4><p>You pay when leads arrive, so a quiet month costs nothing. There is no budget to commit or burn through.</p></div>
       <div class="card"><div class="ic"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 0 1 .919-.53l4.78 1.281a.75.75 0 0 1 .531.919l-1.281 4.78a.75.75 0 0 1-1.449-.387l.81-3.022a19.407 19.407 0 0 0-5.594 5.203.75.75 0 0 1-1.139.093L7 10.06l-4.72 4.72a.75.75 0 0 1-1.06-1.061l5.25-5.25a.75.75 0 0 1 1.06 0l3.074 3.073a20.923 20.923 0 0 1 5.545-4.931l-3.042-.815a.75.75 0 0 1-.53-.919Z" clip-rule="evenodd"/></svg></div><h4>Room to grow</h4><p>The site already shows up 17,771 times in 90 days at an average position of 20. Every step up page one sends more homeowners to Keith Zars, at the same per-lead price.</p></div>

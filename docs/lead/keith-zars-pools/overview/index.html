@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keith Zars Lead Channel</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: the Keith Zars lead packet's language (dark bar, green gradient hero, white cards with
+   green rules) so this reads as part of the same set. One light theme on purpose; every colour set. */
+:root{
+  color-scheme: light;
+  --green:#10b981; --green-dark:#047857; --green-tint:#e6f7ef; --green-line:#d2ecdf;
+  --dark:#1a1a2e; --gray:#4b5563; --white:#fff; --rule:#e8eaee; --soft:#f6f8f7;
+  --font:'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--dark);font:16px/1.6 var(--font);-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;text-wrap:balance} p{margin:0} ul{margin:0;padding:0;list-style:none}
+.bar{background:var(--dark);color:#fff;padding:.85rem 1.25rem;text-align:center;border-bottom:4px solid var(--green)}
+.bar .k{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9fb3c8}
+.bar h1{font-size:1.05rem;font-weight:700;margin-top:.15rem}
+.hero{background:linear-gradient(135deg,#10b981,#047857);color:#fff;padding:2.4rem 1.5rem 2.6rem;text-align:center}
+.hero .eyebrow{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:.3rem .8rem;border-radius:50px}
+.hero h2{font-size:clamp(1.6rem,4vw,2.35rem);font-weight:800;letter-spacing:-.02em;margin-top:.9rem;line-height:1.15}
+.hero p{margin:.8rem auto 0;max-width:44rem;font-size:1.05rem;color:#ecfdf5}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.25rem}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#fff;border:1px solid var(--rule);border-radius:16px;box-shadow:0 14px 40px rgba(16,24,40,.1);margin:-1.6rem auto 0;position:relative;overflow:hidden}
+.stat{padding:1.15rem 1.1rem;border-right:1px solid var(--rule)} .stat:last-child{border-right:0}
+.stat b{display:block;font-size:1.65rem;font-weight:800;color:var(--green-dark);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat span{display:block;font-size:.78rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;margin-top:.15rem}
+section{padding:2.6rem 0 0}
+.label{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green-dark)}
+h3{font-size:1.45rem;font-weight:800;letter-spacing:-.015em;margin-top:.35rem}
+.lede{color:var(--gray);margin-top:.5rem;max-width:46rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.2rem}
+.card{border:1px solid var(--rule);border-radius:14px;padding:1.25rem 1.3rem;background:#fff}
+.card h4{margin:0 0 .35rem;font-size:1.02rem;font-weight:800}
+.card p{color:var(--gray);font-size:.95rem}
+.card .ic{width:38px;height:38px;border-radius:10px;background:var(--green-tint);color:var(--green-dark);display:grid;place-items:center;margin-bottom:.7rem}
+.card .ic svg{width:20px;height:20px}
+.price{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:1rem;margin-top:1.2rem}
+.price .p{border:1px solid var(--green-line);background:var(--green-tint);border-radius:14px;padding:1.2rem 1.25rem}
+.price .p b{display:block;font-size:1.9rem;font-weight:800;color:var(--dark);letter-spacing:-.02em}
+.price .p span{display:block;font-weight:700;font-size:.92rem}
+.price .p small{display:block;color:var(--gray);font-size:.85rem;margin-top:.35rem}
+.terms{margin-top:1rem;display:grid;grid-template-columns:1fr 1fr;gap:.45rem 1.5rem}
+.terms li{position:relative;padding-left:1.6rem;color:var(--gray);font-size:.95rem}
+.terms li svg{position:absolute;left:0;top:.2rem;width:18px;height:18px;color:var(--green-dark)}
+.tbl{overflow-x:auto;margin-top:1.2rem;border:1px solid var(--rule);border-radius:14px}
+table{width:100%;border-collapse:collapse;min-width:560px;font-variant-numeric:tabular-nums}
+th{background:var(--dark);color:#fff;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;text-align:left;padding:.75rem .9rem}
+td{padding:.75rem .9rem;border-top:1px solid var(--rule);font-size:.95rem}
+tr:nth-child(even) td{background:var(--soft)}
+td.n{font-weight:800;color:var(--green-dark)}
+.note{color:var(--gray);font-size:.85rem;margin-top:.6rem}
+.proof{display:flex;gap:1rem;align-items:center;margin-top:1.2rem;border-radius:14px;padding:1.2rem 1.3rem;background:var(--dark);color:#fff}
+.proof b{font-size:2.3rem;font-weight:800;color:#6ee7b7;line-height:1}
+.proof p{color:#d1d5db;font-size:.95rem}
+.list{margin-top:1rem;display:grid;gap:.55rem}
+.list li{position:relative;padding-left:1.8rem;color:var(--gray)}
+.list li b{color:var(--dark)}
+.list li svg{position:absolute;left:0;top:.2rem;width:20px;height:20px;color:var(--green-dark)}
+.next{margin:2.8rem 0 0;border-radius:16px;padding:1.8rem 1.6rem;background:linear-gradient(135deg,#10b981,#047857);color:#fff;display:grid;grid-template-columns:1.4fr 1fr;gap:1.4rem;align-items:center}
+.next h3{color:#fff}
+.next p{color:#ecfdf5;margin-top:.4rem}
+.next .who{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:1rem 1.1rem;font-size:.95rem}
+.next .who b{display:block;font-size:1.1rem}
+footer{text-align:center;color:#9ca3af;font-size:.8rem;padding:2rem 1rem 2.5rem}
+@media (max-width:760px){
+  .stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+  .grid2,.price,.terms,.next{grid-template-columns:1fr}
+  .stat b{font-size:1.4rem}
+}
+</style>
+
+</head>
+<body>
+<div class="bar"><div class="k">Iron Tiger Digital</div><h1>Keith Zars Pools: lead channel overview</h1></div>
+
+<header class="hero">
+  <span class="eyebrow">Prepared for Jason Olcott and the Keith Zars marketing team</span>
+  <h2>Extra resurfacing jobs from homeowners who never searched your name</h2>
+  <p>A separate source of San Antonio pool leads, sent only to Keith Zars, priced per lead, and built to sit alongside your own marketing without touching it.</p>
+</header>
+
+<div class="wrap">
+  <div class="stats" role="list">
+    <div class="stat" role="listitem"><b>15</b><span>Leads sent since May</span></div>
+    <div class="stat" role="listitem"><b>11 of 13</b><span>Tracked leads still open</span></div>
+    <div class="stat" role="listitem"><b>17,771</b><span>Google impressions, 90 days</span></div>
+    <div class="stat" role="listitem"><b>0</b><span>Searches for "Keith Zars"</span></div>
+  </div>
+
+  <section>
+    <div class="label">Where things stand</div>
+    <h3>Your team has worked every lead</h3>
+    <p class="lede">Of the 13 leads on your status board, 8 have been contacted, 3 have quotes out and 2 were closed lost. Nobody was ignored. The two newest, Buddy Riley in Windcrest and Thomas Carter, do not have a status set yet.</p>
+  </section>
+
+  <section>
+    <div class="label">What it costs</div>
+    <h3>Simple, per-lead pricing</h3>
+    <p class="lede">You know the cost the day a lead arrives. Nothing to set up and nothing monthly.</p>
+    <div class="price">
+      <div class="p"><b>$50</b><span>Per lead delivered</span><small>Billed weekly by bank transfer, due in 7 days.</small></div>
+      <div class="p"><b>$500</b><span>Closed-job fee, $8K to $15K jobs</span><small>Once, only if the lead becomes a signed job.</small></div>
+      <div class="p"><b>$750</b><span>Closed-job fee, jobs over $15K</span><small>Due 7 days after the homeowner's final payment.</small></div>
+    </div>
+    <ul class="terms">
+      <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg>No setup fee, no monthly fee, no minimum volume.</li>
+      <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg>Month to month. Stop any time, nothing owed beyond leads delivered.</li>
+      <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg>Bad leads replaced free: wrong number, spam, out of area or work you do not take.</li>
+      <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg>Leads delivered before these terms stay on the original agreement.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="label">The math, from a finance view</div>
+    <h3>What a won job actually costs you</h3>
+    <p class="lede">An illustration on an $11,000 resurface, using today's pace of about 3 leads a month (36 a year). Plug in your own close rate.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Your close rate</th><th>Jobs won a year</th><th>Revenue at $11K</th><th>Total Iron Tiger cost</th><th>Cost as share of revenue</th></tr></thead>
+        <tbody>
+          <tr><td>10%</td><td>3.6</td><td>$39,600</td><td>$3,600</td><td class="n">9.1%</td></tr>
+          <tr><td>20%</td><td>7.2</td><td>$79,200</td><td>$5,400</td><td class="n">6.8%</td></tr>
+          <tr><td>30%</td><td>10.8</td><td>$118,800</td><td>$7,200</td><td class="n">6.1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Total cost is 36 leads at $50 plus a $500 closed-job fee per won job. Jobs over $15,000 carry $750 instead. You pay the closed-job fee only after you have been paid, so it never comes out of cash you have not collected.</p>
+    <div class="grid2">
+      <div class="card"><div class="ic"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.75 10.818v2.614A3.13 3.13 0 0 0 11.888 13c.482-.315.612-.648.612-.875 0-.227-.13-.56-.612-.875a3.13 3.13 0 0 0-1.138-.432ZM8.33 8.62c.053.055.115.11.184.164.208.16.46.284.736.363V6.603a2.45 2.45 0 0 0-.35.13c-.14.065-.27.143-.386.233-.377.292-.514.627-.514.909 0 .184.058.39.202.592.037.051.08.102.128.152Z"/><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-8-6a.75.75 0 0 1 .75.75v.316a3.78 3.78 0 0 1 1.653.713c.426.33.744.74.925 1.2a.75.75 0 0 1-1.395.55 1.35 1.35 0 0 0-.447-.563 2.187 2.187 0 0 0-.736-.363V9.3c.698.093 1.383.32 1.959.696.787.514 1.29 1.27 1.29 2.13 0 .86-.504 1.616-1.29 2.13-.576.377-1.261.603-1.96.696v.299a.75.75 0 1 1-1.5 0v-.3c-.697-.092-1.382-.318-1.958-.695-.482-.315-.857-.717-1.078-1.188a.75.75 0 1 1 1.359-.636c.08.173.245.376.54.569.313.205.706.353 1.138.432v-2.748a3.782 3.782 0 0 1-1.653-.713C6.9 9.433 6.5 8.681 6.5 7.875c0-.805.4-1.558 1.097-2.096a3.78 3.78 0 0 1 1.653-.713V4.75A.75.75 0 0 1 10 4Z" clip-rule="evenodd"/></svg></div><h4>A variable cost, not a retainer</h4><p>You pay when leads arrive, so a quiet month costs nothing. There is no budget to commit or burn through.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 0 1 .919-.53l4.78 1.281a.75.75 0 0 1 .531.919l-1.281 4.78a.75.75 0 0 1-1.449-.387l.81-3.022a19.407 19.407 0 0 0-5.594 5.203.75.75 0 0 1-1.139.093L7 10.06l-4.72 4.72a.75.75 0 0 1-1.06-1.061l5.25-5.25a.75.75 0 0 1 1.06 0l3.074 3.073a20.923 20.923 0 0 1 5.545-4.931l-3.042-.815a.75.75 0 0 1-.53-.919Z" clip-rule="evenodd"/></svg></div><h4>Room to grow</h4><p>The site already shows up 17,771 times in 90 days at an average position of 20. Every step up page one sends more homeowners to Keith Zars, at the same per-lead price.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label">For your marketing team</div>
+    <h3>It does not compete with anything you run</h3>
+    <p class="lede">The site is a separate, independent resurfacing guide for San Antonio. It reaches homeowners searching for the service, not for your company.</p>
+    <div class="proof"><b>0</b><p>Of the 17,771 Google searches that showed the site in the last 90 days, none included "Keith Zars". The searches are generic, like "pool resurfacing san antonio" and "pool resurfacing near me". These are homeowners your brand search and your ads would not reach by name.</p></div>
+    <ul class="list">
+      <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg><b>No paid ads.</b> The site ranks organically, so it never bids against your Google Ads or raises your cost per click.</li>
+      <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg><b>No Google Business Profile.</b> It does not compete with your listing in the map results or for your reviews.</li>
+      <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg><b>Your brand stays yours.</b> The site does not use the Keith Zars name, logo or trademarks, and we never touch your website, ad accounts, listings or social.</li>
+      <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg><b>Clean attribution.</b> Every lead comes through its own phone line, (726) 268-5597, and its own forms, so it can be tracked as a separate channel with no double counting against your other sources.</li>
+      <li><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg><b>Exclusive to Keith Zars.</b> Every San Antonio lead goes to your team only. None are shared or resold.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="label">What your team gets</div>
+    <h3>Visibility without extra work</h3>
+    <div class="grid2">
+      <div class="card"><h4>A shared lead page</h4><p>Every lead with name, phone, address, the job and call notes, plus a status board your team already uses. Your marketing lead can have the link too.</p></div>
+      <div class="card"><h4>Calls answered day and night</h4><p>Homeowners who call the line reach an assistant that collects the job details and screens out spam and sales calls before anything reaches your team.</p></div>
+      <div class="card"><h4>Reporting your marketing team can use</h4><p>On request, a monthly summary of the searches, impressions and leads behind the channel, so it can sit in your own reporting.</p></div>
+      <div class="card"><h4>Steered toward the jobs you want</h4><p>Tell us which work and which areas matter most and the site's focus follows. You decide what is worth more of.</p></div>
+    </div>
+  </section>
+
+  <div class="next">
+    <div>
+      <h3>Next step</h3>
+      <p>Happy to join a short call with your marketing team to answer anything about how the site works and how it sits next to your channels. Once you are comfortable, the next lead goes out on these terms.</p>
+    </div>
+    <div class="who"><b>Costa Demetral</b>Iron Tiger Digital<br>(512) 956-7133<br>contact@irontigerdigital.com</div>
+  </div>
+</div>
+
+<footer>Iron Tiger Digital · Prepared October 2026 for Keith Zars Pools · Figures from Google Search Console (July 6 to October 4, 2026) and the Keith Zars lead page.</footer>
+
+</body>
+</html>

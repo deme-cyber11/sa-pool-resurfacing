@@ -426,3 +426,9 @@ body.dm .hero-badge { color: var(--sand-l); background: rgba(11,43,45,.45); bord
   body.dm-guide .header ul.nav-links a:not(.btn-nav) { padding: 0 3px; font-size: .9rem; }
   body.dm-legal ul.nav-links a.nav-cta { padding: 0 12px; font-size: .88rem; }
 }
+
+/* Hero photo as WebP where the browser supports image-set type(); others keep the JPEG
+   in --hero-img (speed: LCP). */
+@supports (background-image: image-set(url("a.webp") type("image/webp"))) {
+  [style*="--hero-img-webp"] { --hero-img: var(--hero-img-webp) !important; }
+}

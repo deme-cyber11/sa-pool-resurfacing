@@ -42,7 +42,7 @@
   .terms svg, .check { color: var(--primary); flex-shrink: 0; }
 
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 18px; }
-  .stat { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .stat { background: #fffaf6; border: 1px solid #f1e3d8; border-radius: 12px; padding: 14px 16px; }
   .stat b { display: block; font-size: 1.7rem; font-weight: 800; letter-spacing: -.5px; color: var(--primary-dark); line-height: 1.1; }
   .stat span { display: block; margin-top: 4px; font-size: .84rem; line-height: 1.4; color: var(--gray); }
   .src { margin-top: 8px; font-size: .76rem; color: var(--gray); }
@@ -53,6 +53,9 @@
   .intro { margin-top: 8px; color: var(--soft); max-width: 46rem; }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
   .item { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  .get .item { background: #fffaf6; border-color: #f1e3d8; }
+  .fit .item { background: var(--light); border-color: #ece8e3; }
+  .team .item { border-left: 4px solid var(--primary); }
   .item h3 { font-size: 1rem; font-weight: 700; line-height: 1.35; display: flex; gap: 9px; align-items: flex-start; }
   .item h3 svg { color: var(--primary); margin-top: 3px; flex-shrink: 0; }
   .item p { margin-top: 5px; font-size: .93rem; line-height: 1.6; color: var(--soft); padding-left: 27px; }
@@ -69,21 +72,22 @@
   table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: .9rem; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
   th, td { padding: 8px 12px; text-align: right; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
   th:first-child, td:first-child { text-align: left; }
-  th { font-size: .74rem; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--gray); background: var(--light); }
+  th { font-size: .74rem; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--primary-dark); background: #fbeee5; }
+  tbody tr:nth-child(even) td { background: #fffaf6; }
   tr:last-child td { border-bottom: 0; }
   td.n { font-weight: 800; color: var(--primary-dark); }
   .note { margin-top: 8px; font-size: .84rem; color: var(--gray); }
 
   .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 22px; margin-top: 14px; }
   .faq div { border-top: 1px solid var(--rule); padding-top: 10px; }
-  .faq b { display: block; font-size: .95rem; }
+  .faq b { display: block; font-size: .95rem; color: var(--primary-dark); }
   .faq p { margin-top: 3px; font-size: .9rem; line-height: 1.55; color: var(--soft); }
 
   .start { display: grid; grid-template-columns: 1.25fr .75fr; gap: 16px; margin-top: 16px; }
-  .start-card { border: 1.5px solid rgba(196,92,38,.35); border-radius: 16px; padding: 22px 24px; }
+  .start-card { background: var(--tint); border: 1.5px solid rgba(196,92,38,.35); border-radius: 16px; padding: 22px 24px; }
   .start-card h2 { margin-top: 4px; }
   .yes-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 14px; }
-  .yes { display: inline-flex; flex-direction: column; border: 1.5px solid var(--primary); border-radius: 12px; padding: 9px 15px; font-size: .88rem; color: var(--gray); background: var(--tint); }
+  .yes { display: inline-flex; flex-direction: column; border: 1.5px solid var(--primary); border-radius: 12px; padding: 9px 15px; font-size: .88rem; color: var(--gray); background: #fff; }
   .yes b { font-size: 1.08rem; font-weight: 800; color: var(--primary-dark); }
   .or { font-size: .85rem; font-weight: 600; color: var(--gray); }
   .start-note { margin-top: 12px; font-size: .92rem; color: var(--soft); }
@@ -221,15 +225,15 @@
   </div>
 </header>
 
-<section class="section">
+<section class="section get">
   <div class="wrap">
     <div class="eyebrow">What you get</div>
     <h2>Ready-to-call homeowners, sent only to your team</h2>
     <div class="grid2">
       <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M9.661 2.237a.531.531 0 0 1 .678 0 11.947 11.947 0 0 0 7.078 2.749.5.5 0 0 1 .479.425c.069.52.104 1.05.104 1.59 0 5.162-3.26 9.563-7.834 11.256a.48.48 0 0 1-.332 0C5.26 16.564 2 12.163 2 7c0-.538.035-1.069.104-1.589a.5.5 0 0 1 .48-.425 11.947 11.947 0 0 0 7.077-2.75Zm4.196 5.954a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd"/></svg>Exclusive leads</h3><p>Every San Antonio lead from the site goes to Keith Zars only. Never shared, never resold.</p></div>
-      <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Calls answered day and night</h3><p>A voice assistant answers every call, screens out spam and sales calls, and collects the job details.</p></div>
+      <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Calls answered day and night</h3><p>A voice assistant answers day and night and screens out spam and sales calls.</p></div>
       <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z" clip-rule="evenodd"/></svg>A complete lead packet</h3><p>Name, phone, address, the job and the call notes, in your inbox and on your lead page.</p></div>
-      <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1ZM9.5 6A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1ZM3.5 10A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1Z"/></svg>Room to grow</h3><p>The site averages position 20 on Google today. Every step up page one sends more homeowners to you at the same price.</p></div>
+      <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1ZM9.5 6A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1ZM3.5 10A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1Z"/></svg>Room to grow</h3><p>The site averages position 20 on Google. Each step toward page one sends you more homeowners.</p></div>
     </div>
   </div>
 </section>
@@ -247,7 +251,7 @@
       </div>
       <ul class="price-notes">
         <li><svg class="check" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>One invoice every 2 weeks, due in 7 days by bank transfer.</li>
-        <li><svg class="check" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>The job balance is due 7 days after the homeowner's final payment.</li>
+        <li><svg class="check" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>Job balance due 7 days after the final payment.</li>
         <li><svg class="check" width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>Leads already delivered stay on the original agreement.</li>
       </ul>
       <table>
@@ -263,7 +267,7 @@
   </div>
 </section>
 
-<section class="section page2">
+<section class="section page2 fit">
   <div class="wrap">
     <div class="eyebrow">For your marketing team</div>
     <h2>It runs beside your marketing, never on top of it</h2>
@@ -277,12 +281,12 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section team">
   <div class="wrap">
     <div class="eyebrow">Working with your team</div>
     <h2>Built to fit how Keith Zars already runs</h2>
     <div class="grid2">
-      <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>Streamlined for your team</h3><p>Leads go to whoever you choose. One shared lead page holds every lead with status and notes.</p></div>
+      <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>Streamlined for your team</h3><p>Leads go to whoever you choose. Your team calls back fast and keeps each status current on one shared lead page.</p></div>
       <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>Tailored to your business</h3><p>Tell me the jobs, finishes and neighborhoods you want more of, and I shape the site's pages around them.</p></div>
       <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>Reporting you can use</h3><p>On request, a monthly summary of searches and leads for your own reports.</p></div>
       <div class="item"><h3><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>A long-term partner</h3><p>As the site climbs on Google, more of the San Antonio market reaches Keith Zars, at the same price.</p></div>

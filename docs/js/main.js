@@ -35,9 +35,11 @@
 
   /* ---------- Header scroll effect ---------- */
   const header = document.querySelector('.header');
-  window.addEventListener('scroll',()=>{
-    header.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  if(header){
+    window.addEventListener('scroll',()=>{
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  }
 
   /* ---------- Smooth scroll ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor=>{

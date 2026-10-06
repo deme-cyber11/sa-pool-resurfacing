@@ -432,3 +432,27 @@ body.dm .hero-badge { color: var(--sand-l); background: rgba(11,43,45,.45); bord
 @supports (background-image: image-set(url("a.webp") type("image/webp"))) {
   [style*="--hero-img-webp"] { --hero-img: var(--hero-img-webp) !important; }
 }
+
+/* ---------- 2026-10-06 visual check ---------- */
+/* footer contact icons are <img> SVGs drawn in black, so they vanished on the dark footer */
+body.dm .footer-contact img.inline-icon { filter: brightness(0) invert(1); opacity: .85; }
+/* the footer phone link was dimmed twice (li at .7 and a at .7), so the number read fainter than the email */
+body.dm .footer-contact li a { opacity: 1; }
+/* new-pool-construction and turf-installation keep the older single-column hero: it had no top or
+   bottom padding (badge touched the header, buttons touched the strip below) and centred buttons
+   under left-aligned text */
+@media (min-width: 769px) {
+  body.dm.dm-svc .hero:not(.dm-svc-hero) { padding: clamp(56px, 6vw, 88px) 0; }
+  body.dm.dm-svc .hero:not(.dm-svc-hero) .hero-buttons { justify-content: flex-start !important; }
+}
+/* pool-renovation: two inline 3-column card grids stayed 3 columns on phones (96px-wide cards) */
+@media (max-width: 640px) {
+  body.dm .services-grid[style*="repeat(3"] { grid-template-columns: 1fr !important; }
+}
+/* blog and water-guide closing call-to-action boxes: the article rule (.blog-content p, .resource-body p
+   = #444) painted the paragraph near-black on the teal box, and the guide's estimate link teal on teal */
+body.dm div[style*="background:var(--primary"] :is(p, li) { color: rgba(255,255,255,.9); }
+body.dm .cta-block :is(p, li) { color: rgba(255,255,255,.88); }
+body.dm .cta-block a.cta-form:not(.btn):not(.cta-call):not(.cta-pill) { color: #fff; }
+/* "Free Estimate" header button on two blog posts: dark text on terracotta, white everywhere else */
+body.dm .header .nav-links a.btn.btn-primary { color: #fff; }

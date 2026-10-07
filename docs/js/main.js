@@ -86,7 +86,7 @@
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(eased * target) + suffix;
+      el.textContent = Math.floor(eased * target).toLocaleString('en-US') + suffix;
       if(progress < 1) requestAnimationFrame(update);
     }
     requestAnimationFrame(update);

@@ -60,12 +60,20 @@
       {"@type": "City", "name": "Seguin"},
       {"@type": "City", "name": "Universal City"}
     ],
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      "opens": "07:00",
-      "closes": "18:00"
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "14:00"
+      }
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
@@ -476,7 +484,7 @@
   <div class="container">
     <div class="section-header reveal">
       <p class="overline">Our Process</p>
-      <h2>What Happens When You Call San Antonio Pool Resurfacing</h2>
+      <h2>What Happens When You Call About Pool Resurfacing in San Antonio</h2>
       <p>From your first call to diving back in — here's exactly what to expect.</p>
     </div>
     <div class="timeline">

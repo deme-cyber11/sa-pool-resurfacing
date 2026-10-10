@@ -200,7 +200,8 @@
         </ul>
 
         <h2>Information Sharing</h2>
-        <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in the following situations:</p>
+        <p>We work with one long-term local partner, based in San Antonio, who handles every request from this site. When you call or send a request, only that partner receives your details (name, phone number, email and address), so they can contact you about your project. No other contractor sees your information, and if our partner cannot take the job, your request is not passed to anyone else. Our partner may pay us a fee for the referral, and we do not sell your information to anyone else.</p>
+        <p>We may share your information in the following situations:</p>
         <ul>
             <li><strong>Service Providers:</strong> We may share information with trusted third-party vendors who assist us in operating our business (e.g., website hosting, email services).</li>
             <li><strong>Legal Requirements:</strong> We may disclose information if required by law or in response to valid requests by public authorities.</li>
@@ -321,5 +322,8 @@
   },{passive:true});
 })();
 </script>
+<!-- itd-d24: page attribution for leads and calls, managed by tools/page-attribution-plan.py -->
+<script>(function(){var A='https://lead-manager-api.irontigerdigital.workers.dev';function f(){var fs=document.querySelectorAll('form');for(var i=0;i<fs.length;i++){var x=fs[i],a=x.getAttribute('action')||'';if(a&&a.indexOf('/ingest')<0)continue;var h=x.querySelector('input[name="page_url"]');if(!h){h=document.createElement('input');h.type='hidden';h.name='page_url';x.appendChild(h);}h.value=location.pathname;}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f();document.addEventListener('click',function(e){var t=e.target&&e.target.closest?e.target.closest('a[href^="tel:"]'):null;if(!t||!navigator.sendBeacon)return;try{navigator.sendBeacon(A+'/track/call-click',JSON.stringify({site:location.hostname.replace(/^www\./,''),page_path:location.pathname,tel:t.getAttribute('href')}));}catch(_){}},true);})();</script>
+<!-- /itd-d24 -->
 </body>
 </html>

@@ -116,6 +116,7 @@
         </div>
         <div id="form-error" style="display:none;background:#fef2f2;border:1.5px solid #ef4444;border-radius:10px;padding:20px;color:#7f1d1d;margin-bottom:16px" role="alert" aria-live="assertive"></div>
         <form id="contact-form" action="https://lead-manager-api.irontigerdigital.workers.dev/ingest" method="POST" data-success="form-success" data-error="form-error" data-strict="true" data-fallback-tel="(726) 268-5597">
+<input type="hidden" name="page_url" value="/contact.html">
       <input type="hidden" name="site_domain" value="alamopoolresurfacing.com">
           
           <input type="hidden" name="_subject" value="New Contact Request — Alamo Pool Resurfacing">
@@ -261,5 +262,8 @@
 })();
 </script>
 <script src="/js/form.js" defer></script>
+<!-- itd-d24: page attribution for leads and calls, managed by tools/page-attribution-plan.py -->
+<script>(function(){var A='https://lead-manager-api.irontigerdigital.workers.dev';function f(){var fs=document.querySelectorAll('form');for(var i=0;i<fs.length;i++){var x=fs[i],a=x.getAttribute('action')||'';if(a&&a.indexOf('/ingest')<0)continue;var h=x.querySelector('input[name="page_url"]');if(!h){h=document.createElement('input');h.type='hidden';h.name='page_url';x.appendChild(h);}h.value=location.pathname;}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f();document.addEventListener('click',function(e){var t=e.target&&e.target.closest?e.target.closest('a[href^="tel:"]'):null;if(!t||!navigator.sendBeacon)return;try{navigator.sendBeacon(A+'/track/call-click',JSON.stringify({site:location.hostname.replace(/^www\./,''),page_path:location.pathname,tel:t.getAttribute('href')}));}catch(_){}},true);})();</script>
+<!-- /itd-d24 -->
 </body>
 </html>

@@ -417,7 +417,17 @@ footer strong { color: var(--green-dark); }
   font-weight: 600;
 }
 /* Per-lead notes (2026-09-30) */
-.sb-row, .sb-header { grid-template-columns: 1fr auto auto; }
+.sb-row, .sb-header { grid-template-columns: 1fr auto auto auto; }
+.sb-rec {
+  display: inline-flex; align-items: center; gap: .3rem;
+  padding: .3rem .7rem; border-radius: 999px; white-space: nowrap;
+  font-size: .72rem; font-weight: 700; letter-spacing: .03em;
+  background: var(--dark); color: #fff; text-decoration: none;
+}
+.sb-rec:hover { opacity: .85; }
+.sb-rec-ico { width: 12px; height: 12px; }
+.sb-src { font-size: .7rem; color: var(--gray); white-space: nowrap; }
+@media (max-width: 480px) { .sb-rec { padding: .3rem .55rem; } .sb-src { font-size: .65rem; } }
 .sb-note-btn {
   padding: .3rem .7rem; border-radius: 999px; font: 700 .72rem/1 inherit; font-family: inherit;
   letter-spacing: .03em; cursor: pointer; white-space: nowrap;
@@ -1214,73 +1224,90 @@ footer strong { color: var(--green-dark); }
 
 <div id="tab-status" class="tab-panel">
   <div class="sb-wrap">
-    <div class="sb-header"><span>Lead</span><span>Notes</span><span>Status</span></div>
+    <div class="sb-header"><span>Lead</span><span>Call</span><span>Notes</span><span>Status</span></div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 17 — Robert Niemiec</div><div class="sb-desc">226 Branch Oak Way, Shavano Park · Spa tile re-set, he has the tiles</div></div>
+      <a class="sb-rec" href="https://lead-manager-api.irontigerdigital.workers.dev/rec/call_98f63102acd8369a9db772d2a94.mp3" target="_blank" rel="noopener" aria-label="Listen to the call with this homeowner"><svg class="sb-rec-ico" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Listen 3:36</a>
       <button class="sb-badge" data-id="robert-niemiec" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 16 — Mayuri Escalona Torres</div><div class="sb-desc">13619 Scarsdale St., Northern Hills · Replastering</div></div>
+      <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="mayuri-escalona-torres" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 15 — Thomas Carter</div><div class="sb-desc">26302 Hackney Ln, San Antonio · Plaster</div></div>
+      <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="thomas-carter" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 14 — Buddy Riley</div><div class="sb-desc">6318 Mallard Point, Windcrest · Pebble</div></div>
+      <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="buddy-riley" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 13 — Robert Martinez</div><div class="sb-desc">4319 Forest Green, San Antonio · Plaster-replaster</div></div>
+      <a class="sb-rec" href="https://lead-manager-api.irontigerdigital.workers.dev/rec/call_941d71140192430e7b23d22095d.mp3" target="_blank" rel="noopener" aria-label="Listen to the call with this homeowner"><svg class="sb-rec-ico" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Listen 3:55</a>
       <button class="sb-badge" data-id="robert-martinez" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 12 — Christina Gankov</div><div class="sb-desc">10919 Whisper Hollow St, San Antonio · Plaster-replaster</div></div>
+      <a class="sb-rec" href="https://lead-manager-api.irontigerdigital.workers.dev/rec/call_9449f3e9ea5c1946cb6bc0c4491.mp3" target="_blank" rel="noopener" aria-label="Listen to the call with this homeowner"><svg class="sb-rec-ico" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Listen 4:55</a>
       <button class="sb-badge" data-id="christina-gankov" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 11 — Caroline  Kalkhoff McKinney</div><div class="sb-desc">1522 Beauchamp St San Antonio, TX 78213-1210 · Plaster</div></div>
+      <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="caroline-kalkhoff-mckinney" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 10 — Mike Gittinger</div><div class="sb-desc">3619 Barrington Street, San Antonio · Plaster replaster</div></div>
+      <a class="sb-rec" href="https://lead-manager-api.irontigerdigital.workers.dev/rec/call_ea07d3f37747acd8161598d2718.mp3" target="_blank" rel="noopener" aria-label="Listen to the call with this homeowner"><svg class="sb-rec-ico" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Listen 4:16</a>
       <button class="sb-badge" data-id="mike-gittinger" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 09 — Michelle De La Torre</div><div class="sb-desc">12607 Chateau Forest Ln, San Antonio · Plaster resurfacing</div></div>
+      <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="michelle-de-la-torre" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 08 — Guillermo Moya</div><div class="sb-desc">6315 Echo Hill, Leon Valley · Plaster resurfacing</div></div>
+      <a class="sb-rec" href="https://lead-manager-api.irontigerdigital.workers.dev/rec/call_f7866d76b383cedf404e2790fde.mp3" target="_blank" rel="noopener" aria-label="Listen to the call with this homeowner"><svg class="sb-rec-ico" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Listen 3:08</a>
       <button class="sb-badge" data-id="guillermo-moya" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 07 — Kimberly Gill</div><div class="sb-desc">9823 Strathaven St, San Antonio · Full coping replacement</div></div>
+      <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="kimberly-gill" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 06 — Terri Roberts</div><div class="sb-desc">112 River Valley, Castroville · Tile replacement · fading plaster repair · crack investigation</div></div>
+      <a class="sb-rec" href="https://lead-manager-api.irontigerdigital.workers.dev/rec/call_95925c120cd51f622c3b11ae3b1.mp3" target="_blank" rel="noopener" aria-label="Listen to the call with this homeowner"><svg class="sb-rec-ico" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Listen 8:04</a>
       <button class="sb-badge" data-id="terri-roberts" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 05 — Michael Davis</div><div class="sb-desc">13803 Bentridge Drive, San Antonio · Full pool resurfacing</div></div>
+      <a class="sb-rec" href="https://lead-manager-api.irontigerdigital.workers.dev/rec/call_76f6459e83329e274416b5ab22c.mp3" target="_blank" rel="noopener" aria-label="Listen to the call with this homeowner"><svg class="sb-rec-ico" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Listen 4:27</a>
       <button class="sb-badge" data-id="michael-davis" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 04 — Jake Morris</div><div class="sb-desc">15731 Dawn Crest, San Antonio · Plaster resurfacing</div></div>
+      <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="jake-morris" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 03 — Mary Hutton</div><div class="sb-desc">7245 Silver Spur Trail, Fair Oaks Ranch · Plaster repair</div></div>
+      <a class="sb-rec" href="https://lead-manager-api.irontigerdigital.workers.dev/rec/call_486f73dd803dbfa73d4494b2f2f.mp3" target="_blank" rel="noopener" aria-label="Listen to the call with this homeowner"><svg class="sb-rec-ico" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Listen 4:02</a>
       <button class="sb-badge" data-id="mary-hutton" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 02 — Kristen Mole</div><div class="sb-desc">307 Augusta, Boerne · Pebble Tec resurfacing · deep-blue tile-line replacement · dead light cap-off</div></div>
+      <a class="sb-rec" href="https://lead-manager-api.irontigerdigital.workers.dev/rec/call_2b2a085814dfd79cb71cc75fb73.mp3" target="_blank" rel="noopener" aria-label="Listen to the call with this homeowner"><svg class="sb-rec-ico" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd"/></svg>Listen 5:31</a>
       <button class="sb-badge" data-id="kristen-mole" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
       <div><div class="sb-name">Lead 01 — Don Henderson</div><div class="sb-desc">807 Lodge Creek, New Braunfels · Pool resurfacing</div></div>
+      <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="don-henderson" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
   </div>

@@ -340,8 +340,12 @@ footer strong { color: var(--green-dark); }
 }
 .sb-row:first-child { border-radius: 10px 10px 0 0; }
 .sb-row:last-child { border-bottom: none; border-radius: 0 0 10px 10px; }
-.sb-name { font-weight: 700; font-size: .88rem; }
-.sb-desc { font-size: .75rem; color: var(--gray); margin-top: .1rem; }
+.sb-row > div:first-child { min-width: 0; }
+.sb-name { font-weight: 700; font-size: .88rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sb-desc {
+  font-size: .75rem; color: var(--gray); margin-top: .1rem;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 .sb-badge {
   padding: .3rem .75rem;
   border-radius: 999px;
@@ -1242,7 +1246,7 @@ footer strong { color: var(--green-dark); }
       <button class="sb-badge" data-id="robert-niemiec" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
-      <div><div class="sb-name">Lead 16 — Mayuri Escalona Torres</div><div class="sb-desc">13619 Scarsdale St., Northern Hills · Replastering</div></div>
+      <div><div class="sb-name">Lead 16 — Mayuri Escalona...</div><div class="sb-desc">13619 Scarsdale St., Northern Hills · Replastering</div></div>
       <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="mayuri-escalona-torres" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
@@ -1267,7 +1271,7 @@ footer strong { color: var(--green-dark); }
       <button class="sb-badge" data-id="christina-gankov" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>
     <div class="sb-row">
-      <div><div class="sb-name">Lead 11 — Caroline  Kalkhoff McKinney</div><div class="sb-desc">1522 Beauchamp St San Antonio, TX 78213-1210 · Plaster</div></div>
+      <div><div class="sb-name">Lead 11 — Caroline Kalkhoff...</div><div class="sb-desc">1522 Beauchamp St San Antonio, TX 78213-1210 · Plaster</div></div>
       <span class="sb-src">Form submission</span>
       <button class="sb-badge" data-id="caroline-kalkhoff-mckinney" data-status="Active" onclick="cycleStatus(this)">Active</button>
     </div>

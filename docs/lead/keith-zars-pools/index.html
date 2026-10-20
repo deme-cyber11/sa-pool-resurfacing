@@ -428,6 +428,17 @@ footer strong { color: var(--green-dark); }
 .sb-rec-ico { width: 12px; height: 12px; }
 .sb-src { font-size: .7rem; color: var(--gray); white-space: nowrap; }
 @media (max-width: 480px) { .sb-rec { padding: .3rem .55rem; } .sb-src { font-size: .65rem; } }
+/* Four columns do not fit a phone: at 390px the name collapsed to one word per line and
+   the status badge was clipped off the right edge. Below 640px the name takes its own
+   line and the three controls sit under it. The header labels are dropped there because
+   the controls already say what they are ("Listen 3:36", "Notes", "Contacted"). */
+@media (max-width: 640px) {
+  .sb-header { display: none; }
+  .sb-row { grid-template-columns: auto auto 1fr; gap: .5rem; }
+  .sb-row > div:first-child { grid-column: 1 / -1; }
+  .sb-row > .sb-badge { justify-self: end; }
+  .sb-desc { margin-bottom: .15rem; }
+}
 .sb-note-btn {
   padding: .3rem .7rem; border-radius: 999px; font: 700 .72rem/1 inherit; font-family: inherit;
   letter-spacing: .03em; cursor: pointer; white-space: nowrap;
